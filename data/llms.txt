@@ -1,0 +1,220 @@
+# Grow Payments — Developer Documentation
+
+> Grow Payments (grow-il / Meshulam) is an Israeli payment service provider. Full developer documentation: integration guides, the Light Server REST API (regular & token payments, payment links, refunds, direct debit, transaction & payment-process info), webhooks, server-to-server callbacks, SDKs (Apple/Bit), 3DS, NFC and POS. Sandbox API host: https://sandbox.meshulam.co.il (production hosts issued by Grow support). Auth is via per-business identifiers (userId + pageCode / API key). Content is mixed English and Hebrew.
+
+Source: https://grow-il.readme.io • Each link is a bundled Markdown file (path relative to this file); the live URL follows on the next line.
+
+## Overview
+
+- [Grow Payments](pages/home/_home.md): Grow Payments (grow-il / Meshulam) is an Israeli payment service provider (PSP). This documentation
+  - source: https://grow-il.readme.io/
+
+## Guides
+
+- [3DS](pages/docs/3ds.md): Experience Enhanced Security with 3D Secure (3DS) What is 3D Secure?
+  - source: https://grow-il.readme.io/docs/3ds
+- [About Grow](pages/docs/about-grow-products.md): At Grow develop tailor-made payment solutions for our customers, drawing from our extensive experience working with thousands of businesses across various indus…
+  - source: https://grow-il.readme.io/docs/about-grow-products
+- [Grow App](pages/docs/אפליצקיית-grow.md): Seamless Mobile Payment Management
+  - source: https://grow-il.readme.io/docs/%D7%90%D7%A4%D7%9C%D7%99%D7%A6%D7%A7%D7%99%D7%99%D7%AA-grow
+- [Grow App for Make](pages/docs/grow-app-for-make.md): The Grow app for Make allows you to automate payment flows using Grow’s payment services directly from your Make scenarios.
+  - source: https://grow-il.readme.io/docs/grow-app-for-make
+- [Light API](pages/docs/light-api.md): Elevating Your Transactional Experience
+  - source: https://grow-il.readme.io/docs/light-api
+- [NFC Service](pages/docs/nfc.md): Revolutionize Transactions with NFC on Your Smartphone
+  - source: https://grow-il.readme.io/docs/nfc
+- [Plugin WordPress](pages/docs/תוסף-wp.md): Grow’s payment plugin for WooCommerce offers an advanced interface that remains within the website environment throughout the entire payment process. This seaml…
+  - source: https://grow-il.readme.io/docs/%D7%AA%D7%95%D7%A1%D7%A3-wp
+- [POS Device](pages/docs/מכשיריpos.md): Introducing the 3Q Mobile Terminal: Elevate Your Checkout Experience
+  - source: https://grow-il.readme.io/docs/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99pos
+- [Static Payment Page](pages/docs/עמודי-מכירה.md): Tailor-made Sales and Payment Pages for Effortless Transactions
+  - source: https://grow-il.readme.io/docs/%D7%A2%D7%9E%D7%95%D7%93%D7%99-%D7%9E%D7%9B%D7%99%D7%A8%D7%94
+- [Webhooks](pages/docs/webhooks.md): Achieve automation excellence with Grow's Webhooks, enhancing your control and management capabilities.
+  - source: https://grow-il.readme.io/docs/webhooks
+
+## API Reference — Concepts
+
+- [3DS](pages/reference/3ds-1.md): Enhance the security of your transactions with the Grow 3DS service, a robust defence against fraudulent activities.
+  - source: https://grow-il.readme.io/reference/3ds-1
+- [Apple Domain Verification](pages/reference/sdk-apple.md): To enable Apple Pay in the GROW payment flow, the hosting domain must be verified with Apple.
+  - source: https://grow-il.readme.io/reference/sdk-apple
+- [Approve Transaction](pages/reference/approve-transation.md): The Approve Transaction step confirms that Grow’s server update was received after a payment is completed.
+  - source: https://grow-il.readme.io/reference/approve-transation
+- [Authentication](pages/reference/authentication.md): Authentication is required to keep payment processing secure and to separate test credentials from live payment credentials.
+  - source: https://grow-il.readme.io/reference/authentication
+- [Billing](pages/reference/billing.md): Grow Billing is a recurring payment solution for managing automatic monthly charges and long-term customer payment plans.
+  - source: https://grow-il.readme.io/reference/billing
+- [Bit Redirect](pages/reference/bit-redirect.md): After a successful Bit Redirect payment, the thank-you page is displayed to complete the customer flow.
+  - source: https://grow-il.readme.io/reference/bit-redirect
+- [Bit SDK Android](pages/reference/sdk-bit-android-copy.md): 1. Add authToken to gradle.properties
+  - source: https://grow-il.readme.io/reference/sdk-bit-android-copy
+- [Bit SDK IOS](pages/reference/sdk-bit-ios.md): 1. Run 'pod init' command from the terminal in your project directory.
+  - source: https://grow-il.readme.io/reference/sdk-bit-ios
+- [Errors](pages/reference/errors.md): a list of the error codes. There might be more, but these are the main ones.
+  - source: https://grow-il.readme.io/reference/errors
+- [Growin SDK](pages/reference/page.md): Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.
+  - source: https://grow-il.readme.io/reference/page
+- [Growin Wallet SDK](pages/reference/implement-code-on-client-side.md): The Wallet SDK provides an innovative and modular solution for rendering a unified payment form that seamlessly consolidates all available payment methods into …
+  - source: https://grow-il.readme.io/reference/implement-code-on-client-side
+- [Iframe vs. Redirect](pages/reference/iframe-vs-redirect.md): Businesses can choose between Iframe and Redirect when setting up the Grow payment flow.
+  - source: https://grow-il.readme.io/reference/iframe-vs-redirect
+- [Initiating a Transaction on a POS Terminal or Android Device](pages/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device.md): This guide explains how to send a transaction from the merchant’s system to a target device in order to complete a payment.
+  - source: https://grow-il.readme.io/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device
+- [Introduction](pages/reference/introduction.md): At Grow Payments, we provide advanced, secure, and scalable payment solutions designed to help businesses streamline their payment processes and create a seamle…
+  - source: https://grow-il.readme.io/reference/introduction
+- [Invoice Server Response](pages/reference/invoice-server-response.md): When using the [createPaymentProcess](https://grow-il.readme.io/reference/postapi-light-server-1-0-createpaymentprocess) API, you can provide the optional param…
+  - source: https://grow-il.readme.io/reference/invoice-server-response
+- [IP Addresses](pages/reference/ip-adress.md): The following IP addresses must be allowed at the firewall for testing and production transactions:
+  - source: https://grow-il.readme.io/reference/ip-adress
+- [NFC](pages/reference/nfc-1.md): 1. Execute a "createPaymentProcess" call with the designated "pageCode" for the transaction and the "deviceKey" of the selected broadcasting device.
+  - source: https://grow-il.readme.io/reference/nfc-1
+- [Overview](pages/reference/overview-2.md): This delayed payment flow allows businesses to secure customer approval upfront while charging the final amount only after the service or product is completed.
+  - source: https://grow-il.readme.io/reference/overview-2
+- [Overview](pages/reference/overview-5.md): Transaction inquiries give a reliable way to check the status of a specific payment manualy, when automatic updates are not enough.
+  - source: https://grow-il.readme.io/reference/overview-5
+- [Overview](pages/reference/overview-1.md): Recurring payments allow businesses to automate ongoing charges, such as monthly fees, subscriptions, or other regular customer payments.
+  - source: https://grow-il.readme.io/reference/overview-1
+- [Overview](pages/reference/overview-3.md): Businesses can manage refunds for completed payments directly within the Grow system
+  - source: https://grow-il.readme.io/reference/overview-3
+- [Overview](pages/reference/overview-9.md): Effortless Billing with Grow Systems
+  - source: https://grow-il.readme.io/reference/overview-9
+- [overview](pages/reference/overview-8.md): Token Billing with Premium Recurring Payments
+  - source: https://grow-il.readme.io/reference/overview-8
+- [Overview](pages/reference/overview-4.md): Grow tokenization supports secure future payments, recurring payments, and token-based charges without storing card details directly.
+  - source: https://grow-il.readme.io/reference/overview-4
+- [Overview](pages/reference/overview-6.md): This page outlines how to launch a standard online payment flow by generating a secure payment form for customers.
+  - source: https://grow-il.readme.io/reference/overview-6
+- [Overview](pages/reference/payment-link.md): Payment Link
+  - source: https://grow-il.readme.io/reference/payment-link
+- [Parameter Mapping](pages/reference/parameter-mapping.md): Parameters details
+  - source: https://grow-il.readme.io/reference/parameter-mapping
+- [Payment Page](pages/reference/payment-page.md): Grow Payment Pages help businesses collect payments through secure, ready-made payment forms tailored to different checkout needs.
+  - source: https://grow-il.readme.io/reference/payment-page
+- [Payment Process](pages/reference/the-process.md): The payment process starts with creating a payment form and ends with completing and approving the transaction.
+  - source: https://grow-il.readme.io/reference/the-process
+- [Payments Type](pages/reference/payments-types.md): Payment Types Offered by Grow
+  - source: https://grow-il.readme.io/reference/payments-types
+- [Platforms & Multi-Merchant Systems](pages/reference/api-guidelines-for-platforms-system-integrators.md): This section is intended for platform partners and system integrators that enable multiple businesses to process payments through their own system using Grow Pa…
+  - source: https://grow-il.readme.io/reference/api-guidelines-for-platforms-system-integrators
+- [Post Message](pages/reference/postmassage.md): PostMessage helps your business react instantly to what happens inside the Grow payment page.
+  - source: https://grow-il.readme.io/reference/postmassage
+- [Postman Collection](pages/reference/postman-collection.md): The Grow Postman Collection gives you one organized place to explore the full Grow API payment environment.
+  - source: https://grow-il.readme.io/reference/postman-collection
+- [Premium Recurring Payment](pages/reference/premium-recurring-payment.md): For enhanced services, consider the premium recurring payment option that offers:
+  - source: https://grow-il.readme.io/reference/premium-recurring-payment
+- [Recurring Payment vs. Tokenization](pages/reference/recurring-vs-token.md): Compare Grow Billing and tokenization and choose the right way to manage recurring payments.
+  - source: https://grow-il.readme.io/reference/recurring-vs-token
+- [Response](pages/reference/response-3.md): "processId": 6652,
+  - source: https://grow-il.readme.io/reference/response-3
+- [Response](pages/reference/delayed-payment-response.md): "processId":"734754",
+  - source: https://grow-il.readme.io/reference/delayed-payment-response
+- [Response](pages/reference/response-copy-1.md): "asmachta": "111111111",
+  - source: https://grow-il.readme.io/reference/response-copy-1
+- [Response](pages/reference/responae.md): "message": "קוד זיהוי עסק אינו תקין"
+  - source: https://grow-il.readme.io/reference/responae
+- [Response](pages/reference/response-copy-copy.md): "processId":"123456",
+  - source: https://grow-il.readme.io/reference/response-copy-copy
+- [Response](pages/reference/response.md): "status": "תשלום שזוכה",
+  - source: https://grow-il.readme.io/reference/response
+- [Response](pages/reference/copy-of-response.md): "asmachta": "293942875",
+  - source: https://grow-il.readme.io/reference/copy-of-response
+- [Response](pages/reference/response-copy-2.md): "asmachta": "293942875",
+  - source: https://grow-il.readme.io/reference/response-copy-2
+- [Response](pages/reference/reponse.md): "processId":"734754",
+  - source: https://grow-il.readme.io/reference/reponse
+- [Response](pages/reference/response-copy-3.md): CreatePaymentLink
+  - source: https://grow-il.readme.io/reference/response-copy-3
+- [Response get payment process info](pages/reference/response-get-transaction-info-copy.md): "processId": "1234122",
+  - source: https://grow-il.readme.io/reference/response-get-transaction-info-copy
+- [Response get transaction info](pages/reference/response-1.md): "asmachta": "300000209",
+  - source: https://grow-il.readme.io/reference/response-1
+- [Server Response](pages/reference/server-response-1.md): After a transaction starts, Grow sends payment status updates to the business server.
+  - source: https://grow-il.readme.io/reference/server-response-1
+- [Server response](pages/reference/server-response-copy-1.md): Updating the server with the transaction's status and details would be performed by an HTTPS API method that you will be providing us when calling to create a p…
+  - source: https://grow-il.readme.io/reference/server-response-copy-1
+- [Server-to-Server Callback](pages/reference/server-to-server-callback.md): Transaction Status Update via Webhook for CreatePaymentProcess
+  - source: https://grow-il.readme.io/reference/server-to-server-callback
+- [Server-to-Server Callback](pages/reference/server-response-copy.md): Transaction Status Update via Webhook for CreatePaymentProcess
+  - source: https://grow-il.readme.io/reference/server-response-copy
+- [Server-to-Server Callback](pages/reference/server-response-copy-copy.md): Transaction Status Update via Webhook for CreatePaymentProcess
+  - source: https://grow-il.readme.io/reference/server-response-copy-copy
+- [Server-to-Server Callback](pages/reference/server-response.md): Transaction Status Update via Webhook for CreatePaymentProcess
+  - source: https://grow-il.readme.io/reference/server-response
+- [Server-to-Server Callback](pages/reference/server-respons-copy.md): Transaction Status Update via Webhook for CreatePaymentLink
+  - source: https://grow-il.readme.io/reference/server-respons-copy
+- [Success URL](pages/reference/success-url.md): After completing the transaction via the transaction form, the user will be redirected to a success page. They will be redirected to the link you have provided …
+  - source: https://grow-il.readme.io/reference/success-url
+- [Supported Payment Method](pages/reference/payments.md): Accepted Payment Methods
+  - source: https://grow-il.readme.io/reference/payments
+- [Testing Environment](pages/reference/testing-environment.md): Grow’s Testing Environment helps businesses validate their payment setup before moving to Production environment. The Sandbox is used to run mock credit card tr…
+  - source: https://grow-il.readme.io/reference/testing-environment
+- [Token](pages/reference/token.md): Grow Tokenization allows businesses to securely save a customer’s card as a token and use it for future credit card charges.
+  - source: https://grow-il.readme.io/reference/token
+- [Transition to Production Environment](pages/reference/live-environment.md): Key Steps
+  - source: https://grow-il.readme.io/reference/live-environment
+
+## API Endpoints
+
+- [Approve Transaction](pages/reference/post_api-light-server-1-0-approvetransaction-2.md): The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-2
+- [Approve Transaction](pages/reference/post_api-light-server-1-0-approvetransaction-4.md): The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-4
+- [Approve Transaction](pages/reference/post_api-light-server-1-0-approvetransaction-1.md): The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-1
+- [Approve Transaction ](pages/reference/post_api-light-server-1-0-approvetransaction-5.md): The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-5
+- [Cancel Bit Transaction](pages/reference/post_api-light-andriod-1-0-cancelbittransaction.md): Each business has its own unique identifiers  (pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-andriod-1-0-cancelbittransaction
+- [Create payment &save token](pages/reference/post_api-light-server-1-0-createpaymentprocess-9.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-9
+- [Create Payment Link](pages/reference/post_api-light-server-1-0-createpaymentlink.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentlink
+- [Create Transaction With Token](pages/reference/post_api-light-server-1-0-createtransactionwithtoken-4.md): Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-4
+- [Delayed Payment J4J5](pages/reference/post_api-light-server-1-0-createpaymentprocess-10.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-10
+- [First Payment -Premium Recurring By Token](pages/reference/post_api-light-server-1-0-createtransactionwithtoken-3.md)
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-3
+- [Further Payment -Premium Recurring By Token](pages/reference/post_api-light-server-1-0-createtransactionwithtoken-1.md)
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-1
+- [Get Payment Link Info](pages/reference/post_api-light-server-1-0-getpaymentlinkinfo-2.md): Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpaymentlinkinfo-2
+- [Get Payment Process Info](pages/reference/post_api-light-server-1-0-getpaymentprocessinfo-1.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpaymentprocessinfo-1
+- [Get Token Only](pages/reference/post_api-light-server-1-0-createpaymentprocess-6.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-6
+- [Get Transaction Info](pages/reference/post_api-light-server-1-0-gettransactioninfo-1.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-gettransactioninfo-1
+- [getTokenTransactionsByExternalIdentifiers](pages/reference/post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1.md): Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1
+- [Premium Recurring Payment Managed by Grow via Token](pages/reference/post_api-light-server-1-0-createtransactionwithtoken.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken
+- [Recurring Payment](pages/reference/post_api-light-server-1-0-createpaymentprocess-3.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-3
+- [Refund Transaction](pages/reference/post_api-light-server-1-0-refundtransaction-1.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-refundtransaction-1
+- [Regular Payment](pages/reference/post_api-light-server-1-0-createpaymentprocess.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess
+- [Regular Payment SDK](pages/reference/post_api-light-server-1-0-createpaymentprocess-1.md): Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-1
+- [SetAccountDetails ](pages/reference/post_api-light-server-1-0-setaccountdetails.md): This API allows you to define default branding settings for the business, such as logo, background color, and button styling. These settings will be automatically applied to all payment links generated by the business.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-setaccountdetails
+- [Settle Suspended Transaction](pages/reference/post_api-light-server-1-0-settlesuspendedtransaction-1.md): This method is used to perform a J4 operation, releasing a held transaction. It requires the transactionId and transactionToken to identify and settle the transaction. Please note that each business has its own unique identifiers — the values shown in this documentation are for demonstration purposes only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-settlesuspendedtransaction-1
+- [Update Payment Link ](pages/reference/post_api-light-server-1-0-updatepaymentlink-1.md): Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-updatepaymentlink-1
+- [Update Recurring Payment](pages/reference/post_api-light-server-1-0-updatedirectdebit.md): This method is for updating an existing direct debit payment .   Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+  - source: https://grow-il.readme.io/reference/post_api-light-server-1-0-updatedirectdebit
+
+## Changelog
+
+- [Changelog](pages/changelog/changelog.md): Release notes and product updates for Grow Payments. Entries:
+  - source: https://grow-il.readme.io/changelog
+- [Infrastructure upgrade](pages/changelog/whats-new.md): 19.07.2023 infrastructure upgrade
+  - source: https://grow-il.readme.io/changelog/whats-new
+- [New invoice features](pages/changelog/new-development-invoice-items-in-api-call.md): 01.11.2022 New development of invoice items in API call
+  - source: https://grow-il.readme.io/changelog/new-development-invoice-items-in-api-call
+- [NFC Service](pages/changelog/nfc-service.md): 01.12.2022 A new development
+  - source: https://grow-il.readme.io/changelog/nfc-service
+- [Unique identifiers for token transactions](pages/changelog/unique-identifiers-for-token-transactions.md): 01.11.2023 A new development.
+  - source: https://grow-il.readme.io/changelog/unique-identifiers-for-token-transactions

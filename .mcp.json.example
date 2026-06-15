@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "grow-payments-docs": {
+      "command": "/ABSOLUTE/PATH/TO/grow-payments-mcp/.venv/bin/python",
+      "args": ["/ABSOLUTE/PATH/TO/grow-payments-mcp/skills/grow-payments-mcp/server.py"],
+      "env": { "GROW_DOCS_DATA": "/ABSOLUTE/PATH/TO/grow-payments-mcp/data" }
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+  "title": "תיקונים 05.06.25 Copy",
+  "version": "1.0.0"
+ },
+ "servers": [
+  {
+   "url": "https://sandbox.meshulam.co.il"
+  }
+ ],
+ "paths": {
+  "/api/light/server/1.0/createTransactionWithToken": {
+   "post": {
+    "tags": [
+     "default"
+    ],
+    "summary": "First Payment -Premium Recurring By Token",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "type": "object",
+        "properties": {
+         "cardToken": {
+          "type": "string",
+          "description": "Required field - credit card token .",
+          "example": "456456776vgfyvhjbsdkc87s8"
+         },
+         "userId": {
+          "type": "string",
+          "description": "Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2.",
+          "example": "4ec1d595ae764243"
+         },
+         "sum": {
+          "type": "integer",
+          "description": "Required field - Total amount for payment Example: 10.99.",
+          "example": "1"
+         },
+         "description": {
+          "type": "string",
+          "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+          "example": "Course"
+         },
+         "paymentType": {
+          "type": "integer",
+          "description": "Required field -\n2-Regular",
+          "example": "2"
+         },
+         "paymentNum": {
+          "type": "integer",
+          "description": "Required field -  Determine payments number. 1-12",
+          "example": "1"
+         },
+         "pageField[fullName]": {
+          "type": "string",
+          "description": "Required field - Full name must consist of at least two names.",
+          "example": "John Smith"
+         },
+         "pageField[phone]": {
+          "type": "string",
+          "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 "
+         },
+         "pageField[email]": {
+          "type": "string",
+          "description": "optional -A valid email address",
+          "example": "test@gmail.com"
+         },
+         "cField1": {
+          "type": "string",
+          "description": "optional -Custom field, you may add up to 9 fields.",
+          "example": "my_key123"
+         },
+         "cField2": {
+          "type": "string",
+          "description": "optional -Custom field, you may add up to 9 fields.",
+          "example": "next456"
+         },
+         "transactionGroupIdentifier": {
+          "type": "integer",
+          "description": "optional - Group identifier for the payment- if you send a value in this field, then a check will be made if there is a succesful payment with this value,  then the request will be rejected .",
+          "example": "253"
+         },
+         "transactionUniqueIdentifier": {
+          "type": "integer",
+          "description": "Required field - Unique identifier for the request - if we send a value in this field, then a check will be made that this is the first time we see this value for the business. If it finds that a request has been sent with this ID, then the current request will be rejected outright regardless of the status of the first request with this ID.",
+          "example": "17663"
+         },
+         "isRecurringDebitPayment": {
+          "type": "integer",
+          "description": "Required field - Creating a premium direct debit",
+          "example": "1"
+         }
+        }
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful response",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  },
+  "/api/light/server/1.0/createPaymentProcess": {
+   "post": {
+    "tags": [
+     "default"
+    ],
+    "summary": "recuring Payment Copy",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "type": "object",
+        "properties": {
+         "pageCode": {
+          "type": "string",
+          "description": "Required field -Unique identifier refers to payment mathod",
+          "example": "6c2a76ed1e85"
+         },
+         "userId": {
+          "type": "string",
+          "description": "Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+          "example": "4ec1d595ae764243"
+         },
+         "chargeType": {
+          "type": "integer",
+          "description": "optional -\n1 - Regular Charge\n2 - Suspended Charge",
+          "example": "1"
+         },
+         "sum": {
+          "type": "integer",
+          "description": "Required field -Total amount for payment Example: 10.99.",
+          "example": "2"
+         },
+         "successUrl": {
+          "type": "string",
+          "description": "Required field - An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true",
+          "example": "https://mysite.co.il/thank.html?test=1"
+         },
+         "cancelUrl": {
+          "type": "string",
+          "description": "Required field - The page users will be redirected to if a payment is cancelled.",
+          "example": "https://mysite.co.il"
+         },
+         "paymentNum": {
+          "type": "integer",
+          "description": "optional- Determine payments number. 1-12",
+          "example": "10"
+         },
+         "maxPaymentNum": {
+          "type": "integer",
+          "description": "optional -the customer can choose number of payments between 2- to the value that you choose in this parameter.\nThe payments number must be minimum 2\nDetermine Restricting the number of payments",
+          "example": "12"
+         },
+         "description": {
+          "type": "string",
+          "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+          "example": "Course"
+         },
+         "pageField[invoiceName]": {
+          "type": "string",
+          "description": "optional - the name for the invoice",
+          "example": "Jon Jon"
+         },
+         "pageField[fullName]": {
+          "type": "string",
+          "description": "Required field - Full name must consist of at least two names.",
+          "example": "John Smith"
+         },
+         "pageField[phone]": {
+          "type": "integer",
+          "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 ",
+          "example": "0509721696"
+         },
+         "pageField[email]": {
+          "type": "string",
+          "description": "optional -A valid email address",
+          "example": "test@gmail.com"
+         },
+         "cField1": {
+          "type": "string",
+          "description": "optional - Custom field, you may add up to 9 fields.",
+          "example": "my_key123"
+         },
+         "cField2": {
+          "type": "string",
+          "description": "optional - Custom field, you may add up to 9 fields.",
+          "example": "next456"
+         },
+         "productData[0][catalogNumber]": {
+          "type": "integer",
+          "description": "optional - catalog number for an item in the Invoice ",
+          "example": "8787989"
+         },
+         "productData[0][quantity]": {
+          "type": "integer",
+          "description": "optional- quantity for an item in the Invoice ",
+          "example": "2"
+         },
+         "productData[0][price]": {
+          "type": "integer",
+          "description": "optional - price for an item in the Invoice ",
+          "example": "1"
+         },
+         "productData[0][itemDescription]": {
+          "type": "string",
+          "description": "optional - item description for an item in the Invoice ",
+          "example": "first item description"
+         },
+         "notifyUrl": {
+          "type": "string",
+          "description": "optional",
+          "example": "Url for server to sever request"
+         },
+         "invoiceNotifyUrl": {
+          "type": "string",
+          "description": "optional - Url for invoice",
+          "example": "https://yourinvoicewebhookurl.com\n"
+         }
+        }
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful response",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  }
+ },
+ "x-readme": {
+  "explorer-enabled": true,
+  "proxy-enabled": true
+ }
+}

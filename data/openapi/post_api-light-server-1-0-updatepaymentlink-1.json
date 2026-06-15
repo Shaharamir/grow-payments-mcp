@@ -1,0 +1,83 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+  "title": "עריכת מחודשת 20.5",
+  "version": "1.0.0"
+ },
+ "servers": [
+  {
+   "url": "https://sandboxapi.grow.link"
+  }
+ ],
+ "components": {
+  "securitySchemes": {
+   "noauthAuth": {
+    "type": "http",
+    "scheme": "noauth"
+   }
+  }
+ },
+ "paths": {
+  "/api/light/server/1.0/UpdatePaymentLink": {
+   "post": {
+    "tags": [
+     "default"
+    ],
+    "summary": "Update Payment Link ",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "type": "object",
+        "properties": {
+         "pageCode": {
+          "type": "string",
+          "description": "Required field - Unique identifier refers for this payment mathod\n",
+          "example": "c34d1f4a546f"
+         },
+         "isActive": {
+          "type": "integer",
+          "description": "Required field -\nLink is active = 1\ninactive =0",
+          "example": "0"
+         },
+         "paymentLinkProcessId": {
+          "type": "string",
+          "description": "Required field - process identifier\n"
+         },
+         "paymentLinkProcessToken": {
+          "type": "string",
+          "description": "Required field - process identifier\n"
+         }
+        }
+       }
+      }
+     }
+    },
+    "security": [
+     {
+      "noauthAuth": []
+     }
+    ],
+    "parameters": [
+     {
+      "name": "x-api-key",
+      "in": "header",
+      "schema": {
+       "type": "string"
+      },
+      "example": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Successful response",
+      "content": {
+       "application/json": {}
+      }
+     }
+    },
+    "description": "Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
+   }
+  }
+ }
+}

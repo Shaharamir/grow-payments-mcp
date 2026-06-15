@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "grow-payments-docs": {
+      "command": "/ABS/PATH/grow-docs-skill/.venv/bin/python",
+      "args": ["/ABS/PATH/grow-docs-skill/skills/grow-payments-mcp/server.py"],
+      "env": { "GROW_DOCS_DATA": "/ABS/PATH/grow-docs-skill/data" }
+    }
+  }
+}

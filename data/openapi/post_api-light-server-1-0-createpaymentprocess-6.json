@@ -1,0 +1,144 @@
+{
+ "openapi": "3.0.0",
+ "info": {
+  "title": "תיקונים 05.06.25 Copy 4",
+  "version": "1.0.0"
+ },
+ "servers": [
+  {
+   "url": "https://sandbox.meshulam.co.il"
+  }
+ ],
+ "paths": {
+  "/api/light/server/1.0/createPaymentProcess": {
+   "post": {
+    "tags": [
+     "default"
+    ],
+    "summary": "Get Token Only Copy",
+    "requestBody": {
+     "content": {
+      "multipart/form-data": {
+       "schema": {
+        "type": "object",
+        "properties": {
+         "pageCode": {
+          "type": "string",
+          "description": "Required field - Unique identifier refers to payment mathod",
+          "example": "0b7a16e03b25"
+         },
+         "userId": {
+          "type": "string",
+          "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+          "example": "4ec1d595ae764243"
+         },
+         "chargeType": {
+          "type": "integer",
+          "description": "Required field - \n\n3 - Create Token",
+          "example": "3"
+         },
+         "sum": {
+          "type": "integer",
+          "description": "Required field -  Total amount must be 1",
+          "example": "1"
+         },
+         "successUrl": {
+          "type": "string",
+          "description": "Required field - An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true",
+          "example": "https://mysite.co.il/thank.html?test=1"
+         },
+         "cancelUrl": {
+          "type": "string",
+          "description": "Required field - The page users will be redirected to if a payment is cancelled.",
+          "example": "https://mysite.co.il"
+         },
+         "paymentNum": {
+          "type": "integer",
+          "description": "Determine payments number. 1-12",
+          "example": "10"
+         },
+         "maxPaymentNum": {
+          "type": "integer",
+          "description": "Restricting the number of payments. the customer can choose between 1- the value that you choose in this parameter.",
+          "example": "12"
+         },
+         "description": {
+          "type": "string",
+          "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+          "example": "Course"
+         },
+         "pageField[fullName]": {
+          "type": "string",
+          "description": "Required field - Full name must consist of at least two names.",
+          "example": "John Smith"
+         },
+         "pageField[phone]": {
+          "type": "string",
+          "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 "
+         },
+         "pageField[email]": {
+          "type": "string",
+          "description": "optional - A valid email address",
+          "example": "test@gmail.com"
+         },
+         "cField1": {
+          "type": "string",
+          "description": "optional - Custom field, you may add up to 9 fields.",
+          "example": "my_key123"
+         },
+         "cField2": {
+          "type": "string",
+          "description": "optional - Custom field, you may add up to 9 fields.",
+          "example": "next456"
+         },
+         "saveCardToken": {
+          "type": "integer",
+          "description": "Required field - \nif set to 1: the token of client credit card will be sent after payment for running future tokenization payments . \nif you set 0 the token of client credit card wil not be saved .",
+          "example": "1"
+         },
+         "productData[0][catalog_number]": {
+          "type": "integer",
+          "description": "optional - catalog number for an item in the Invoice ",
+          "example": "8787989"
+         },
+         "productData[0][quantity]": {
+          "type": "integer",
+          "description": "optional - quantity for an item in the Invoice ",
+          "example": "2"
+         },
+         "productData[0][price]": {
+          "type": "integer",
+          "description": "optional - price for an item in the Invoice ",
+          "example": "1"
+         },
+         "productData[0][item_description]": {
+          "type": "string",
+          "description": "optional - item description for an item in the Invoice ",
+          "example": "first item description"
+         },
+         "notifyUrl": {
+          "type": "string",
+          "description": "optional - Url for server to sever request",
+          "example": "Url for server to sever request"
+         }
+        }
+       }
+      }
+     }
+    },
+    "responses": {
+     "200": {
+      "description": "Successful response",
+      "content": {
+       "application/json": {}
+      }
+     }
+    }
+   }
+  }
+ },
+ "x-readme": {
+  "explorer-enabled": true,
+  "proxy-enabled": true
+ }
+}
