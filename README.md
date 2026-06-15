@@ -1,10 +1,26 @@
+<div align="center">
+
+<img src="media/grow-logo.png" alt="Grow Payments logo" width="84" height="84" />
+
 # Grow Payments — LLM-ready API knowledge base (`llms.txt` + MCP)
+
+🌐 **Bilingual content — English & Hebrew (עברית)** &nbsp;·&nbsp; 🇮🇱 Israeli payment gateway
+
+### ⚠️ UNOFFICIAL — WE ARE NOT GROW / Meshulam. Not affiliated. Not endorsed.
+
+בסיס ידע **לא רשמי** לתיעוד המפתחים של **Grow / משולם** — מותאם ל‑LLM: קורפוס `llms.txt` ושרת MCP.
+התוכן **דו‑לשוני** (אנגלית + עברית). זהו פרויקט עצמאי — **איננו Grow / משולם ואיננו מסונפים אליהם.**
+
+</div>
+
+---
 
 > **Unofficial, LLM-ready knowledge base of the [Grow Payments](https://grow-il.readme.io) (Meshulam / grow.link) developer documentation** — the complete **Light API** reference, OpenAPI schemas, integration guides and changelog, packaged as an [`llms.txt`](https://llmstxt.org) corpus **and** a [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server.
 
 Built for developers and AI agents (Claude, Cursor, etc.) that need accurate, grep-able
 answers about **Grow / Meshulam payment integration** without crawling a JavaScript
-documentation site every time.
+documentation site every time. The original docs — and therefore much of this corpus — are
+written in a **mix of English and Hebrew (עברית)**.
 
 <!-- keywords: grow payments api, meshulam api, grow.link, israel payment gateway,
      light api, createPaymentProcess, payment page, token payment, payment link, refund,
@@ -122,12 +138,24 @@ python3 -m pip install markdownify beautifulsoup4
 
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer — this is NOT official
 
-This is an **unofficial** mirror, **not affiliated with or endorsed by Grow Payments /
-Meshulam**. Documentation content under `data/` is © Grow Payments and reproduced here for
-developer convenience; the repository code is MIT-licensed (see [LICENSE](LICENSE)). Always
-verify money- or security-critical details against the [official docs](https://grow-il.readme.io)
-or Grow support before using in production. Rights holders: open an issue to request changes.
+**We are not Grow Payments / Meshulam.** This is an independent, community-made,
+**unofficial** mirror. It is **not affiliated with, authorized by, sponsored by, or endorsed
+by** Grow Payments, Meshulam, or grow.link in any way.
+
+All product names, trademarks, logos and brands — including the **Grow logo** shown above —
+are the property of their respective owners and are used here purely to identify the
+documentation this project mirrors (nominative use), not to imply any affiliation.
+
+Documentation content under `data/` is © Grow Payments and reproduced here for developer
+convenience; the repository **code** is MIT-licensed (see [LICENSE](LICENSE)). Always verify
+money- or security-critical details against the [official docs](https://grow-il.readme.io)
+or Grow support before using in production. **Rights holders:** open an issue and any
+content will be amended or removed promptly.
+
+> בעברית: זהו פרויקט **לא רשמי** ועצמאי. **איננו Grow / משולם** ואיננו מסונפים אליהם, מורשים
+> או נתמכים על ידם. כל הסימנים המסחריים והלוגו שייכים לבעליהם. לבעלי הזכויות: פתחו issue
+> ונסיר/נתקן כל תוכן לפי בקשה.
 
 _Snapshot: 2026-06-15._
