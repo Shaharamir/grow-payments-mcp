@@ -1,0 +1,1420 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Grow Payments — Light API (unofficial, merged)",
+    "version": "1.0.0",
+    "description": "Unofficial merged OpenAPI spec for the Grow Payments (Meshulam) Light API, assembled from https://grow-il.readme.io. Not affiliated with Grow/Meshulam. Identifiers (userId/pageCode) are per-business and issued by Grow support."
+  },
+  "servers": [
+    {
+      "url": "https://sandbox.meshulam.co.il"
+    },
+    {
+      "url": "http://sandboxapi.grow.link"
+    },
+    {
+      "url": "https://sandboxapi.grow.link"
+    },
+    {
+      "url": "https://growdevcms.inmanage.com"
+    }
+  ],
+  "paths": {
+    "/api/light/andriod/1.0/cancelBitTransaction/": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Cancel Bit Transaction",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to payment mathod",
+                    "example": "9f4c528c7fae"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "processId": {
+                    "type": "integer",
+                    "description": "Required field - process identifier",
+                    "example": "443829"
+                  },
+                  "processToken": {
+                    "type": "string",
+                    "description": "Required field - process identifier",
+                    "example": "5e7343c2e8fad0157701fe8fc657581b"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/CreatePaymentLink": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Create Payment Link",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.\n",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers for this payment mathod\n",
+                    "example": "c34d1f4a546f"
+                  },
+                  "paymentLinkType": {
+                    "type": "integer",
+                    "description": "Required field -The link is closed for one payment",
+                    "example": "2"
+                  },
+                  "isActive": {
+                    "type": "integer",
+                    "description": "Required field -Link is active = 1",
+                    "example": "1"
+                  },
+                  "sendingMode": {
+                    "type": "integer",
+                    "description": "Optional   - 1=SMS,2=Mail",
+                    "example": "1"
+                  },
+                  "messageText": {
+                    "type": "string",
+                    "description": "Message text sent to user.\n\n\nRequired only in case the parameter \"sendingMode\" is send.\n\n\n",
+                    "example": "שלום ישראל כאן ביוטי ספא"
+                  },
+                  "chargeType": {
+                    "type": "integer",
+                    "description": "Optional -\n1 - Regular Charge\n2- j4j5\n",
+                    "example": "1"
+                  },
+                  "successUrl": {
+                    "type": "string",
+                    "description": "Optional  -An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true\n\nDo not include special characters in this field."
+                  },
+                  "customText[thankPageTitle]": {
+                    "type": "string",
+                    "description": "Optional -Thank you page title",
+                    "example": "תודה על רכישתכם "
+                  },
+                  "customText[thankPageDescription]": {
+                    "type": "string",
+                    "description": "Optional -Description to the thank you page",
+                    "example": "נציג יצור קשר בהקדם לקביעת מועד טיפול "
+                  },
+                  "invoiceNotifyUrl": {
+                    "type": "string",
+                    "description": "optional - Url for invoice\n\nDo not include special characters in this field.",
+                    "example": "https://yourinvoicewebhookurl.com\n"
+                  },
+                  "notifyUrl": {
+                    "type": "string",
+                    "description": "Optional - A fixed server address can be set via GROW\n\nDo not include special characters in this field."
+                  },
+                  "title": {
+                    "type": "string",
+                    "description": "Required field -Page title",
+                    "example": "דרישת תשלום - טיפול יופי"
+                  },
+                  "paymentTypes[0][type]": {
+                    "type": "string",
+                    "description": "Required field - payment method - payments",
+                    "example": "payments"
+                  },
+                  "paymentTypes[0][payments][paymentsPaymentNum]": {
+                    "type": "integer",
+                    "description": "Required field  - in case the parameter \npaymentTypes[0][payments][paymentsMaxPaymentNum]\n is not sent.\n Determine payments number. 1-12",
+                    "example": "1"
+                  },
+                  "paymentTypes[0][payments][paymentsMaxPaymentNum]": {
+                    "type": "string",
+                    "description": "Required field  in case the  parameter \npaymentTypes[0][payments][paymentsPaymentNum]\n is not sent.\n-Determine payments number must be minimum 2\nRestricting the number of payments. the customer can choose between 2- 12"
+                  },
+                  "pageFieldSettings[fullName][value]": {
+                    "type": "string",
+                    "description": "Required field -Full name must consist of at least two names.",
+                    "example": "ישראל ישראלי"
+                  },
+                  "pageFieldSettings[phone][value]": {
+                    "type": "string",
+                    "description": "Required field -A valid israeli mobile phone numebr Example: 0500000000"
+                  },
+                  "pageFieldSettings[email][value]": {
+                    "type": "string",
+                    "description": "optional -A valid email address",
+                    "example": "test@test.com"
+                  },
+                  "pageFieldSettings[invoiceName][isRequired]": {
+                    "type": "boolean",
+                    "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
+                  },
+                  "pageFieldSettings[invoiceLicenseNumber][isRequired]": {
+                    "type": "boolean",
+                    "default": "",
+                    "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
+                  },
+                  "products[data][0][catalogNumber]": {
+                    "type": "integer",
+                    "description": "Optional - catalog number of the product",
+                    "example": "1"
+                  },
+                  "products[data][0][name]": {
+                    "type": "string",
+                    "description": "Required field - product name",
+                    "example": "חבילת טיפול יופי "
+                  },
+                  "products[data][0][price]": {
+                    "type": "integer",
+                    "description": "Required field - product amount",
+                    "example": "100"
+                  },
+                  "products[data][0][quantity]": {
+                    "type": "integer",
+                    "description": "Optional - maximum units per product",
+                    "example": "1"
+                  },
+                  "products[data][0][minQuantity]": {
+                    "type": "integer",
+                    "description": "Optional - minimum units per product",
+                    "example": "1"
+                  },
+                  "products[data][0][url]": {
+                    "type": "string",
+                    "description": "Optional -URL image of the product"
+                  },
+                  "products[data][0][vatType]": {
+                    "type": "integer",
+                    "description": "Required field- \nSpecifies the value based on the business VAT status:\n\n\nif the business is subject to regular VAT setting=  1\nif the business is VAT-exempt - VAT setting = 3\n",
+                    "example": "1"
+                  },
+                  "transactionType[0]": {
+                    "type": "integer",
+                    "description": "specify which payment method to display - Credit Card",
+                    "example": "1"
+                  },
+                  "transactionType[1]": {
+                    "type": "integer",
+                    "description": "specify which payment method to display -bit",
+                    "example": "6"
+                  },
+                  "transactionType[2]": {
+                    "type": "integer",
+                    "description": "specify which payment method to display -Apple Pay",
+                    "example": "13"
+                  },
+                  "transactionType[3]": {
+                    "type": "integer",
+                    "description": "specify which payment method to display - Google Pay",
+                    "example": "14"
+                  },
+                  "transactionType[4]": {
+                    "type": "integer",
+                    "description": "specify which payment method to display - bank transfer",
+                    "example": "15"
+                  },
+                  "transactionType[5]": {
+                    "type": "integer",
+                    "default": "5",
+                    "description": "specify which payment method to display - Pay Box"
+                  },
+                  "cField1": {
+                    "type": "string",
+                    "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
+                  },
+                  "cField2": {
+                    "type": "string",
+                    "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
+                  },
+                  "backgroundColor": {
+                    "type": "string",
+                    "description": "Optional - Defines the background color of the payment page.\n\nFormat:\nHEX color code (e.g. #FFFFFF)\n\n",
+                    "example": "#0285Ac"
+                  },
+                  "buttonColor": {
+                    "type": "string",
+                    "description": "Optional - Defines the background color of the payment button.\n\nFormat:\nHEX color code (e.g. #0285AC)\n\n",
+                    "example": "#0285Ac"
+                  },
+                  "paymentButtonText": {
+                    "type": "string",
+                    "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules:\nUp to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface.",
+                    "example": "לתשלום"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
+      }
+    },
+    "/api/light/server/1.0/SetAccountDetails": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Payment Request",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to payment mathod",
+                    "example": "0b7a16e03b25",
+                    "default": "c34d1f4a546f"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field- Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243",
+                    "default": "4ec1d595ae764243"
+                  },
+                  "backgroundColor": {
+                    "type": "string",
+                    "description": "Optional - Defines the background color of the payment page.\n\nFormat: HEX color code (e.g. #FFFFFF)\n\nYou can also configure a default business logo via the business management interface.",
+                    "example": "https://mysite.co.il/thank.html?test=1",
+                    "default": "#0285Ac"
+                  },
+                  "paymentButtonText": {
+                    "type": "string",
+                    "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules: Up to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface.",
+                    "default": "לתשלום"
+                  },
+                  "buttonColor": {
+                    "type": "string",
+                    "description": "Optional - Defines the background color of the payment button.\n\nFormat: HEX color code (e.g. #0285AC)\n\nYou can also configure a default business logo via the business management interface.",
+                    "default": "#0285Ac"
+                  },
+                  "businessLogo": {
+                    "type": "string",
+                    "description": "\nRequired field – Defines the business logo displayed in the payment link.\n\nProvide a valid image URL that will be used as the default logo for the business.\n\nValidations:\n\nMaximum file size: up to 512KB\nMinimum resolution: 128x128 pixels\nSupported formats: square, rectangle, or circular images\n\nThe configured logo will be automatically applied to all payment links created by the business.",
+                    "example": "10",
+                    "default": "https://i.postimg.cc/d3kdfbwV/download-2.jpg"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "operationId": "post_api-light-server-1-0-setaccountdetails",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "x-api-key",
+            "schema": {
+              "type": "string",
+              "default": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
+            }
+          }
+        ]
+      }
+    },
+    "/api/light/server/1.0/UpdatePaymentLink": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Update Payment Link ",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers for this payment mathod\n",
+                    "example": "c34d1f4a546f"
+                  },
+                  "isActive": {
+                    "type": "integer",
+                    "description": "Required field -\nLink is active = 1\ninactive =0",
+                    "example": "0"
+                  },
+                  "paymentLinkProcessId": {
+                    "type": "string",
+                    "description": "Required field - process identifier\n"
+                  },
+                  "paymentLinkProcessToken": {
+                    "type": "string",
+                    "description": "Required field - process identifier\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "noauthAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
+      }
+    },
+    "/api/light/server/1.0/approveTransaction": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Approve Transaction  תיקון",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to payment mathod",
+                    "example": "38v28496fc91"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field - transaction identifier\n",
+                    "example": "10446"
+                  },
+                  "transactionToken": {
+                    "type": "string",
+                    "description": "Required field -transaction identifier\n",
+                    "example": "15b8op468fa16m7d814d6bd326924968"
+                  },
+                  "transactionTypeId": {
+                    "type": "integer",
+                    "description": "Required field - \nCredit card=1\nBit=6\nGoogle Pay=14\nApple Pay=13",
+                    "example": "1"
+                  },
+                  "paymentType": {
+                    "type": "integer",
+                    "description": "Required field - \n1-Direct Debit\n2-Regular\n4-Payments",
+                    "example": "2"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "description": "Required field - Sum from server notification\n\n",
+                    "example": "1"
+                  },
+                  "firstPaymentSum": {
+                    "type": "integer",
+                    "description": "Required field - The first payment to pay in a multiple payments transaction\n\n",
+                    "example": "0"
+                  },
+                  "periodicalPaymentSum": {
+                    "type": "integer",
+                    "description": "Required field - The amount of each payment after the first payment in a multiple payments transaction",
+                    "example": "0"
+                  },
+                  "paymentsNum": {
+                    "type": "integer",
+                    "description": "Required field -Current payment number\n",
+                    "example": "1"
+                  },
+                  "allPaymentsNum": {
+                    "type": "integer",
+                    "description": "Required field -Total number of payments to be made\n",
+                    "example": "1"
+                  },
+                  "paymentDate": {
+                    "type": "string",
+                    "description": "Required field- Payment date\n",
+                    "example": "01/12/20"
+                  },
+                  "asmachta": {
+                    "type": "integer",
+                    "description": "Required field -An approval from the credit card company for the payment\n",
+                    "example": "987654"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Required field- Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+                    "example": "Course"
+                  },
+                  "fullName": {
+                    "type": "string",
+                    "description": "Required field -Full name must consist of at least two names.",
+                    "example": "John Smith"
+                  },
+                  "payerPhone": {
+                    "type": "integer",
+                    "description": "Required field -A valid israeli mobile phone numebr Example: 0500000000 ",
+                    "example": "0501234567"
+                  },
+                  "payerEmail": {
+                    "type": "string",
+                    "description": "Required field -A valid email address",
+                    "example": "test@gmail.com"
+                  },
+                  "cardSuffix": {
+                    "type": "integer",
+                    "description": "Required field -Last 4 credit card digits from server notification",
+                    "example": "1121"
+                  },
+                  "cardType": {
+                    "type": "string",
+                    "description": "Required field -CardType from server notification\n",
+                    "example": "Local"
+                  },
+                  "cardTypeCode": {
+                    "type": "integer",
+                    "description": "Required field -\n1-Local\n2-Foreign\n3-Fuel\n4-Debit\n5-Gift/Rechargeable",
+                    "example": "1"
+                  },
+                  "cardBrand": {
+                    "type": "string",
+                    "description": "Required field -The card's brand from server notification\n\n",
+                    "example": "Visa"
+                  },
+                  "cardBrandCode": {
+                    "type": "integer",
+                    "description": "Required field -\nMastercard=2\nVisa=3\nIsracard=5\nDiners=8\nDiscover=7\n",
+                    "example": "3"
+                  },
+                  "cardExp": {
+                    "type": "integer",
+                    "description": "Required field -Card expiration date from server notification",
+                    "example": "1023"
+                  },
+                  "processId": {
+                    "type": "integer",
+                    "description": "Required field -process identifier\n",
+                    "example": "5632"
+                  },
+                  "processToken": {
+                    "type": "string",
+                    "description": "Required field -process identifier\n",
+                    "example": "p9d34ke5bf293desr87d50395893630u"
+                  },
+                  "paymentLinkProcessId": {
+                    "type": "integer",
+                    "description": "Required field -payment Link Process identifier\n",
+                    "example": "1234"
+                  },
+                  "paymentLinkProcessToken": {
+                    "type": "string",
+                    "description": "Required field -payment Link Process identifier\n",
+                    "example": "ac3f4d3b656d3454545412c5ff33d7030"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/cancelPaymentLink": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "cancelPaymentLink  תיקון",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "paymentLinkProcessId": {
+                    "type": "integer",
+                    "description": "Required field -payment Link Process identifier\n",
+                    "example": "917577"
+                  },
+                  "paymentLinkProcessToken": {
+                    "type": "string",
+                    "description": "Required field -payment Link Process identifier\n",
+                    "example": "5cdc1faa6d7ccb69138f84bc4b57b85a"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/createPaymentLink": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "createPaymentLink תיקון",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers for this payment mathod",
+                    "example": "c34d1f4a546f"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "example": "1"
+                  },
+                  "successUrl": {
+                    "type": "string",
+                    "description": "Required field -An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true",
+                    "example": "https://mysite.co.il/thank.html?test=1"
+                  },
+                  "cancelUrl": {
+                    "type": "string",
+                    "description": "Required field -The page users will be redirected to if a payment is cancelled.\n",
+                    "example": "https://mysite.co.il/thank.html?test=1"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Required field -Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+                    "example": "Course"
+                  },
+                  "notifyUrl": {
+                    "type": "string",
+                    "description": "optional Url for server to sever request"
+                  },
+                  "pageField[fullName]": {
+                    "type": "string",
+                    "description": "Required field - Full name must consist of at least two names.",
+                    "example": "John Smith"
+                  },
+                  "pageField[phone]": {
+                    "type": "integer",
+                    "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000",
+                    "example": "050"
+                  },
+                  "pageField[email]": {
+                    "type": "string",
+                    "description": "optional -A valid email address",
+                    "example": "test@gmail.com"
+                  },
+                  "sendingMode": {
+                    "type": "integer",
+                    "description": "1=SMS,2=Mail",
+                    "example": "1"
+                  },
+                  "messageText": {
+                    "type": "string",
+                    "description": "optional  -Message text sent to user."
+                  },
+                  "cField1": {
+                    "type": "string",
+                    "description": "optional - Custom field, you may add up to 9 fields.\n\n",
+                    "example": "test field 1"
+                  },
+                  "cField2": {
+                    "type": "string",
+                    "description": "optional - Custom field, you may add up to 9 fields.\n\n",
+                    "example": "test field 2"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/createPaymentProcess": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Regular Payment SDK Copy",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to payment mathod",
+                    "example": "c34d1f4a546f"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "chargeType": {
+                    "type": "integer",
+                    "description": "optional - \n1 - Regular Charge\n",
+                    "example": "1"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "description": "Required field -Total amount for payment Example: 10.99.",
+                    "example": "2"
+                  },
+                  "successUrl": {
+                    "type": "string",
+                    "description": "Required field - An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true\n\nDo not include special characters in this field.",
+                    "example": "https://mysite.co.il/thank.html?test=1"
+                  },
+                  "cancelUrl": {
+                    "type": "string",
+                    "description": "Required field - The page users will be redirected to if a payment is cancelled.\n\nDo not include special characters in this field.",
+                    "example": "https://mysite.co.il"
+                  },
+                  "paymentNum": {
+                    "type": "integer",
+                    "description": "optional- Determine payments number. 1-12",
+                    "example": "1"
+                  },
+                  "maxPaymentNum": {
+                    "type": "integer",
+                    "description": "optional -the customer can choose number of payments between 2- to the value that you choose in this parameter.\nThe payments number must be minimum 2\nDetermine Restricting the number of payments",
+                    "example": "12"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.\n\nDo not include special characters in this field.",
+                    "example": "Course"
+                  },
+                  "pageField[invoiceName]": {
+                    "type": "string",
+                    "description": "optional - the name for the invoice",
+                    "example": "Jon Jon"
+                  },
+                  "pageField[invoiceLicenseNumber]": {
+                    "type": "string",
+                    "description": "optional - Invoice License Number for invoice"
+                  },
+                  "pageField[fullName]": {
+                    "type": "string",
+                    "description": "Required field - Full name must consist of at least two names.",
+                    "example": "John Smith"
+                  },
+                  "pageField[phone]": {
+                    "type": "string",
+                    "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 "
+                  },
+                  "pageField[email]": {
+                    "type": "string",
+                    "description": "optional -A valid email address",
+                    "example": "test@gmail.com"
+                  },
+                  "cField1": {
+                    "type": "string",
+                    "description": "optional - Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field.",
+                    "example": "my_key123"
+                  },
+                  "cField2": {
+                    "type": "string",
+                    "description": "optional - Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field.",
+                    "example": "next456"
+                  },
+                  "productData[0][catalogNumber]": {
+                    "type": "integer",
+                    "description": "optional - catalog number for an item in the Invoice ",
+                    "example": "8787989"
+                  },
+                  "productData[0][quantity]": {
+                    "type": "integer",
+                    "description": "optional- quantity for an item in the Invoice ",
+                    "example": "2"
+                  },
+                  "productData[0][price]": {
+                    "type": "integer",
+                    "description": "optional - price for an item in the Invoice ",
+                    "example": "1"
+                  },
+                  "productData[0][itemDescription]": {
+                    "type": "string",
+                    "description": "optional - item description for an item in the Invoice ",
+                    "example": "first item description"
+                  },
+                  "transactionTypes[0]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only -\nspecify which payment method to display - Credit Card",
+                    "example": "1"
+                  },
+                  "transactionTypes[1]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only\nspecify which payment method to display -bit",
+                    "example": "6"
+                  },
+                  "transactionTypes[2]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only\nspecify which payment method to display -Apple Pay",
+                    "example": "13"
+                  },
+                  "transactionTypes[3]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only\nspecify which payment method to display - Google Pay",
+                    "example": "14"
+                  },
+                  "transactionTypes[4]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only\nspecify which payment method to display - bank transfer",
+                    "example": "15",
+                    "default": ""
+                  },
+                  "transactionTypes[5]": {
+                    "type": "integer",
+                    "description": "optional - Valid for payment in SDK wallet only\nspecify which payment method to display - Pay Box",
+                    "default": "5"
+                  },
+                  "notifyUrl": {
+                    "type": "string",
+                    "description": "optional - Url for server to sever request\n\nDo not include special characters in this field.\n",
+                    "example": "Url for server to sever request"
+                  },
+                  "invoiceNotifyUrl": {
+                    "type": "string",
+                    "description": "optional - Url for invoice",
+                    "example": "https://yourinvoicewebhookurl.com\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/createTransactionWithToken": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Further Payment -Premium Recurring By Token תיקון",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cardToken": {
+                    "type": "string",
+                    "description": "Required field - credit card token .",
+                    "example": "456456776vgfyvhjbsdkc87s8"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2.",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "description": "Required field - Total amount for payment Example: 10.99.",
+                    "example": "1"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.",
+                    "example": "Course"
+                  },
+                  "paymentType": {
+                    "type": "integer",
+                    "description": "Required field - 2-Regular",
+                    "example": "2"
+                  },
+                  "paymentNum": {
+                    "type": "integer",
+                    "description": "Determine payments number. 1-12",
+                    "example": "1"
+                  },
+                  "pageField[fullName]": {
+                    "type": "string",
+                    "description": "Required field - Full name must consist of at least two names.",
+                    "example": "John Smith"
+                  },
+                  "pageField[phone]": {
+                    "type": "string",
+                    "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 "
+                  },
+                  "pageField[email]": {
+                    "type": "string",
+                    "description": "A valid email address",
+                    "example": "test@gmail.com"
+                  },
+                  "cField1": {
+                    "type": "string",
+                    "description": "Custom field, you may add up to 9 fields.",
+                    "example": "my_key123"
+                  },
+                  "cField2": {
+                    "type": "string",
+                    "description": "Custom field, you may add up to 9 fields.",
+                    "example": "next456"
+                  },
+                  "companyCommission": {
+                    "type": "number",
+                    "description": "A different commission than the regular commission Meshulam has. Example: 2.5.\n",
+                    "example": "2.5"
+                  },
+                  "recurringDebitId": {
+                    "type": "integer",
+                    "description": "Required field - the given value in the param \"recurringDebitId\" from the respons of the first premiume recurring payment  payment ",
+                    "example": "1234"
+                  },
+                  "transactionGroupIdentifier": {
+                    "type": "integer",
+                    "description": "optional - Group identifier for the payment- if you send a value in this field, then a check will be made if there is a succesful payment with this value,  then the request will be rejected .",
+                    "example": "253"
+                  },
+                  "transactionUniqueIdentifier": {
+                    "type": "integer",
+                    "description": "Required field - Unique identifier for the request - if we send a value in this field, then a check will be made that this is the first time we see this value for the business. If it finds that a request has been sent with this ID, then the current request will be rejected outright regardless of the status of the first request with this ID.",
+                    "example": "17663"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/getPaymentLinkInfo": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "GetPaymentLinkInfo Copy",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "paymentLinkProcessToken": {
+                    "type": "string",
+                    "description": "Required field - process identifier\n\n"
+                  },
+                  "paymentLinkProcessId": {
+                    "type": "string",
+                    "description": "Required field - process identifier\n\n"
+                  },
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers for this payment mathod\n"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "noauthAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/getPaymentProcessInfo": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Get Payment Process Info",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to payment mathod",
+                    "example": "0b7a16e03b25"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "processId": {
+                    "type": "integer",
+                    "description": "Required field - process identifier",
+                    "example": "395235"
+                  },
+                  "processToken": {
+                    "type": "string",
+                    "description": "Required field - process identifier",
+                    "example": "7ebb2d0ce6139d8540b6796ffb514"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/getTokenTransactionsByExternalIdentifiers/": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "getTokenTransactionsByExternalIdentifiers",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "cardToken": {
+                    "type": "string",
+                    "description": "Required field - credit card token .",
+                    "example": "b91ca50b93c7b402a0665c09e533f6ca"
+                  },
+                  "transactionGroupIdentifier": {
+                    "type": "integer",
+                    "description": "optional -Group identifier for the payment- if you send a value in this field, then a check will be made if there is a succesful payment with this value, then the request will be rejected ."
+                  },
+                  "transactionUniqueIdentifier": {
+                    "type": "integer",
+                    "description": "Required field - Unique identifier for the request - if we send a value in this field, then a check will be made that this is the first time we see this value for the business. If it finds that a request has been sent with this ID, then the current request will be rejected outright regardless of the status of the first request with this ID.",
+                    "example": "2002"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        },
+        "description": "Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
+      }
+    },
+    "/api/light/server/1.0/getTransactionInfo": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Get Transaction Info",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to payment mathod",
+                    "example": "0b7a16e03b25"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field - transaction identifier",
+                    "example": "10446"
+                  },
+                  "transactionToken": {
+                    "type": "string",
+                    "description": "Required field - transaction identifier",
+                    "example": "a3ffd8a1e628d21b2b057cde9"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/refundTransaction": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Refund Transaction",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field - transaction identifier",
+                    "example": "1049"
+                  },
+                  "transactionToken": {
+                    "type": "string",
+                    "description": "Required field - transaction identifier",
+                    "example": "38ed1514a67a78083a5a1a3d3e7"
+                  },
+                  "refundSum": {
+                    "type": "integer",
+                    "description": "Required field - total amount to refund",
+                    "example": "1"
+                  },
+                  "stopDirectDebit": {
+                    "type": "integer",
+                    "description": "optional - in case this is a direct debit transaction you need to send the value of 1 to stop the upcoming payments",
+                    "example": "1"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "apiKey": {
+                    "type": "string",
+                    "description": "Required only for companies that are working with multiple businesses. company's code",
+                    "example": "57ce86548429"
+                  },
+                  "pageCode": {
+                    "type": "string",
+                    "description": "optional - Unique identifier refers to payment mathod\n\n",
+                    "example": "0b7a16e03b25"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/settleSuspendedTransaction": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Settle Suspended Transaction Copy",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to payment mathod",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field -transaction identifier\n",
+                    "example": "10446"
+                  },
+                  "transactionToken": {
+                    "type": "string",
+                    "description": "Required field -transaction identifier\n",
+                    "example": "a3ffd8a1e628d21b2b057cde9"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "description": "Required field -Total amount for payment Example: 10.99.",
+                    "example": "1"
+                  },
+                  "productData[0][catalogNumber]": {
+                    "type": "integer",
+                    "description": "optional -catalog number for an item in the Invoice ",
+                    "example": "8787989"
+                  },
+                  "productData[0][quantity]": {
+                    "type": "integer",
+                    "description": "optional -quantity for an item in the Invoice ",
+                    "example": "2"
+                  },
+                  "productData[0][price]": {
+                    "type": "integer",
+                    "description": "optional -price for an item in the Invoice ",
+                    "example": "1"
+                  },
+                  "productData[0][itemDescription]": {
+                    "type": "string",
+                    "description": "optional -item description for an item in the Invoice ",
+                    "example": "first item description"
+                  },
+                  "pageField[invoiceName]": {
+                    "type": "string",
+                    "description": "optional - the name for the invoice\n\n"
+                  },
+                  "pageField[invoiceLicenseNumber]": {
+                    "type": "string",
+                    "description": "optional - Invoice License Number for invoice"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/light/server/1.0/updateDirectDebit": {
+      "post": {
+        "tags": [
+          "default"
+        ],
+        "summary": "Update Recurring Payment",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions.",
+                    "example": "2b2e9b70fc98dc6f"
+                  },
+                  "transactionToken": {
+                    "type": "string",
+                    "description": "Required field -transaction identifier\n",
+                    "example": "94d4a5095f56521c5adbb0c906efbeb2"
+                  },
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field -transaction identifier",
+                    "example": "32627825"
+                  },
+                  "asmachta": {
+                    "type": "integer",
+                    "description": "Required field - An approval from the credit card company for the payment",
+                    "example": "295616074"
+                  },
+                  "fullName": {
+                    "type": "string",
+                    "description": "optional-Full name must consist of at least two names.",
+                    "example": "Israel israeli"
+                  },
+                  "phone": {
+                    "type": "string",
+                    "description": "optional -A valid israeli mobile phone numebr Example: 0500000000 "
+                  },
+                  "chargeDay": {
+                    "type": "integer",
+                    "description": "optional - 1-31",
+                    "example": "10"
+                  },
+                  "sum": {
+                    "type": "integer",
+                    "description": "optional - Total amount for payment Example: 10.99.",
+                    "example": "12"
+                  },
+                  "paymentNum": {
+                    "type": "integer",
+                    "description": "optional - 1-48",
+                    "example": "10"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "optional -A valid email address",
+                    "example": "changeEmail@gmail.com"
+                  },
+                  "changeStatus": {
+                    "type": "integer",
+                    "description": "optional -\n1= active 2= canceled",
+                    "example": "1"
+                  },
+                  "updateCard": {
+                    "type": "integer",
+                    "description": "optional -\n0= no update 1=update",
+                    "example": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "noauthAuth": {
+        "type": "http",
+        "scheme": "noauth"
+      }
+    }
+  }
+}

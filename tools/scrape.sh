@@ -71,6 +71,9 @@ json.dump(man, open('data/assets/manifest.json','w',encoding='utf-8'),ensure_asc
 print("   ",len([f for f in os.listdir('data/assets') if f!='manifest.json']),"images")
 PY
 
-echo "==> 5/5 build llms.txt / llms-full.txt / index.json"
+echo "==> 5/6 build llms.txt / llms-full.txt / index.json"
 python3 "$TOOLS/build_corpus.py"
+
+echo "==> 6/6 merge unified OpenAPI + Postman collection"
+python3 "$TOOLS/build_api.py"
 echo "DONE."

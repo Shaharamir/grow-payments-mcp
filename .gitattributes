@@ -1,0 +1,8 @@
+# Treat the scraped corpus as documentation/data, not source — keeps GitHub's
+# language stats focused on the actual code (Python).
+data/**            linguist-documentation
+data/openapi/**    linguist-generated
+data/postman/**    linguist-generated
+*.json             linguist-detectable=false
+# Ensure Hebrew Markdown is treated as text with LF endings.
+*.md               text eol=lf

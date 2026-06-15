@@ -1,0 +1,44 @@
+name: Refresh docs corpus
+
+# Re-scrapes https://grow-il.readme.io weekly and commits any changes so the
+# llms.txt corpus, OpenAPI and Postman collection never go stale.
+on:
+  schedule:
+    - cron: "17 4 * * 1"      # every Monday 04:17 UTC
+  workflow_dispatch: {}        # allow manual runs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install scraper deps
+        run: python -m pip install --quiet markdownify beautifulsoup4
+
+      - name: Re-scrape + rebuild corpus
+        run: ./tools/scrape.sh
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git add data/
+            git commit -m "chore: weekly docs refresh ($(date -u +%Y-%m-%d))"
+            git push
+            echo "Pushed updated corpus."
+          else
+            echo "No changes — corpus already up to date."
+          fi

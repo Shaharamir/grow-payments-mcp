@@ -1,10 +1,19 @@
 <div align="center">
 
-<img src="media/grow-logo.png" alt="Grow Payments logo" width="84" height="84" />
+<img src="media/grow-logo.svg" alt="Grow / Meshulam logo" width="240" />
 
 # Grow Payments — LLM-ready API knowledge base (`llms.txt` + MCP)
 
+**Grow** (formerly & still widely known as **Meshulam**) · **גרואו** · **משולם**
+
 🌐 **Bilingual content — English & Hebrew (עברית)** &nbsp;·&nbsp; 🇮🇱 Israeli payment gateway
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![Docs: 100 pages](https://img.shields.io/badge/docs-100%20pages-success)
+![Light API: 16 endpoints](https://img.shields.io/badge/Light%20API-16%20endpoints-blueviolet)
+![MCP server](https://img.shields.io/badge/MCP-server-orange)
+![llms.txt](https://img.shields.io/badge/llms.txt-ready-brightgreen)
+![Last commit](https://img.shields.io/github/last-commit/Shaharamir/grow-payments-mcp)
 
 ### ⚠️ UNOFFICIAL — WE ARE NOT GROW / Meshulam. Not affiliated. Not endorsed.
 
@@ -22,9 +31,15 @@ answers about **Grow / Meshulam payment integration** without crawling a JavaScr
 documentation site every time. The original docs — and therefore much of this corpus — are
 written in a **mix of English and Hebrew (עברית)**.
 
-<!-- keywords: grow payments api, meshulam api, grow.link, israel payment gateway,
-     light api, createPaymentProcess, payment page, token payment, payment link, refund,
-     direct debit, webhooks, llms.txt, mcp, model context protocol, openapi, claude, llm -->
+<!-- keywords / brand names for search:
+     grow payments, grow, גרואו, meshulam, משולם, "meshulam grow", meshulam api, grow.link,
+     grow-il, israel payment gateway, סליקת אשראי, light api, createPaymentProcess,
+     payment page, token payment, payment link, refund, direct debit, webhooks,
+     llms.txt, mcp, model context protocol, openapi, postman, claude, llm, ai agent -->
+
+> **Naming:** *Grow* and *Meshulam* (Hebrew **גרואו** / **משולם**) are the same payment
+> provider — Meshulam rebranded to Grow. People search both; this repo covers the Grow /
+> Meshulam **Light API**.
 
 ---
 
@@ -37,6 +52,7 @@ scripts to consume, and mixed English/Hebrew. This repo turns the **entire site*
 - 📚 **`data/llms-full.txt`** — the whole documentation set in one ~310 KB file.
 - 🗂️ **`data/pages/**.md`** — one Markdown file per page (guides + API reference).
 - 🔌 **`data/openapi/*.json`** — OpenAPI 3.0 schema for each API endpoint.
+- 🧩 **`data/openapi/_grow-payments-light-api.openapi.json`** + **Postman collection** — the **whole Light API (16 endpoints)** merged into one importable spec.
 - 🤖 **`skills/grow-payments-mcp`** — an MCP server exposing it all as search tools.
 
 ## What's inside
@@ -61,7 +77,8 @@ the Apple / Bit **SDKs**.
 │   ├── llms-full.txt           #   everything, one file
 │   ├── index.json              #   machine-readable index
 │   ├── pages/{home,docs,reference,changelog}/*.md
-│   └── openapi/*.json          #   per-endpoint OpenAPI 3.0
+│   ├── openapi/*.json          #   per-endpoint OpenAPI 3.0  (+ _…light-api.openapi.json merged)
+│   └── postman/*.json          #   Postman collection for the whole Light API
 ├── skills/
 │   ├── grow-payments-docs/     #   llms.txt skill  (read files directly)
 │   └── grow-payments-mcp/      #   MCP server      (search via tools)
@@ -110,7 +127,14 @@ Register with your MCP client (copy [`.mcp.json.example`](.mcp.json.example) →
 ```
 
 **Tools:** `search_docs`, `get_doc`, `list_docs`, `list_endpoints`, `get_openapi`.
-**Resources:** `grow://llms.txt`, `grow://llms-full.txt`.
+**Resources:** `grow://llms.txt`, `grow://llms-full.txt`, `grow://openapi.json`.
+
+### Option C — import the whole API
+
+One merged OpenAPI 3.0 spec + a Postman collection for all 16 Light API endpoints:
+
+- **OpenAPI:** [`data/openapi/_grow-payments-light-api.openapi.json`](data/openapi/_grow-payments-light-api.openapi.json) — import into Swagger UI, Insomnia, or any codegen.
+- **Postman:** [`data/postman/grow-payments-light-api.postman_collection.json`](data/postman/grow-payments-light-api.postman_collection.json) — *Import → File* in Postman.
 
 > Example prompt once connected: *"Using grow-payments-docs, show the request fields for
 > `createPaymentProcess` and the refund endpoint's OpenAPI schema."*

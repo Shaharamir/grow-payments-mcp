@@ -80,5 +80,11 @@ def llms_full_txt() -> str:
     return corpus.llms_full_txt()
 
 
+@mcp.resource("grow://openapi.json")
+def openapi_json() -> str:
+    """The whole Grow Light API merged into one OpenAPI 3.0 document."""
+    return corpus.openapi_merged()
+
+
 if __name__ == "__main__":
     mcp.run()

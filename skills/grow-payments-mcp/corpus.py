@@ -164,3 +164,9 @@ def llms_txt() -> str:
 
 def llms_full_txt() -> str:
     return (DATA / "llms-full.txt").read_text(encoding="utf-8")
+
+
+def openapi_merged() -> str:
+    """The whole Light API merged into one OpenAPI 3.0 document."""
+    p = DATA / "openapi" / "_grow-payments-light-api.openapi.json"
+    return p.read_text(encoding="utf-8") if p.exists() else "{}"
