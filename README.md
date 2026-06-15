@@ -62,7 +62,7 @@ Point your LLM / agent / script at [`data/llms.txt`](data/llms.txt) and open the
 links to. For example:
 
 ```bash
-git clone https://github.com/OWNER/grow-payments-mcp.git
+git clone https://github.com/Shaharamir/grow-payments-mcp.git
 cd grow-payments-mcp
 grep -rIl -i "refund" data/pages        # find pages
 cat data/pages/reference/post_api-light-server-1-0-refundtransaction-1.md
