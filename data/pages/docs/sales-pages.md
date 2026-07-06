@@ -1,9 +1,9 @@
 ---
 title: "Static Payment Page"
-slug: עמודי-מכירה
+slug: sales-pages
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%A2%D7%9E%D7%95%D7%93%D7%99-%D7%9E%D7%9B%D7%99%D7%A8%D7%94
+source_url: https://grow-il.readme.io/docs/sales-pages
 ---
 
 # Static Payment Page

@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-6
+slug: regular-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-6
+source_url: https://grow-il.readme.io/reference/regular-payment-overview
 ---
 
 # Overview
@@ -23,6 +23,7 @@ The **userId and pageCode** parameters are provided by Grow during the onboardin
 The flow:
 
   
+
 ![](https://files.readme.io/a7a0c5cbfc534415368373aa2f3e06fd47635c21483f6d1c3c5c2019d345b1ba-_.png)
 
 # Important Notes

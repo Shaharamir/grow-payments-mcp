@@ -12,8 +12,8 @@ source_url: https://grow-il.readme.io/reference/payments
 
 Explore Grow payment methods and how each one fits into real-world checkout and payment flows.
 
-Grow brings together leading payment methods in one place, making it easier to offer customers the payment experience they prefer. Businesses can choose the right payment option for each scenario, from credit card payments to Apple Pay, Google Pay, Bit, PayBox, and bank transfers.
-Each method has its own capabilities, such as one-time payments, recurring charges, tokenization, refunds, direct debit, and J5/J4 support.
+Grow brings together leading payment methods in one place, making it easier to offer customers the payment experience they prefer. Businesses can choose the right payment option for each scenario, from credit card payments to Apple Pay, Google Pay, Bit, PayBox, and bank transfers.  
+Each method has its own capabilities, such as one-time payments, recurring charges, tokenization, refunds, direct debit, and J5/J4 support.  
 By comparing these options in one place, businesses can plan smoother payment experiences and match each payment flow to their needs.
 
 # Payment options

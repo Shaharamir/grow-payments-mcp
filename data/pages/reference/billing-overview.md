@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-9
+slug: billing-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-9
+source_url: https://grow-il.readme.io/reference/billing-overview
 ---
 
 # Overview

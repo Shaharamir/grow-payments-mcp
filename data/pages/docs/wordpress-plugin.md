@@ -1,9 +1,9 @@
 ---
 title: "Plugin WordPress"
-slug: תוסף-wp
+slug: wordpress-plugin
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%AA%D7%95%D7%A1%D7%A3-wp
+source_url: https://grow-il.readme.io/docs/wordpress-plugin
 ---
 
 # Plugin WordPress

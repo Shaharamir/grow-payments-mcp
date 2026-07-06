@@ -38,12 +38,6 @@
               "description": "Required field - Unique identifier refers to payment mathod"
             },
             {
-              "key": "apiKey",
-              "value": "57ce86548429",
-              "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
-            },
-            {
               "key": "processId",
               "value": "443829",
               "type": "text",

@@ -1,9 +1,9 @@
 ---
 title: "IP Addresses"
-slug: ip-adress
+slug: ip-address
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/ip-adress
+source_url: https://grow-il.readme.io/reference/ip-address
 ---
 
 # IP Addresses

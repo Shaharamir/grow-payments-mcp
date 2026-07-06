@@ -1,9 +1,9 @@
 ---
 title: "POS Device"
-slug: מכשיריpos
+slug: pos-devices
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99pos
+source_url: https://grow-il.readme.io/docs/pos-devices
 ---
 
 # POS Device

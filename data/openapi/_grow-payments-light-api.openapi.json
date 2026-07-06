@@ -37,11 +37,6 @@
                     "description": "Required field - Unique identifier refers to payment mathod",
                     "example": "9f4c528c7fae"
                   },
-                  "apiKey": {
-                    "type": "string",
-                    "description": "Required only for companies that are working with multiple businesses. company's code",
-                    "example": "57ce86548429"
-                  },
                   "processId": {
                     "type": "integer",
                     "description": "Required field - process identifier",
@@ -64,7 +59,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers  (pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/CreatePaymentLink": {

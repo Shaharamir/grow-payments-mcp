@@ -12,7 +12,7 @@ Grow Tokenization allows businesses to securely save a customer’s card as a to
 
 It is needed when payments repeat over time, amounts may change, or the customer should not re-enter payment details for every transaction.
 
-The customer pays once and the payment method is securely saved as a token for future use.
+The customer pays once and the payment method is securely saved as a token for future use.  
 After that, one-time or recurring charges can be made with the token, without asking the customer to enter card details again.
 
 ### Charging with Tokens

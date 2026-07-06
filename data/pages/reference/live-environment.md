@@ -12,13 +12,13 @@ source_url: https://grow-il.readme.io/reference/live-environment
 
 This page explains how to move from Sandbox testing to Grow’s live Production environment.
 
-It is needed before real payment processing can begin, because Grow must review the setup and issue production identifiers.
-The transition covers live URLs, server updates, ApproveTransaction handling, token saving consent, webhooks, Apple Pay, and commercial approval.
+It is needed before real payment processing can begin, because Grow must review the setup and issue production identifiers.  
+The transition covers live URLs, server updates, ApproveTransaction handling, token saving consent, webhooks, Apple Pay, and commercial approval.  
 Following these requirements helps reduce payment errors, protect customer data, and ensure the business is ready to accept real transactions through Grow.
 
 To transition from the Sandbox environment to the Production environment, please contact us and request a production review.
 
-**Contact Information:**
+**Contact Information:**  
 Email: [support@grow.business](mailto:support@grow.business)
 
 Before production identifiers can be issued, Grow will review the integration and verify that the required API calls, server updates, and implementation steps were completed correctly.

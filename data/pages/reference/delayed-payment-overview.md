@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-2
+slug: delayed-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-2
+source_url: https://grow-il.readme.io/reference/delayed-payment-overview
 ---
 
 # Overview

@@ -10,7 +10,7 @@ source_url: https://grow-il.readme.io/reference/bit-redirect
 
 After a successful Bit Redirect payment, the thank-you page is displayed to complete the customer flow.
 
-It is needed because the display may change when the payment starts in a mobile browser and continues in the Bit app.
+It is needed because the display may change when the payment starts in a mobile browser and continues in the Bit app.  
 The customer starts in the browser, moves to Bit, and completes the payment in the app.
 
 After approval, Grow opens the thank-you page based on the selected option: Original Page, Original Browser, or New Tab.

@@ -14,7 +14,7 @@ This verification must be completed on the domain where the payment page or ifra
 
 ### Step 1: Embed the Apple Pay SDK:
 
-Add the following script to the page where the payment process begins.
+Add the following script to the page where the payment process begins.  
 It is recommended to place it inside the head tag of the page.:
 
 Text

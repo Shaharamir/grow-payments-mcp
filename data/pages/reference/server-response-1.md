@@ -8,8 +8,8 @@ source_url: https://grow-il.readme.io/reference/server-response-1
 
 # Server Response
 
-After a transaction starts, Grow sends payment status updates to the business server.
-It helps verify and record transaction details, payer information, card data, and custom fields
+After a transaction starts, Grow sends payment status updates to the business server.  
+It helps verify and record transaction details, payer information, card data, and custom fields  
 Grow sends an HTTPS POST update to the notifyUrl provided in CreatePaymentProcess.
 
 After receiving the update, the business confirms receipt and calls ApproveTransaction.

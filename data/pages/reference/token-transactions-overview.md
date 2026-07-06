@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-4
+slug: token-transactions-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-4
+source_url: https://grow-il.readme.io/reference/token-transactions-overview
 ---
 
 # Overview

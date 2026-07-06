@@ -14,7 +14,7 @@ Payment Link enables a business to create a flexible payment page for different 
 
 It can be used as a standalone checkout page, an embedded payment component on a website, or an offline payment request sent to a customer.
 
-The page supports rich customization, including logo, background color, button color, button text, and visual assets.
+The page supports rich customization, including logo, background color, button color, button text, and visual assets.  
 Beyond design, it also supports dynamic products and custom fields, making each payment request fit the business need
 
 **Effortless Dynamic Payment Requests with Grow**  

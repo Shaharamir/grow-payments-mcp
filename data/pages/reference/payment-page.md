@@ -40,6 +40,7 @@ Grow Payment Pages provide multiple page codes and setup options, making it easi
 ● Click here ([Link here](https://grow-il.readme.io/reference/implement-code-on-client-side))for a guide on implementing the SDK.
 
 ![](https://files.readme.io/9e2b7a79d6c41b83b641b7ff8a42b15d40a0819684de84f6d78d358e6b8c4746-Growin_new1.png)
+
   
 
 # Generic Payment Page
@@ -68,6 +69,7 @@ This is what the page looks like (default color, choosing full name & phone fiel
 *This is the look of the regular page as a small screen*:
 
 ![](https://files.readme.io/72e2cc9-_.png)
+
   
 
 # Google Pay Page
@@ -112,6 +114,7 @@ Designed for a straightforward user experience:
 ● Offers a quick and convenient way to process Bit transactions.
 
 ![](https://files.readme.io/2b973fd-_.png)
+
   
 
 # Send Transaction to Terminal

@@ -18,9 +18,9 @@ This ensures that every request is processed securely, using the correct credent
 
 Grow supports two main authentication flows:
 
-1. **Direct business payments**
+1. **Direct business payments**  
    Used by a business that processes payments for itself.
-2. **Multiple business payments**
+2. **Multiple business payments**  
    Used by companies or platforms that manage payments on behalf of multiple businesses.
 
 ## Direct Business Payments

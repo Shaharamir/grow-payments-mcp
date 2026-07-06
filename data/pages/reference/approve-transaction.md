@@ -1,9 +1,9 @@
 ---
 title: "Approve Transaction"
-slug: approve-transation
+slug: approve-transaction
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/approve-transation
+source_url: https://grow-il.readme.io/reference/approve-transaction
 ---
 
 # Approve Transaction

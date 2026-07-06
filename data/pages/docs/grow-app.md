@@ -1,9 +1,9 @@
 ---
 title: "Grow App"
-slug: אפליצקיית-grow
+slug: grow-app
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%90%D7%A4%D7%9C%D7%99%D7%A6%D7%A7%D7%99%D7%99%D7%AA-grow
+source_url: https://grow-il.readme.io/docs/grow-app
 ---
 
 # Grow App

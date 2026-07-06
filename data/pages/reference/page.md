@@ -8,10 +8,10 @@ source_url: https://grow-il.readme.io/reference/page
 
 # Growin SDK
 
-Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.
-It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.
-The form adapts to the site design, helping create a smoother payment experience and improve conversion.
-After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.
+Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.  
+It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.  
+The form adapts to the site design, helping create a smoother payment experience and improve conversion.  
+After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.  
 Real-time events keep the payment status clear from start to success, failure, cancellation, or form changes.
 
 > 📘
@@ -70,7 +70,7 @@ Real-time events keep the payment status clear from start to success, failure, c
 | --- | --- | --- | --- | --- | --- |
 | environment | String | required | “PRODUCTION”, “DEV” |  |  |
 | version | String | required | Current stable version is 1 | Target the preferred base version |  |
-| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).  onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.  onError: Gets triggered on payment error, receives a message describing what caused the error.  onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.  onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.  onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }  onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }  onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }  {  "status": 0,  "message": "התשלום סורב"  }  onWalletChange:  open  Close  onPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }  onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
+| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.onError: Gets triggered on payment error, receives a message describing what caused the error.onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }{  "status": 0,  "message": "התשלום סורב"  }onWalletChange:  open  CloseonPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
 
 onSuccess events:
 

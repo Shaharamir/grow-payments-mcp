@@ -147,10 +147,10 @@ At Grow, we strive to provide comprehensive and adaptable payment solutions, ens
 
 ---
 title: "Grow App"
-slug: אפליצקיית-grow
+slug: grow-app
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%90%D7%A4%D7%9C%D7%99%D7%A6%D7%A7%D7%99%D7%99%D7%AA-grow
+source_url: https://grow-il.readme.io/docs/grow-app
 ---
 
 # Grow App
@@ -640,10 +640,10 @@ Embrace the future of contactless payments with Grow's NFC feature—where innov
 
 ---
 title: "Plugin WordPress"
-slug: תוסף-wp
+slug: wordpress-plugin
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%AA%D7%95%D7%A1%D7%A3-wp
+source_url: https://grow-il.readme.io/docs/wordpress-plugin
 ---
 
 # Plugin WordPress
@@ -722,10 +722,10 @@ For a link to a self-installation guide of the plugin and settings for payments,
 
 ---
 title: "POS Device"
-slug: מכשיריpos
+slug: pos-devices
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%9E%D7%9B%D7%A9%D7%99%D7%A8%D7%99pos
+source_url: https://grow-il.readme.io/docs/pos-devices
 ---
 
 # POS Device
@@ -766,10 +766,10 @@ Revolutionize Your Checkout Experience with the 3Q Mobile Terminal.
 
 ---
 title: "Static Payment Page"
-slug: עמודי-מכירה
+slug: sales-pages
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/%D7%A2%D7%9E%D7%95%D7%93%D7%99-%D7%9E%D7%9B%D7%99%D7%A8%D7%94
+source_url: https://grow-il.readme.io/docs/sales-pages
 ---
 
 # Static Payment Page
@@ -1226,7 +1226,7 @@ This verification must be completed on the domain where the payment page or ifra
 
 ### Step 1: Embed the Apple Pay SDK:
 
-Add the following script to the page where the payment process begins.
+Add the following script to the page where the payment process begins.  
 It is recommended to place it inside the head tag of the page.:
 
 Text
@@ -1270,10 +1270,10 @@ If you want to enable Apple Pay in the development environment as well, repeat t
 
 ---
 title: "Approve Transaction"
-slug: approve-transation
+slug: approve-transaction
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/approve-transation
+source_url: https://grow-il.readme.io/reference/approve-transaction
 ---
 
 # Approve Transaction
@@ -1321,9 +1321,9 @@ This ensures that every request is processed securely, using the correct credent
 
 Grow supports two main authentication flows:
 
-1. **Direct business payments**
+1. **Direct business payments**  
    Used by a business that processes payments for itself.
-2. **Multiple business payments**
+2. **Multiple business payments**  
    Used by companies or platforms that manage payments on behalf of multiple businesses.
 
 ## Direct Business Payments
@@ -1406,7 +1406,7 @@ source_url: https://grow-il.readme.io/reference/billing
 
 Grow Billing is a recurring payment solution for managing automatic monthly charges and long-term customer payment plans.
 
-It is needed for subscriptions, memberships, retainers, and any service that charges customers on a regular schedule.
+It is needed for subscriptions, memberships, retainers, and any service that charges customers on a regular schedule.  
 Unlike one-time payment flows, this billing setup supports long-term payment plans, flexible updates, and automatic monthly charging without manual handling.
 
 Businesses can change amounts, payment dates, customer details, card details, or cancel a recurring charge when needed.
@@ -1445,7 +1445,7 @@ source_url: https://grow-il.readme.io/reference/bit-redirect
 
 After a successful Bit Redirect payment, the thank-you page is displayed to complete the customer flow.
 
-It is needed because the display may change when the payment starts in a mobile browser and continues in the Bit app.
+It is needed because the display may change when the payment starts in a mobile browser and continues in the Bit app.  
 The customer starts in the browser, moves to Bit, and completes the payment in the app.
 
 After approval, Grow opens the thank-you page based on the selected option: Original Page, Original Browser, or New Tab.
@@ -1551,10 +1551,10 @@ If the thank-you page does not need to retrieve data from the original tab or re
 
 ---
 title: "Bit SDK Android"
-slug: sdk-bit-android-copy
+slug: sdk-bit-android
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-android-copy
+source_url: https://grow-il.readme.io/reference/sdk-bit-android
 ---
 
 # Bit SDK Android
@@ -1567,8 +1567,8 @@ source_url: https://grow-il.readme.io/reference/sdk-bit-android-copy
 
 2. Add maven to gradle - allprojects - repositories
 
-**maven**
-`{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
+**maven**  
+`\{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
 
 ![](https://files.readme.io/6d62257-image.png)
 
@@ -1582,7 +1582,7 @@ implementation 'com.github.inManage:MeshulamSDK-Android:1.0.2'
 
 **In case your project uses volley and you're getting a duplicate class error, use implementation below:**
 
-implementation (`com.github.inManage:MeshulamSDK-Android:1.0.2`,
+implementation (`com.github.inManage:MeshulamSDK-Android:1.0.2`,  
 `{ exclude group: "com.android.volley"\ }`)
 
 4. Sync project
@@ -1928,10 +1928,10 @@ source_url: https://grow-il.readme.io/reference/page
 
 # Growin SDK
 
-Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.
-It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.
-The form adapts to the site design, helping create a smoother payment experience and improve conversion.
-After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.
+Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.  
+It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.  
+The form adapts to the site design, helping create a smoother payment experience and improve conversion.  
+After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.  
 Real-time events keep the payment status clear from start to success, failure, cancellation, or form changes.
 
 > 📘
@@ -1990,7 +1990,7 @@ Real-time events keep the payment status clear from start to success, failure, c
 | --- | --- | --- | --- | --- | --- |
 | environment | String | required | “PRODUCTION”, “DEV” |  |  |
 | version | String | required | Current stable version is 1 | Target the preferred base version |  |
-| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).  onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.  onError: Gets triggered on payment error, receives a message describing what caused the error.  onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.  onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.  onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }  onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }  onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }  {  "status": 0,  "message": "התשלום סורב"  }  onWalletChange:  open  Close  onPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }  onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
+| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.onError: Gets triggered on payment error, receives a message describing what caused the error.onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }{  "status": 0,  "message": "התשלום סורב"  }onWalletChange:  open  CloseonPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
 
 onSuccess events:
 
@@ -2105,6 +2105,7 @@ Ensure that all URLs and cField parameters contain valid, encoded characters.
 ## Process flow:
 
   
+
 ![](https://files.readme.io/3bc2607cf4a74218307f1563f29c9c0cf7d30147bee5ebfe1dbbe6d633fef316-payment_process.png)
 
 
@@ -2126,12 +2127,12 @@ source_url: https://grow-il.readme.io/reference/iframe-vs-redirect
 
 # Iframe vs. Redirect
 
-Businesses can choose between Iframe and Redirect when setting up the Grow payment flow.
+Businesses can choose between Iframe and Redirect when setting up the Grow payment flow.  
 With Iframe, the payment page stays embedded inside the business website, creating a smoother and more continuous checkout experience.
 
 With Redirect, the customer moves to a separate payment page, which can be simpler to manage and clearer for external payment actions.
 
-The comparison is needed because each option affects the customer journey, trust, payment experience, and checkout flow differently.
+The comparison is needed because each option affects the customer journey, trust, payment experience, and checkout flow differently.  
 For businesses using Apple Pay in an Iframe, domain verification is an important requirement for secure payment integration.
 
 ### The differences between Iframe and Redirect:
@@ -2400,10 +2401,10 @@ For a detailed example of the API request, please see the API Request Example [S
 
 ---
 title: "IP Addresses"
-slug: ip-adress
+slug: ip-address
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/ip-adress
+source_url: https://grow-il.readme.io/reference/ip-address
 ---
 
 # IP Addresses
@@ -2539,10 +2540,10 @@ NOTE:
 
 ---
 title: "Overview"
-slug: overview-2
+slug: delayed-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-2
+source_url: https://grow-il.readme.io/reference/delayed-payment-overview
 ---
 
 # Overview
@@ -2605,10 +2606,10 @@ Products with variable weight (vegetables or meat), or products that the total c
 
 ---
 title: "Overview"
-slug: overview-5
+slug: transaction-inquiry-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-5
+source_url: https://grow-il.readme.io/reference/transaction-inquiry-overview
 ---
 
 # Overview
@@ -2617,7 +2618,7 @@ Transaction inquiries give a reliable way to check the status of a specific paym
 
 It is relevant when there is an issue in the business system, website, or platform, or for any other reason that requires checking the payment status directly.
 
-The inquiry flow helps confirm whether a payment was approved, declined, completed, or still pending.
+The inquiry flow helps confirm whether a payment was approved, declined, completed, or still pending.  
 To use it, identify the relevant transaction and run the appropriate inquiry method for that specific payment.
 
 The response provides targeted transaction information, giving businesses a backup way to verify payment status without using inquiries as a regular payment flow.
@@ -2642,10 +2643,10 @@ These inquiry methods are designed to address exceptional scenarios and provide 
 
 ---
 title: "Overview"
-slug: overview-1
+slug: recurring-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-1
+source_url: https://grow-il.readme.io/reference/recurring-payment-overview
 ---
 
 # Overview
@@ -2656,7 +2657,7 @@ It is needed when a business wants to automate monthly billing, reduce manual wo
 
 The flow starts by creating the payment form with a unique pageCode, then presenting the returned payment link in an iframe, new tab, or direct customer message.
 
-Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.
+Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.  
 Uniquely with Grow, customers can also set up the recurring payment through PayBox, without entering credit card details.
 
 Effortless Billing with Grow Systems  
@@ -2680,6 +2681,7 @@ Creating and managing direct debits is a breeze, allowing you to customize the f
 Grow Systems ensures a hassle-free billing experience, providing you with the flexibility to manage your direct debits seamlessly. For any inquiries or assistance, our dedicated support team is ready to help. Choose Grow Systems for effortless billing solutions.
 
 ![](https://files.readme.io/2d64471-image.png)
+
 ![](https://files.readme.io/aa428c5af151fd11c00248d9759b59375a42cfedc7ac405a14234cdca29df9c5-_.png)
 
 
@@ -2692,10 +2694,10 @@ Grow Systems ensures a hassle-free billing experience, providing you with the fl
 
 ---
 title: "Overview"
-slug: overview-3
+slug: refund-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-3
+source_url: https://grow-il.readme.io/reference/refund-overview
 ---
 
 # Overview
@@ -2744,10 +2746,10 @@ Ensure a smooth and compliant refund process by adhering to these guidelines. If
 
 ---
 title: "Overview"
-slug: overview-9
+slug: billing-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-9
+source_url: https://grow-il.readme.io/reference/billing-overview
 ---
 
 # Overview
@@ -2777,10 +2779,10 @@ The flow is as following:
 
 ---
 title: "overview"
-slug: overview-8
+slug: billing-premium-recurring-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-8
+source_url: https://grow-il.readme.io/reference/billing-premium-recurring-overview
 ---
 
 # overview
@@ -2821,10 +2823,10 @@ The flow is as following:
 
 ---
 title: "Overview"
-slug: overview-4
+slug: token-transactions-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-4
+source_url: https://grow-il.readme.io/reference/token-transactions-overview
 ---
 
 # Overview
@@ -2887,10 +2889,10 @@ Choose the token transaction flow that aligns with your business strategy. Grow 
 
 ---
 title: "Overview"
-slug: overview-6
+slug: regular-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-6
+source_url: https://grow-il.readme.io/reference/regular-payment-overview
 ---
 
 # Overview
@@ -2910,6 +2912,7 @@ The **userId and pageCode** parameters are provided by Grow during the onboardin
 The flow:
 
   
+
 ![](https://files.readme.io/a7a0c5cbfc534415368373aa2f3e06fd47635c21483f6d1c3c5c2019d345b1ba-_.png)
 
 # Important Notes
@@ -2955,7 +2958,7 @@ Payment Link enables a business to create a flexible payment page for different 
 
 It can be used as a standalone checkout page, an embedded payment component on a website, or an offline payment request sent to a customer.
 
-The page supports rich customization, including logo, background color, button color, button text, and visual assets.
+The page supports rich customization, including logo, background color, button color, button text, and visual assets.  
 Beyond design, it also supports dynamic products and custom fields, making each payment request fit the business need
 
 **Effortless Dynamic Payment Requests with Grow**  
@@ -3086,6 +3089,7 @@ Grow Payment Pages provide multiple page codes and setup options, making it easi
 ● Click here ([Link here](https://grow-il.readme.io/reference/implement-code-on-client-side))for a guide on implementing the SDK.
 
 ![](https://files.readme.io/9e2b7a79d6c41b83b641b7ff8a42b15d40a0819684de84f6d78d358e6b8c4746-Growin_new1.png)
+
   
 
 # Generic Payment Page
@@ -3114,6 +3118,7 @@ This is what the page looks like (default color, choosing full name & phone fiel
 *This is the look of the regular page as a small screen*:
 
 ![](https://files.readme.io/72e2cc9-_.png)
+
   
 
 # Google Pay Page
@@ -3158,6 +3163,7 @@ Designed for a straightforward user experience:
 ● Offers a quick and convenient way to process Bit transactions.
 
 ![](https://files.readme.io/2b973fd-_.png)
+
   
 
 # Send Transaction to Terminal
@@ -3267,8 +3273,8 @@ source_url: https://grow-il.readme.io/reference/payments-types
 
 An introduction to Grow payment types, that brings together the available charging options and helps businesses match each payment flow to their needs.
 
-This variety is needed so each business can use a payment flow that fits its model, whether it involves one-time payments, installments, Billing, tokens, refunds, or J4/J5 transactions.
-With Grow, payments can be processed by credit card, Bit, PayBox, Google Pay, Apple Pay, or bank transfer, split into installments, or managed as recurring monthly charges.
+This variety is needed so each business can use a payment flow that fits its model, whether it involves one-time payments, installments, Billing, tokens, refunds, or J4/J5 transactions.  
+With Grow, payments can be processed by credit card, Bit, PayBox, Google Pay, Apple Pay, or bank transfer, split into installments, or managed as recurring monthly charges.  
 Together, these options allow businesses to manage token-based charges, full or partial refunds, flexible final-amount transactions, and a broad range of payment flows through Grow.
 
 # Regular Payment
@@ -3439,15 +3445,15 @@ JSON
 
 ---
 title: "Post Message"
-slug: postmassage
+slug: postmessage
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/postmassage
+source_url: https://grow-il.readme.io/reference/postmessage
 ---
 
 # Post Message
 
-PostMessage helps your business react instantly to what happens inside the Grow payment page.
+PostMessage helps your business react instantly to what happens inside the Grow payment page.  
 It is useful when the merchant uses an iframe, and the system needs to know whether the customer paid, closed the page, or changed direction.
 
 Grow supports different event messages for credit card, Bit, Apple Pay, and Google Pay, so each payment method can be handled in the right context.
@@ -3695,7 +3701,7 @@ source_url: https://grow-il.readme.io/reference/recurring-vs-token
 
 Compare Grow Billing and tokenization and choose the right way to manage recurring payments.
 
-With Billing, Grow manages the full recurring payment journey, from payment schedule and charge amounts, sends updates, and handles failure notifications.
+With Billing, Grow manages the full recurring payment journey, from payment schedule and charge amounts, sends updates, and handles failure notifications.  
 Once the initial setup is complete, the Recurring Payment runs automatically on a recurring basis.
 
 Tokenization gives businesses more control by allowing them to save a token and trigger each future charge separately, choosing when, how, and how often to charge.
@@ -4496,8 +4502,8 @@ source_url: https://grow-il.readme.io/reference/server-response-1
 
 # Server Response
 
-After a transaction starts, Grow sends payment status updates to the business server.
-It helps verify and record transaction details, payer information, card data, and custom fields
+After a transaction starts, Grow sends payment status updates to the business server.  
+It helps verify and record transaction details, payer information, card data, and custom fields  
 Grow sends an HTTPS POST update to the notifyUrl provided in CreatePaymentProcess.
 
 After receiving the update, the business confirms receipt and calls ApproveTransaction.
@@ -5098,8 +5104,8 @@ source_url: https://grow-il.readme.io/reference/payments
 
 Explore Grow payment methods and how each one fits into real-world checkout and payment flows.
 
-Grow brings together leading payment methods in one place, making it easier to offer customers the payment experience they prefer. Businesses can choose the right payment option for each scenario, from credit card payments to Apple Pay, Google Pay, Bit, PayBox, and bank transfers.
-Each method has its own capabilities, such as one-time payments, recurring charges, tokenization, refunds, direct debit, and J5/J4 support.
+Grow brings together leading payment methods in one place, making it easier to offer customers the payment experience they prefer. Businesses can choose the right payment option for each scenario, from credit card payments to Apple Pay, Google Pay, Bit, PayBox, and bank transfers.  
+Each method has its own capabilities, such as one-time payments, recurring charges, tokenization, refunds, direct debit, and J5/J4 support.  
 By comparing these options in one place, businesses can plan smoother payment experiences and match each payment flow to their needs.
 
 # Payment options
@@ -5235,7 +5241,7 @@ Grow Tokenization allows businesses to securely save a customer’s card as a to
 
 It is needed when payments repeat over time, amounts may change, or the customer should not re-enter payment details for every transaction.
 
-The customer pays once and the payment method is securely saved as a token for future use.
+The customer pays once and the payment method is securely saved as a token for future use.  
 After that, one-time or recurring charges can be made with the token, without asking the customer to enter card details again.
 
 ### Charging with Tokens
@@ -5380,13 +5386,13 @@ source_url: https://grow-il.readme.io/reference/live-environment
 
 This page explains how to move from Sandbox testing to Grow’s live Production environment.
 
-It is needed before real payment processing can begin, because Grow must review the setup and issue production identifiers.
-The transition covers live URLs, server updates, ApproveTransaction handling, token saving consent, webhooks, Apple Pay, and commercial approval.
+It is needed before real payment processing can begin, because Grow must review the setup and issue production identifiers.  
+The transition covers live URLs, server updates, ApproveTransaction handling, token saving consent, webhooks, Apple Pay, and commercial approval.  
 Following these requirements helps reduce payment errors, protect customer data, and ensure the business is ready to accept real transactions through Grow.
 
 To transition from the Sandbox environment to the Production environment, please contact us and request a production review.
 
-**Contact Information:**
+**Contact Information:**  
 Email: [support@grow.business](mailto:support@grow.business)
 
 Before production identifiers can be issued, Grow will review the integration and verify that the required API calls, server updates, and implementation steps were completed correctly.
@@ -5774,10 +5780,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 
 ---
 title: "Cancel Bit Transaction"
-slug: post_api-light-andriod-1-0-cancelbittransaction
+slug: cancel-bit-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-andriod-1-0-cancelbittransaction
+source_url: https://grow-il.readme.io/reference/cancel-bit-transaction
 ---
 
 # Cancel Bit Transaction
@@ -5789,7 +5795,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-andriod-1-0-cance
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Cancel Bit Transaction Copy
+**Summary:** Cancel Bit Transaction
+
+Each business has its own unique identifiers  (pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 

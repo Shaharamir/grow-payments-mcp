@@ -1,9 +1,9 @@
 ---
 title: "Cancel Bit Transaction"
-slug: post_api-light-andriod-1-0-cancelbittransaction
+slug: cancel-bit-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-andriod-1-0-cancelbittransaction
+source_url: https://grow-il.readme.io/reference/cancel-bit-transaction
 ---
 
 # Cancel Bit Transaction
@@ -15,7 +15,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-andriod-1-0-cance
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Cancel Bit Transaction Copy
+**Summary:** Cancel Bit Transaction
+
+Each business has its own unique identifiers  (pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 

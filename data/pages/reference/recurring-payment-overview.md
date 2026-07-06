@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-1
+slug: recurring-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-1
+source_url: https://grow-il.readme.io/reference/recurring-payment-overview
 ---
 
 # Overview
@@ -14,7 +14,7 @@ It is needed when a business wants to automate monthly billing, reduce manual wo
 
 The flow starts by creating the payment form with a unique pageCode, then presenting the returned payment link in an iframe, new tab, or direct customer message.
 
-Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.
+Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.  
 Uniquely with Grow, customers can also set up the recurring payment through PayBox, without entering credit card details.
 
 Effortless Billing with Grow Systems  
@@ -38,6 +38,7 @@ Creating and managing direct debits is a breeze, allowing you to customize the f
 Grow Systems ensures a hassle-free billing experience, providing you with the flexibility to manage your direct debits seamlessly. For any inquiries or assistance, our dedicated support team is ready to help. Choose Grow Systems for effortless billing solutions.
 
 ![](https://files.readme.io/2d64471-image.png)
+
 ![](https://files.readme.io/aa428c5af151fd11c00248d9759b59375a42cfedc7ac405a14234cdca29df9c5-_.png)
 
 

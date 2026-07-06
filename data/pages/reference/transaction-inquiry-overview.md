@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-slug: overview-5
+slug: transaction-inquiry-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-5
+source_url: https://grow-il.readme.io/reference/transaction-inquiry-overview
 ---
 
 # Overview
@@ -12,7 +12,7 @@ Transaction inquiries give a reliable way to check the status of a specific paym
 
 It is relevant when there is an issue in the business system, website, or platform, or for any other reason that requires checking the payment status directly.
 
-The inquiry flow helps confirm whether a payment was approved, declined, completed, or still pending.
+The inquiry flow helps confirm whether a payment was approved, declined, completed, or still pending.  
 To use it, identify the relevant transaction and run the appropriate inquiry method for that specific payment.
 
 The response provides targeted transaction information, giving businesses a backup way to verify payment status without using inquiries as a regular payment flow.

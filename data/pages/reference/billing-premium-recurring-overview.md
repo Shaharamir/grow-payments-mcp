@@ -1,9 +1,9 @@
 ---
 title: "overview"
-slug: overview-8
+slug: billing-premium-recurring-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/overview-8
+source_url: https://grow-il.readme.io/reference/billing-premium-recurring-overview
 ---
 
 # overview

@@ -1,9 +1,9 @@
 ---
 title: "Bit SDK Android"
-slug: sdk-bit-android-copy
+slug: sdk-bit-android
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-android-copy
+source_url: https://grow-il.readme.io/reference/sdk-bit-android
 ---
 
 # Bit SDK Android
@@ -16,8 +16,8 @@ source_url: https://grow-il.readme.io/reference/sdk-bit-android-copy
 
 2. Add maven to gradle - allprojects - repositories
 
-**maven**
-`{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
+**maven**  
+`\{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
 
 ![](https://files.readme.io/6d62257-image.png)
 
@@ -31,7 +31,7 @@ implementation 'com.github.inManage:MeshulamSDK-Android:1.0.2'
 
 **In case your project uses volley and you're getting a duplicate class error, use implementation below:**
 
-implementation (`com.github.inManage:MeshulamSDK-Android:1.0.2`,
+implementation (`com.github.inManage:MeshulamSDK-Android:1.0.2`,  
 `{ exclude group: "com.android.volley"\ }`)
 
 4. Sync project

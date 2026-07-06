@@ -150,7 +150,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Cancel Bit Transaction Copy",
+    "summary": "Cancel Bit Transaction",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -184,7 +184,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers  (pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   },
   "/api/light/server/1.0/refundTransaction": {

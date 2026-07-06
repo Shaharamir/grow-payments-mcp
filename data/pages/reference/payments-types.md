@@ -12,8 +12,8 @@ source_url: https://grow-il.readme.io/reference/payments-types
 
 An introduction to Grow payment types, that brings together the available charging options and helps businesses match each payment flow to their needs.
 
-This variety is needed so each business can use a payment flow that fits its model, whether it involves one-time payments, installments, Billing, tokens, refunds, or J4/J5 transactions.
-With Grow, payments can be processed by credit card, Bit, PayBox, Google Pay, Apple Pay, or bank transfer, split into installments, or managed as recurring monthly charges.
+This variety is needed so each business can use a payment flow that fits its model, whether it involves one-time payments, installments, Billing, tokens, refunds, or J4/J5 transactions.  
+With Grow, payments can be processed by credit card, Bit, PayBox, Google Pay, Apple Pay, or bank transfer, split into installments, or managed as recurring monthly charges.  
 Together, these options allow businesses to manage token-based charges, full or partial refunds, flexible final-amount transactions, and a broad range of payment flows through Grow.
 
 # Regular Payment
