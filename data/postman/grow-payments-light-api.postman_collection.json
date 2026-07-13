@@ -318,7 +318,7 @@
       }
     },
     {
-      "name": "POST Payment Request",
+      "name": "POST SetAccountDetails ",
       "request": {
         "method": "POST",
         "header": [
@@ -344,40 +344,40 @@
           "mode": "formdata",
           "formdata": [
             {
-              "key": "pageCode",
-              "value": "0b7a16e03b25",
-              "type": "text",
-              "description": "Required field -Unique identifier refers to payment mathod"
-            },
-            {
               "key": "userId",
               "value": "4ec1d595ae764243",
               "type": "text",
-              "description": "Required field- Unique identifier refers to every business that is connected and uses Grow payments solutions."
+              "description": "Required field- Unique identifier refers to every business that is connected and uses Grow payments solutions.\n\n"
+            },
+            {
+              "key": "pageCode",
+              "value": "c34d1f4a546f",
+              "type": "text",
+              "description": "Required field -Unique identifier refers to payment mathod\n"
             },
             {
               "key": "backgroundColor",
-              "value": "https://mysite.co.il/thank.html?test=1",
+              "value": "#eae0da",
               "type": "text",
               "description": "Optional - Defines the background color of the payment page.\n\nFormat: HEX color code (e.g. #FFFFFF)\n\nYou can also configure a default business logo via the business management interface."
             },
             {
-              "key": "paymentButtonText",
-              "value": "",
-              "type": "text",
-              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules: Up to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface."
-            },
-            {
               "key": "buttonColor",
-              "value": "",
+              "value": "#01518e",
               "type": "text",
               "description": "Optional - Defines the background color of the payment button.\n\nFormat: HEX color code (e.g. #0285AC)\n\nYou can also configure a default business logo via the business management interface."
             },
             {
-              "key": "businessLogo",
-              "value": "10",
+              "key": "paymentButtonText",
+              "value": "למעבר לתשלום",
               "type": "text",
-              "description": "\nRequired field – Defines the business logo displayed in the payment link.\n\nProvide a valid image URL that will be used as the default logo for the business.\n\nValidations:\n\nMaximum file size: up to 512KB\nMinimum resolution: 128x128 pixels\nSupported formats: square, rectangle, or circular images\n\nThe configured logo will be automatically applied to all payment links created by the business."
+              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules: Up to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface."
+            },
+            {
+              "key": "businessLogo",
+              "value": "",
+              "type": "text",
+              "description": "Required field – Defines the business logo displayed in the payment link.\n\nProvide a valid image URL that will be used as the default logo for the business.\n\nValidations:\n\nMaximum file size: up to 512KB Minimum resolution: 128x128 pixels Supported formats: square, rectangle, or circular images\n\nThe configured logo will be automatically applied to all payment links created by the business."
             }
           ]
         }
@@ -798,7 +798,7 @@
       }
     },
     {
-      "name": "POST Regular Payment SDK Copy",
+      "name": "POST Regular Payment SDK",
       "request": {
         "method": "POST",
         "header": [
@@ -1359,19 +1359,19 @@
           "formdata": [
             {
               "key": "transactionId",
-              "value": "1049",
+              "value": "425555",
               "type": "text",
               "description": "Required field - transaction identifier"
             },
             {
               "key": "transactionToken",
-              "value": "38ed1514a67a78083a5a1a3d3e7",
+              "value": "f3095a2579e8654f5234fba0ee0ef09",
               "type": "text",
               "description": "Required field - transaction identifier"
             },
             {
               "key": "refundSum",
-              "value": "1",
+              "value": "2",
               "type": "text",
               "description": "Required field - total amount to refund"
             },
@@ -1388,12 +1388,6 @@
               "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions."
             },
             {
-              "key": "apiKey",
-              "value": "57ce86548429",
-              "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
-            },
-            {
               "key": "pageCode",
               "value": "0b7a16e03b25",
               "type": "text",
@@ -1404,7 +1398,7 @@
       }
     },
     {
-      "name": "POST Settle Suspended Transaction Copy",
+      "name": "POST Settle Suspended Transaction",
       "request": {
         "method": "POST",
         "header": [

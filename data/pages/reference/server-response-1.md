@@ -65,8 +65,10 @@ The method takes in parameters as an HTTP POST, the same way as you would send t
 | processToken | process token | String |  |  |
 | cardToken | credit card token | String | 456456776vgfyvhjbsdkc87s8 |  |
 | customFields | an array of optional fields | Array | {"cField1":"customer123","cField2":"product123"} |  |
+| payerBankAccountDetails | an array of optional fields | Array | {"bankNum":"10","branchNum":"123","accountNum":"1234567","accountName": "name name"} |  |
 
   
+
 > 📘
 >
 > ### Please note:

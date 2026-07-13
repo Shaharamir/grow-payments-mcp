@@ -162,7 +162,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Settle Suspended Transaction Copy",
+    "summary": "Settle Suspended Transaction",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -185,9 +185,10 @@
           "example": "a3ffd8a1e628d21b2b057cde9"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field -Total amount for payment Example: 10.99.",
-          "example": "1"
+          "example": "1",
+          "format": "double"
          },
          "productData[0][catalogNumber]": {
           "type": "integer",
@@ -229,7 +230,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "This method is used to perform a J4 operation, releasing a held transaction. It requires the transactionId and transactionToken to identify and settle the transaction. Please note that each business has its own unique identifiers — the values shown in this documentation are for demonstration purposes only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   },
   "/api/light/server/1.0/createPaymentProcess": {
@@ -237,7 +239,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Delayed Payment J4J5 Copy",
+    "summary": "Delayed Payment J4J5",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -260,9 +262,10 @@
           "example": "2"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field -Total amount for payment Example: 10.99.",
-          "example": "2"
+          "example": "2",
+          "format": "double"
          },
          "successUrl": {
           "type": "string",
@@ -369,7 +372,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   }
  },

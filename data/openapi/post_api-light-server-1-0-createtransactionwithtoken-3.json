@@ -33,9 +33,10 @@
           "example": "4ec1d595ae764243"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field - Total amount for payment Example: 10.99.",
-          "example": "1"
+          "example": "1",
+          "format": "double"
          },
          "description": {
           "type": "string",

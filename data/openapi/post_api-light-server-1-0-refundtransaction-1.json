@@ -15,7 +15,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Recuring Payment Copy",
+    "summary": "Recurring Payment",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -38,9 +38,10 @@
           "example": "1"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field -Total amount for payment Example: 10.99.",
-          "example": "2"
+          "example": "2",
+          "format": "double"
          },
          "successUrl": {
           "type": "string",
@@ -142,7 +143,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   },
   "/api/light/andriod/1.0/cancelBitTransaction/": {
@@ -193,7 +195,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Refund Transaction Copy",
+    "summary": "Refund Transaction",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -211,9 +213,10 @@
           "example": "f3095a2579e8654f5234fba0ee0ef09"
          },
          "refundSum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field - total amount to refund",
-          "example": "2"
+          "example": "2",
+          "format": "double"
          },
          "stopDirectDebit": {
           "type": "integer",
@@ -242,7 +245,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   },
   "/api/light/server/1.0/getPaymentProcessInfo": {

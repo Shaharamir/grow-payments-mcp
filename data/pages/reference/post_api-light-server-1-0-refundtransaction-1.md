@@ -15,7 +15,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-refund
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Refund Transaction Copy
+**Summary:** Refund Transaction
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -23,7 +26,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-refund
 |---|---|---|---|
 | transactionId | integer | False | Required field - transaction identifier |
 | transactionToken | string | False | Required field - transaction identifier |
-| refundSum | integer | False | Required field - total amount to refund |
+| refundSum | number | False | Required field - total amount to refund |
 | stopDirectDebit | integer | False | optional - in case this is a direct debit transaction you need to send the value of 1 to stop the upcoming payments |
 | userId | string | False | Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | pageCode | string | False | optional - Unique identifier refers to payment mathod   |

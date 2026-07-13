@@ -21,7 +21,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 |---|---|---|---|
 | cardToken | string | False | Required field - credit card token . |
 | userId | string | False | Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. |
 | paymentType | integer | False | Required field - 2-Regular |
 | paymentNum | integer | False | Required field -  Determine payments number. 1-12 |

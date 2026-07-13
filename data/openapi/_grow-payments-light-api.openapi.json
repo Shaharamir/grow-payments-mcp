@@ -293,52 +293,57 @@
         "tags": [
           "default"
         ],
-        "summary": "Payment Request",
+        "summary": "SetAccountDetails ",
         "requestBody": {
           "content": {
             "multipart/form-data": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "pageCode": {
-                    "type": "string",
-                    "description": "Required field -Unique identifier refers to payment mathod",
-                    "example": "0b7a16e03b25",
-                    "default": "c34d1f4a546f"
-                  },
                   "userId": {
                     "type": "string",
-                    "description": "Required field- Unique identifier refers to every business that is connected and uses Grow payments solutions.",
-                    "example": "4ec1d595ae764243",
-                    "default": "4ec1d595ae764243"
+                    "description": "Required field- Unique identifier refers to every business that is connected and uses Grow payments solutions.\n\n",
+                    "example": "4ec1d595ae764243"
+                  },
+                  "pageCode": {
+                    "type": "string",
+                    "description": "Required field -Unique identifier refers to payment mathod\n",
+                    "example": "c34d1f4a546f"
                   },
                   "backgroundColor": {
                     "type": "string",
                     "description": "Optional - Defines the background color of the payment page.\n\nFormat: HEX color code (e.g. #FFFFFF)\n\nYou can also configure a default business logo via the business management interface.",
-                    "example": "https://mysite.co.il/thank.html?test=1",
-                    "default": "#0285Ac"
-                  },
-                  "paymentButtonText": {
-                    "type": "string",
-                    "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules: Up to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface.",
-                    "default": "לתשלום"
+                    "example": "#eae0da"
                   },
                   "buttonColor": {
                     "type": "string",
                     "description": "Optional - Defines the background color of the payment button.\n\nFormat: HEX color code (e.g. #0285AC)\n\nYou can also configure a default business logo via the business management interface.",
-                    "default": "#0285Ac"
+                    "example": "#01518e"
+                  },
+                  "paymentButtonText": {
+                    "type": "string",
+                    "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules: Up to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface.",
+                    "example": "למעבר לתשלום"
                   },
                   "businessLogo": {
                     "type": "string",
-                    "description": "\nRequired field – Defines the business logo displayed in the payment link.\n\nProvide a valid image URL that will be used as the default logo for the business.\n\nValidations:\n\nMaximum file size: up to 512KB\nMinimum resolution: 128x128 pixels\nSupported formats: square, rectangle, or circular images\n\nThe configured logo will be automatically applied to all payment links created by the business.",
-                    "example": "10",
-                    "default": "https://i.postimg.cc/d3kdfbwV/download-2.jpg"
+                    "description": "Required field – Defines the business logo displayed in the payment link.\n\nProvide a valid image URL that will be used as the default logo for the business.\n\nValidations:\n\nMaximum file size: up to 512KB Minimum resolution: 128x128 pixels Supported formats: square, rectangle, or circular images\n\nThe configured logo will be automatically applied to all payment links created by the business."
                   }
                 }
               }
             }
           }
         },
+        "parameters": [
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            },
+            "example": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -347,17 +352,7 @@
             }
           }
         },
-        "operationId": "post_api-light-server-1-0-setaccountdetails",
-        "parameters": [
-          {
-            "in": "header",
-            "name": "x-api-key",
-            "schema": {
-              "type": "string",
-              "default": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
-            }
-          }
-        ]
+        "description": "This API allows you to define default branding settings for the business, such as logo, background color, and button styling. These settings will be automatically applied to all payment links generated by the business."
       }
     },
     "/api/light/server/1.0/UpdatePaymentLink": {
@@ -729,7 +724,7 @@
         "tags": [
           "default"
         ],
-        "summary": "Regular Payment SDK Copy",
+        "summary": "Regular Payment SDK",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -752,9 +747,10 @@
                     "example": "1"
                   },
                   "sum": {
-                    "type": "integer",
+                    "type": "number",
                     "description": "Required field -Total amount for payment Example: 10.99.",
-                    "example": "2"
+                    "example": "2",
+                    "format": "double"
                   },
                   "successUrl": {
                     "type": "string",
@@ -887,7 +883,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/createTransactionWithToken": {
@@ -1196,17 +1193,18 @@
                   "transactionId": {
                     "type": "integer",
                     "description": "Required field - transaction identifier",
-                    "example": "1049"
+                    "example": "425555"
                   },
                   "transactionToken": {
                     "type": "string",
                     "description": "Required field - transaction identifier",
-                    "example": "38ed1514a67a78083a5a1a3d3e7"
+                    "example": "f3095a2579e8654f5234fba0ee0ef09"
                   },
                   "refundSum": {
-                    "type": "integer",
+                    "type": "number",
                     "description": "Required field - total amount to refund",
-                    "example": "1"
+                    "example": "2",
+                    "format": "double"
                   },
                   "stopDirectDebit": {
                     "type": "integer",
@@ -1217,11 +1215,6 @@
                     "type": "string",
                     "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.",
                     "example": "4ec1d595ae764243"
-                  },
-                  "apiKey": {
-                    "type": "string",
-                    "description": "Required only for companies that are working with multiple businesses. company's code",
-                    "example": "57ce86548429"
                   },
                   "pageCode": {
                     "type": "string",
@@ -1240,7 +1233,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/settleSuspendedTransaction": {
@@ -1248,7 +1242,7 @@
         "tags": [
           "default"
         ],
-        "summary": "Settle Suspended Transaction Copy",
+        "summary": "Settle Suspended Transaction",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -1271,9 +1265,10 @@
                     "example": "a3ffd8a1e628d21b2b057cde9"
                   },
                   "sum": {
-                    "type": "integer",
+                    "type": "number",
                     "description": "Required field -Total amount for payment Example: 10.99.",
-                    "example": "1"
+                    "example": "1",
+                    "format": "double"
                   },
                   "productData[0][catalogNumber]": {
                     "type": "integer",
@@ -1315,7 +1310,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "This method is used to perform a J4 operation, releasing a held transaction. It requires the transactionId and transactionToken to identify and settle the transaction. Please note that each business has its own unique identifiers — the values shown in this documentation are for demonstration purposes only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/updateDirectDebit": {

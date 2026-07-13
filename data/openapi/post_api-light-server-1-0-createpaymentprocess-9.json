@@ -15,7 +15,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Create payment &save token Copy",
+    "summary": "Create payment &save token",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -38,9 +38,10 @@
           "example": "1"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field - Total amount for payment Example: 10.99.",
-          "example": "2"
+          "example": "2",
+          "format": "double"
          },
          "successUrl": {
           "type": "string",
@@ -147,7 +148,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   },
   "/api/light/server/1.0/createTransactionWithToken": {
@@ -155,7 +157,7 @@
     "tags": [
      "default"
     ],
-    "summary": "Create Transaction With Token Copy",
+    "summary": "Create Transaction With Token",
     "requestBody": {
      "content": {
       "multipart/form-data": {
@@ -173,9 +175,10 @@
           "example": "4ec1d595ae764243"
          },
          "sum": {
-          "type": "integer",
+          "type": "number",
           "description": "Required field - Total amount for payment Example: 10.99.",
-          "example": "1"
+          "example": "1",
+          "format": "double"
          },
          "description": {
           "type": "string",
@@ -248,7 +251,8 @@
        "application/json": {}
       }
      }
-    }
+    },
+    "description": "Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
    }
   }
  },

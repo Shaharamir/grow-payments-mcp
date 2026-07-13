@@ -1568,7 +1568,7 @@ source_url: https://grow-il.readme.io/reference/sdk-bit-android
 2. Add maven to gradle - allprojects - repositories
 
 **maven**  
-`\{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
+`{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
 
 ![](https://files.readme.io/6d62257-image.png)
 
@@ -1990,7 +1990,7 @@ Real-time events keep the payment status clear from start to success, failure, c
 | --- | --- | --- | --- | --- | --- |
 | environment | String | required | “PRODUCTION”, “DEV” |  |  |
 | version | String | required | Current stable version is 1 | Target the preferred base version |  |
-| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.onError: Gets triggered on payment error, receives a message describing what caused the error.onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }{  "status": 0,  "message": "התשלום סורב"  }onWalletChange:  open  CloseonPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
+| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).  onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.  onError: Gets triggered on payment error, receives a message describing what caused the error.  onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.  onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.  onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }  onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }  onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }  {  "status": 0,  "message": "התשלום סורב"  }  onWalletChange:  open  Close  onPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }  onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
 
 onSuccess events:
 
@@ -2474,67 +2474,6 @@ IP live: (for making real transaction on production environment)
 3.77.123.153
 
 3.70.40.72
-
-================================================================================
-
----
-title: "NFC"
-slug: nfc-1
-type: basic
-section: reference
-source_url: https://grow-il.readme.io/reference/nfc-1
----
-
-# NFC
-
-**Procedure for Setting Up the NFC Service:**
-
-- Download the Grow application from Google Play Store.
-- Purchase the service and notify us to receive the code for your device.
-- Send this code as a parameter in the "createPaymentProcess" call under the name "deviceKey."
-- In transaction broadcasts to the device, use the unique pageCode for this transaction provided by the Grow service.
-
-**Steps to Perform a Transaction:**
-
-1. Execute a "createPaymentProcess" call with the designated "pageCode" for the transaction and the "deviceKey" of the selected broadcasting device.
-2. Open the URL sent after the call where transaction details will appear on the application screen.
-
-**Opening the URL - Important Notes:**
-
-1. Before making the call, ensure our application is open on the home page, in a waiting state.  
-   For example
-
-![](https://files.readme.io/88e3b2e-WhatsApp_Image_2023-11-05_at_13.15.21_cc4ca549.jpg)
-
-2. After making the "createPaymentProcess" call, you will receive a URL in response.  
-   This URL should be opened and not closed until the process is completed !  
-   In other words, the link received from the call should be opened on a device separate from the one where the application is open and should remain open until the transaction is finished.  
-   The next screen must remain open:
-
-![](https://files.readme.io/ef84633-image.png)
-
-3. Credit card pairing transactions (pairing a credit card to the back of the phone) are limited to an amount of up to 300 NIS. Digital wallet pairing transactions (phone-to-phone) have no amount limitations.
-4. Business owners can broadcast to multiple devices, meaning they should be able to select from a list which device they want to broadcast to, with support for multiple device keys.
-
-**The application screen during transmission:**
-
-NOTE:
-
-> 📘
->
-> ### Important Note:
->
-> 1. Broadcasting to an active device should only be done within the live environment.  
->    After Transaction:
-> 2. Receive an update from the server confirming that the transaction was successfully completed.
-> 3. Initiate a call to "approve" that updates you upon receiving the server's update, indicating awareness of the transaction.
-> 4. For business owners, the ability to broadcast to multiple devices is supported. They can select from a list which device they want to broadcast to, with support for multiple device keys.
-
-
-## Images
-
-- https://files.readme.io/88e3b2e-WhatsApp_Image_2023-11-05_at_13.15.21_cc4ca549.jpg
-- https://files.readme.io/ef84633-image.png
 
 ================================================================================
 
@@ -3737,59 +3676,6 @@ Understanding your existing infrastructure and requirements will guide you towar
 
 ---
 title: "Response"
-slug: response-3
-type: basic
-section: reference
-source_url: https://grow-il.readme.io/reference/response-3
----
-
-# Response
-
-## Response from createPaymentProcess example:
-
-### *Success*:
-
-JSON
-
-```
-{
-    "status": 1,
-    "err": "",
-    "data": {
-        "processId": 6652,
-        "processToken": "ac3f4d3b656d3245454512c5ff33d7030",
-				"authCode": "eabbb670ece7f311524f25454c14356d%MjA2MTAzODc"
-}
-```
-
-### *Failure*:
-
-JSON
-
-```
-{
-    "err": {
-        "id": 54,
-        "message": "חסרים נתונים:pageCode"
-    },
-    "status": "0",
-    "data": ""
-}
-```
-
-- - **status** is referred to success or failure (1 or 0 respectively).
-- **err** - in case of an error, would return as the error code and error message.
-- **data** - all the details would return here.
-
-## ***Important!***
-
-*You must NOT reveal the process details such as the**processId** and the **processToken** to the paying customer.  
-You may display the **asmachta** field for unique identification of the transaction.*
-
-================================================================================
-
----
-title: "Response"
 slug: delayed-payment-response
 type: basic
 section: reference
@@ -3911,6 +3797,59 @@ JSON
 ## ***Important!***
 
 *You must NOT reveal the process details such as the**processId** and the **processToken** to the paying customer. You may display the **asmachta** field for unique identification of the transaction.*
+
+================================================================================
+
+---
+title: "Response"
+slug: response-3
+type: basic
+section: reference
+source_url: https://grow-il.readme.io/reference/response-3
+---
+
+# Response
+
+## Response from createPaymentProcess example:
+
+### *Success*:
+
+JSON
+
+```
+{
+    "status": 1,
+    "err": "",
+    "data": {
+        "processId": 6652,
+        "processToken": "ac3f4d3b656d3245454512c5ff33d7030",
+				"authCode": "eabbb670ece7f311524f25454c14356d%MjA2MTAzODc"
+}
+```
+
+### *Failure*:
+
+JSON
+
+```
+{
+    "err": {
+        "id": 54,
+        "message": "חסרים נתונים:pageCode"
+    },
+    "status": "0",
+    "data": ""
+}
+```
+
+- - **status** is referred to success or failure (1 or 0 respectively).
+- **err** - in case of an error, would return as the error code and error message.
+- **data** - all the details would return here.
+
+## ***Important!***
+
+*You must NOT reveal the process details such as the**processId** and the **processToken** to the paying customer.  
+You may display the **asmachta** field for unique identification of the transaction.*
 
 ================================================================================
 
@@ -4559,8 +4498,10 @@ The method takes in parameters as an HTTP POST, the same way as you would send t
 | processToken | process token | String |  |  |
 | cardToken | credit card token | String | 456456776vgfyvhjbsdkc87s8 |  |
 | customFields | an array of optional fields | Array | {"cField1":"customer123","cField2":"product123"} |  |
+| payerBankAccountDetails | an array of optional fields | Array | {"bankNum":"10","branchNum":"123","accountNum":"1234567","accountName": "name name"} |  |
 
   
+
 > 📘
 >
 > ### Please note:
@@ -4663,6 +4604,72 @@ This will help you debug the service, and/or insert logs if necessary.
 
 ---
 title: "Server-to-Server Callback"
+slug: server-response-copy
+type: basic
+section: reference
+source_url: https://grow-il.readme.io/reference/server-response-copy
+---
+
+# Server-to-Server Callback
+
+> Transaction Status Update via Webhook for CreatePaymentProcess
+
+An HTTPS callback will be sent to your server to notify the completion of the transaction.  
+The method takes in parameters as an HTTP POST, the same way as you would send the data to the CreatePaymentProcess method and NOT as JSON.
+
+The callback will be made to the endpoint URL specified in the **notifyUrl** parameter of the [createPaymentProcess](https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-5)  API request.
+
+JSON
+
+```
+{
+    "err": "",
+    "status": "1",
+    "data": {
+        "cardSuffix": "3253",
+        "cardType": "Local",
+        "cardTypeCode": 1,
+        "cardBrand": "Visa",
+        "cardBrandCode": 3,
+        "cardExp": "0524",
+        "firstPaymentSum": 0,
+        "periodicalPaymentSum": 0,
+        "status": "עסקה מושהית",
+        "statusCode": 11,
+        "transactionTypeId": 1,
+        "paymentType": 2,
+        "sum": 1,
+        "paymentsNum": 1,
+        "allPaymentsNum": 1,
+        "paymentDate": "09/1/24",
+        "description": "description",
+        "fullName": "TEST TEST",
+        "payerPhone": "0500000000",
+        "payerEmail": "test@test.co.il",
+        "customFields": [],
+        "transactionId": 301770,
+        "transactionToken": "62aec6d32197fbb654152eee5c41728f",
+        "processId": 477278,
+        "processToken": "b350a1924f8cbd7ae2d31fc9ae3304b0"
+    }
+```
+
+# Testing the Server-to-Server Callback
+
+You can test the server-to-server callback using the [updateMyUrl](https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=MySiteURL)  endpoint.
+
+This GET request simulates the callback notification by sending an HTTP request to the URL you specify.
+
+Replace **MySiteURL** with your server's endpoint to test how it handles incoming callback data.
+
+This tool allows you to debug the integration and verify your server’s handling of incoming notifications, including any logging as needed.
+
+<https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=MySiteURL>
+
+================================================================================
+
+---
+title: "Server-to-Server Callback"
 slug: server-to-server-callback
 type: basic
 section: reference
@@ -4739,72 +4746,6 @@ Replace **MySiteURL** with your server's endpoint to test how it handles incomin
 This tool allows you to debug the integration and verify your server’s handling of incoming notifications, including any logging as needed.
 
 Example request: <https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=MySiteURL>
-
-================================================================================
-
----
-title: "Server-to-Server Callback"
-slug: server-response-copy
-type: basic
-section: reference
-source_url: https://grow-il.readme.io/reference/server-response-copy
----
-
-# Server-to-Server Callback
-
-> Transaction Status Update via Webhook for CreatePaymentProcess
-
-An HTTPS callback will be sent to your server to notify the completion of the transaction.  
-The method takes in parameters as an HTTP POST, the same way as you would send the data to the CreatePaymentProcess method and NOT as JSON.
-
-The callback will be made to the endpoint URL specified in the **notifyUrl** parameter of the [createPaymentProcess](https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-5)  API request.
-
-JSON
-
-```
-{
-    "err": "",
-    "status": "1",
-    "data": {
-        "cardSuffix": "3253",
-        "cardType": "Local",
-        "cardTypeCode": 1,
-        "cardBrand": "Visa",
-        "cardBrandCode": 3,
-        "cardExp": "0524",
-        "firstPaymentSum": 0,
-        "periodicalPaymentSum": 0,
-        "status": "עסקה מושהית",
-        "statusCode": 11,
-        "transactionTypeId": 1,
-        "paymentType": 2,
-        "sum": 1,
-        "paymentsNum": 1,
-        "allPaymentsNum": 1,
-        "paymentDate": "09/1/24",
-        "description": "description",
-        "fullName": "TEST TEST",
-        "payerPhone": "0500000000",
-        "payerEmail": "test@test.co.il",
-        "customFields": [],
-        "transactionId": 301770,
-        "transactionToken": "62aec6d32197fbb654152eee5c41728f",
-        "processId": 477278,
-        "processToken": "b350a1924f8cbd7ae2d31fc9ae3304b0"
-    }
-```
-
-# Testing the Server-to-Server Callback
-
-You can test the server-to-server callback using the [updateMyUrl](https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=MySiteURL)  endpoint.
-
-This GET request simulates the callback notification by sending an HTTP request to the URL you specify.
-
-Replace **MySiteURL** with your server's endpoint to test how it handles incoming callback data.
-
-This tool allows you to debug the integration and verify your server’s handling of incoming notifications, including any logging as needed.
-
-<https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUrl/?url=MySiteURL>
 
 ================================================================================
 
@@ -5838,7 +5779,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Create payment &save token Copy
+**Summary:** Create payment &save token
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5847,7 +5791,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field - Unique identifier refers to payment mathod |
 | userId | string | False | Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | Required field -  1 - Regular Charge  |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled. |
 | paymentNum | integer | False | optional - Determine payments number. 1-12 |
@@ -5984,7 +5928,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Create Transaction With Token Copy
+**Summary:** Create Transaction With Token
+
+Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5992,7 +5939,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 |---|---|---|---|
 | cardToken | string | False | Required field - credit card token . |
 | userId | string | False | Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. |
 | paymentType | integer | False | Required field - 1-Direct Debit, 2-Regular, 4-Payments |
 | paymentNum | integer | False | optional -Determine payments number. 1-12 |
@@ -6036,7 +5983,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Delayed Payment J4J5 Copy
+**Summary:** Delayed Payment J4J5
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6045,7 +5995,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field -Unique identifier refers to payment mathod |
 | userId | string | False | Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | Required field -  2 - Suspended Charge  |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field -An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field -The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
 | paymentNum | integer | False | optional -Determine payments number. 1-12 |
@@ -6103,7 +6053,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 |---|---|---|---|
 | cardToken | string | False | Required field - credit card token . |
 | userId | string | False | Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. |
 | paymentType | integer | False | Required field - 2-Regular |
 | paymentNum | integer | False | Required field -  Determine payments number. 1-12 |
@@ -6153,7 +6103,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 |---|---|---|---|
 | cardToken | string | False | Required field - credit card token . |
 | userId | string | False | Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. |
 | paymentType | integer | False | Required field - 2-Regular   |
 | paymentNum | integer | False | Determine payments number. 1-12 |
@@ -6279,7 +6229,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Get Token Only Copy
+**Summary:** Get Token Only
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6288,7 +6241,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field - Unique identifier refers to payment mathod |
 | userId | string | False | Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | Required field -   3 - Create Token |
-| sum | integer | False | Required field -  Total amount must be 1 |
+| sum | number | False | Required field -  Total amount must be 1 |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled. |
 | paymentNum | integer | False | Determine payments number. 1-12 |
@@ -6431,7 +6384,7 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 |---|---|---|---|
 | cardToken | string | False | Required field - credit card token . |
 | userId | string | False | Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2. |
-| sum | integer | False | Required field - Total amount for payment Example: 10.99. |
+| sum | number | False | Required field - Total amount for payment Example: 10.99. |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription. |
 | paymentType | integer | False | Required field - 1-direct debit |
 | paymentNum | integer | False | Required field -  Determine payments number. 2-12 |
@@ -6474,7 +6427,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Recuring Payment Copy
+**Summary:** Recurring Payment
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6483,7 +6439,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field -Unique identifier refers to payment mathod |
 | userId | string | False | Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | optional - 1 - Regular Charge 2 - Suspended Charge |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
 | paymentNum | integer | False | optional- Determine payments number. 2-12 |
@@ -6534,7 +6490,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-refund
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Refund Transaction Copy
+**Summary:** Refund Transaction
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6542,7 +6501,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-refund
 |---|---|---|---|
 | transactionId | integer | False | Required field - transaction identifier |
 | transactionToken | string | False | Required field - transaction identifier |
-| refundSum | integer | False | Required field - total amount to refund |
+| refundSum | number | False | Required field - total amount to refund |
 | stopDirectDebit | integer | False | optional - in case this is a direct debit transaction you need to send the value of 1 to stop the upcoming payments |
 | userId | string | False | Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | pageCode | string | False | optional - Unique identifier refers to payment mathod   |
@@ -6580,7 +6539,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 - https://sandboxapi.grow.link
 - https://growdevcms.inmanage.com
 
-**Summary:** Regular Payment Copy
+**Summary:** Regular Payment
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6589,7 +6551,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field -Unique identifier refers to payment mathod |
 | userId | string | False | Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | optional -  1 - Regular Charge  |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled. |
 | paymentNum | integer | False | optional- Determine payments number. 1-12 |
@@ -6639,7 +6601,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Regular Payment SDK Copy
+**Summary:** Regular Payment SDK
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6648,7 +6613,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field -Unique identifier refers to payment mathod |
 | userId | string | False | Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | optional -  1 - Regular Charge  |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
 | paymentNum | integer | False | optional- Determine payments number. 1-12 |
@@ -6690,10 +6655,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 
 ---
 title: "SetAccountDetails "
-slug: post_api-light-server-1-0-setaccountdetails
+slug: post_api-light-server-1-0-setaccountdetails-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-setaccountdetails
+source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-setaccountdetails-1
 ---
 
 # SetAccountDetails 
@@ -6705,7 +6670,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-setacc
 **Servers:**
 - http://sandboxapi.grow.link
 
-**Summary:** SetAccountDetails Copy
+**Summary:** SetAccountDetails 
+
+This API allows you to define default branding settings for the business, such as logo, background color, and button styling. These settings will be automatically applied to all payment links generated by the business.
+
 
 **Parameters:**
 
@@ -6747,7 +6715,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-settle
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Settle Suspended Transaction Copy
+**Summary:** Settle Suspended Transaction
+
+This method is used to perform a J4 operation, releasing a held transaction. It requires the transactionId and transactionToken to identify and settle the transaction. Please note that each business has its own unique identifiers — the values shown in this documentation are for demonstration purposes only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6756,7 +6727,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-settle
 | userId | string | False | Required field -Unique identifier refers to payment mathod |
 | transactionId | integer | False | Required field -transaction identifier  |
 | transactionToken | string | False | Required field -transaction identifier  |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | productData[0][catalogNumber] | integer | False | optional -catalog number for an item in the Invoice  |
 | productData[0][quantity] | integer | False | optional -quantity for an item in the Invoice  |
 | productData[0][price] | integer | False | optional -price for an item in the Invoice  |

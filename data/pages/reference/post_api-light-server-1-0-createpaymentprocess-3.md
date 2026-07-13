@@ -15,7 +15,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Recuring Payment Copy
+**Summary:** Recurring Payment
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -24,7 +27,7 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 | pageCode | string | False | Required field -Unique identifier refers to payment mathod |
 | userId | string | False | Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions. |
 | chargeType | integer | False | optional - 1 - Regular Charge 2 - Suspended Charge |
-| sum | integer | False | Required field -Total amount for payment Example: 10.99. |
+| sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
 | paymentNum | integer | False | optional- Determine payments number. 2-12 |

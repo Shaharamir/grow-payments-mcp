@@ -17,7 +17,7 @@ source_url: https://grow-il.readme.io/reference/sdk-bit-android
 2. Add maven to gradle - allprojects - repositories
 
 **maven**  
-`\{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
+`{ url "[https://jitpack.io"](https://jitpack.io")\ credentials { username authToken}\ }`
 
 ![](https://files.readme.io/6d62257-image.png)
 
