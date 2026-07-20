@@ -3,7 +3,7 @@ title: "New invoice features"
 slug: new-development-invoice-items-in-api-call
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/new-development-invoice-items-in-api-call
+source_url: https://developers.grow.business/changelog/new-development-invoice-items-in-api-call
 ---
 
 # New invoice features

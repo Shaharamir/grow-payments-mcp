@@ -3,7 +3,7 @@ title: "Approve Transaction"
 slug: approve-transaction
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/approve-transaction
+source_url: https://developers.grow.business/reference/approve-transaction
 ---
 
 # Approve Transaction

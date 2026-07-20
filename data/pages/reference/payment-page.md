@@ -3,7 +3,7 @@ title: "Payment Page"
 slug: payment-page
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payment-page
+source_url: https://developers.grow.business/reference/payment-page
 ---
 
 # Payment Page

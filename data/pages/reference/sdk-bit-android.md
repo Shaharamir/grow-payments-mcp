@@ -3,7 +3,7 @@ title: "Bit SDK Android"
 slug: sdk-bit-android
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-android
+source_url: https://developers.grow.business/reference/sdk-bit-android
 ---
 
 # Bit SDK Android

@@ -3,7 +3,7 @@ title: "About Grow"
 slug: about-grow-products
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/about-grow-products
+source_url: https://developers.grow.business/docs/about-grow-products
 ---
 
 # About Grow

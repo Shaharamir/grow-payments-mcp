@@ -3,7 +3,7 @@ title: "Infrastructure upgrade"
 slug: whats-new
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/whats-new
+source_url: https://developers.grow.business/changelog/whats-new
 ---
 
 # Infrastructure upgrade

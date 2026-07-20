@@ -3,7 +3,7 @@ title: "3DS"
 slug: 3ds
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/3ds
+source_url: https://developers.grow.business/docs/3ds
 ---
 
 # 3DS

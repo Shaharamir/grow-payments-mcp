@@ -3,7 +3,7 @@ title: "Authentication"
 slug: authentication
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/authentication
+source_url: https://developers.grow.business/reference/authentication
 ---
 
 # Authentication

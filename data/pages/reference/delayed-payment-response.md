@@ -3,7 +3,7 @@ title: "Response"
 slug: delayed-payment-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/delayed-payment-response
+source_url: https://developers.grow.business/reference/delayed-payment-response
 ---
 
 # Response

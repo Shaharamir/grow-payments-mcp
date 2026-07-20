@@ -3,7 +3,7 @@ title: "Overview"
 slug: billing-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing-overview
+source_url: https://developers.grow.business/reference/billing-overview
 ---
 
 # Overview

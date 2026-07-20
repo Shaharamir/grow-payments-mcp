@@ -3,7 +3,7 @@ title: "Payments Type"
 slug: payments-types
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payments-types
+source_url: https://developers.grow.business/reference/payments-types
 ---
 
 # Payments Type

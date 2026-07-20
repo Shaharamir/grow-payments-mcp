@@ -3,7 +3,7 @@ title: "Post Message"
 slug: postmessage
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/postmessage
+source_url: https://developers.grow.business/reference/postmessage
 ---
 
 # Post Message

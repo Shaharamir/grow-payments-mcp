@@ -3,7 +3,7 @@ title: "Bit SDK IOS"
 slug: sdk-bit-ios
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-ios
+source_url: https://developers.grow.business/reference/sdk-bit-ios
 ---
 
 # Bit SDK IOS

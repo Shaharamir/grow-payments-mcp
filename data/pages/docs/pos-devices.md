@@ -3,7 +3,7 @@ title: "POS Device"
 slug: pos-devices
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/pos-devices
+source_url: https://developers.grow.business/docs/pos-devices
 ---
 
 # POS Device

@@ -3,7 +3,7 @@ title: "Apple Domain Verification"
 slug: sdk-apple
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-apple
+source_url: https://developers.grow.business/reference/sdk-apple
 ---
 
 # Apple Domain Verification

@@ -3,7 +3,7 @@ title: "Transition to Production Environment"
 slug: live-environment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/live-environment
+source_url: https://developers.grow.business/reference/live-environment
 ---
 
 # Transition to Production Environment

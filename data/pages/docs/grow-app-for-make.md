@@ -3,7 +3,7 @@ title: "Grow App for Make"
 slug: grow-app-for-make
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/grow-app-for-make
+source_url: https://developers.grow.business/docs/grow-app-for-make
 ---
 
 # Grow App for Make

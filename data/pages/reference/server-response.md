@@ -3,7 +3,7 @@ title: "Server-to-Server Callback"
 slug: server-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response
+source_url: https://developers.grow.business/reference/server-response
 ---
 
 # Server-to-Server Callback

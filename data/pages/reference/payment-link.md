@@ -3,7 +3,7 @@ title: "Overview"
 slug: payment-link
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payment-link
+source_url: https://developers.grow.business/reference/payment-link
 ---
 
 # Overview

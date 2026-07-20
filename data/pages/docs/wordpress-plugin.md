@@ -3,7 +3,7 @@ title: "Plugin WordPress"
 slug: wordpress-plugin
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/wordpress-plugin
+source_url: https://developers.grow.business/docs/wordpress-plugin
 ---
 
 # Plugin WordPress

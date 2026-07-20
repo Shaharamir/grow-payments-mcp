@@ -3,7 +3,7 @@ title: "Postman Collection"
 slug: postman-collection
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/postman-collection
+source_url: https://developers.grow.business/reference/postman-collection
 ---
 
 # Postman Collection

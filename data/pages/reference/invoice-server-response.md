@@ -3,7 +3,7 @@ title: "Invoice Server Response"
 slug: invoice-server-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/invoice-server-response
+source_url: https://developers.grow.business/reference/invoice-server-response
 ---
 
 # Invoice Server Response

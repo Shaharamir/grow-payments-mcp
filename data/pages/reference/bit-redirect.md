@@ -3,7 +3,7 @@ title: "Bit Redirect"
 slug: bit-redirect
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/bit-redirect
+source_url: https://developers.grow.business/reference/bit-redirect
 ---
 
 # Bit Redirect

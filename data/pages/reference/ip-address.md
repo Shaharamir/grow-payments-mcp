@@ -3,7 +3,7 @@ title: "IP Addresses"
 slug: ip-address
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/ip-address
+source_url: https://developers.grow.business/reference/ip-address
 ---
 
 # IP Addresses

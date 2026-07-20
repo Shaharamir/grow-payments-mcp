@@ -3,7 +3,7 @@ title: "Initiating a Transaction on a POS Terminal or Android Device"
 slug: initiating-a-transaction-on-a-pos-terminal-or-android-device
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device
+source_url: https://developers.grow.business/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device
 ---
 
 # Initiating a Transaction on a POS Terminal or Android Device

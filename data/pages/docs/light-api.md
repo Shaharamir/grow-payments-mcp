@@ -3,7 +3,7 @@ title: "Light API"
 slug: light-api
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/light-api
+source_url: https://developers.grow.business/docs/light-api
 ---
 
 # Light API

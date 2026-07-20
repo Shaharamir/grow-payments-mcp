@@ -3,7 +3,7 @@ title: "Success URL"
 slug: success-url
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/success-url
+source_url: https://developers.grow.business/reference/success-url
 ---
 
 # Success URL

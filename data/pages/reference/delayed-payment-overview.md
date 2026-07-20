@@ -3,7 +3,7 @@ title: "Overview"
 slug: delayed-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/delayed-payment-overview
+source_url: https://developers.grow.business/reference/delayed-payment-overview
 ---
 
 # Overview

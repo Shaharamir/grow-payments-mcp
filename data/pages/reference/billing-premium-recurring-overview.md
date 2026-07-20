@@ -3,7 +3,7 @@ title: "overview"
 slug: billing-premium-recurring-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing-premium-recurring-overview
+source_url: https://developers.grow.business/reference/billing-premium-recurring-overview
 ---
 
 # overview

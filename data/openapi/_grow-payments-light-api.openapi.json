@@ -421,7 +421,7 @@
         "tags": [
           "default"
         ],
-        "summary": "Approve Transaction  תיקון",
+        "summary": "Approve Transaction",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -575,7 +575,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails."
       }
     },
     "/api/light/server/1.0/cancelPaymentLink": {
@@ -998,7 +999,7 @@
         "tags": [
           "default"
         ],
-        "summary": "GetPaymentLinkInfo Copy",
+        "summary": "Get Payment Link Info",
         "requestBody": {
           "content": {
             "multipart/form-data": {
@@ -1034,7 +1035,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/getPaymentProcessInfo": {
@@ -1053,11 +1055,6 @@
                     "type": "string",
                     "description": "Required field - Unique identifier refers to payment mathod",
                     "example": "0b7a16e03b25"
-                  },
-                  "apiKey": {
-                    "type": "string",
-                    "description": "Required only for companies that are working with multiple businesses. company's code",
-                    "example": "57ce86548429"
                   },
                   "processId": {
                     "type": "integer",
@@ -1081,7 +1078,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/getTokenTransactionsByExternalIdentifiers/": {
@@ -1148,20 +1146,15 @@
                     "description": "Required field - Unique identifier refers to payment mathod",
                     "example": "0b7a16e03b25"
                   },
-                  "apiKey": {
-                    "type": "string",
-                    "description": "Required only for companies that are working with multiple businesses. company's code",
-                    "example": "57ce86548429"
-                  },
-                  "transactionId": {
-                    "type": "integer",
-                    "description": "Required field - transaction identifier",
-                    "example": "10446"
-                  },
                   "transactionToken": {
                     "type": "string",
                     "description": "Required field - transaction identifier",
-                    "example": "a3ffd8a1e628d21b2b057cde9"
+                    "example": "f3095a2579e86d15f5234fba0ee0ef09"
+                  },
+                  "transactionId": {
+                    "type": "integer",
+                    "description": "Required field - transaction identifier\n",
+                    "example": "425855"
                   }
                 }
               }
@@ -1175,7 +1168,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     },
     "/api/light/server/1.0/refundTransaction": {
@@ -1397,7 +1391,8 @@
               "application/json": {}
             }
           }
-        }
+        },
+        "description": "This method is for updating an existing direct debit payment .   Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
       }
     }
   },

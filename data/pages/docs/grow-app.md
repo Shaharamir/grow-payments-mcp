@@ -3,7 +3,7 @@ title: "Grow App"
 slug: grow-app
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/grow-app
+source_url: https://developers.grow.business/docs/grow-app
 ---
 
 # Grow App

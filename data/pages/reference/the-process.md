@@ -3,7 +3,7 @@ title: "Payment Process"
 slug: the-process
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/the-process
+source_url: https://developers.grow.business/reference/the-process
 ---
 
 # Payment Process

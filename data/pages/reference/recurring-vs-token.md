@@ -3,7 +3,7 @@ title: "Recurring Payment vs. Tokenization"
 slug: recurring-vs-token
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/recurring-vs-token
+source_url: https://developers.grow.business/reference/recurring-vs-token
 ---
 
 # Recurring Payment vs. Tokenization

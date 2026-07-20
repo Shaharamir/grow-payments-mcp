@@ -3,7 +3,7 @@ title: "Server Response"
 slug: server-response-1
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response-1
+source_url: https://developers.grow.business/reference/server-response-1
 ---
 
 # Server Response

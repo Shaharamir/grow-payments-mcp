@@ -3,7 +3,7 @@ title: "Parameter Mapping"
 slug: parameter-mapping
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/parameter-mapping
+source_url: https://developers.grow.business/reference/parameter-mapping
 ---
 
 # Parameter Mapping

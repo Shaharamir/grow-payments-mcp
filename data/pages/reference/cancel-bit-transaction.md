@@ -3,7 +3,7 @@ title: "Cancel Bit Transaction"
 slug: cancel-bit-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/cancel-bit-transaction
+source_url: https://developers.grow.business/reference/cancel-bit-transaction
 ---
 
 # Cancel Bit Transaction

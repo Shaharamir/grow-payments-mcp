@@ -3,7 +3,7 @@ title: "NFC Service"
 slug: nfc-service
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/nfc-service
+source_url: https://developers.grow.business/changelog/nfc-service
 ---
 
 # NFC Service

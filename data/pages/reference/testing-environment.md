@@ -3,7 +3,7 @@ title: "Testing Environment"
 slug: testing-environment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/testing-environment
+source_url: https://developers.grow.business/reference/testing-environment
 ---
 
 # Testing Environment

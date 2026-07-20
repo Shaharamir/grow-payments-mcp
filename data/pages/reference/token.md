@@ -3,7 +3,7 @@ title: "Token"
 slug: token
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/token
+source_url: https://developers.grow.business/reference/token
 ---
 
 # Token

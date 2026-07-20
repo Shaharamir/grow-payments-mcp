@@ -3,7 +3,7 @@ title: "Platforms & Multi-Merchant Systems"
 slug: api-guidelines-for-platforms-system-integrators
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/api-guidelines-for-platforms-system-integrators
+source_url: https://developers.grow.business/reference/api-guidelines-for-platforms-system-integrators
 ---
 
 # Platforms & Multi-Merchant Systems

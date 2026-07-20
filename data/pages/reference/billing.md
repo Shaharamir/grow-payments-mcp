@@ -3,7 +3,7 @@ title: "Billing"
 slug: billing
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing
+source_url: https://developers.grow.business/reference/billing
 ---
 
 # Billing

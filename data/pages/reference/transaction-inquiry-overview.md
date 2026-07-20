@@ -3,7 +3,7 @@ title: "Overview"
 slug: transaction-inquiry-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/transaction-inquiry-overview
+source_url: https://developers.grow.business/reference/transaction-inquiry-overview
 ---
 
 # Overview

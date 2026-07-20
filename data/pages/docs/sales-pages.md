@@ -3,7 +3,7 @@ title: "Static Payment Page"
 slug: sales-pages
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/sales-pages
+source_url: https://developers.grow.business/docs/sales-pages
 ---
 
 # Static Payment Page

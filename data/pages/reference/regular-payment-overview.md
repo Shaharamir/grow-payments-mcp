@@ -3,7 +3,7 @@ title: "Overview"
 slug: regular-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/regular-payment-overview
+source_url: https://developers.grow.business/reference/regular-payment-overview
 ---
 
 # Overview

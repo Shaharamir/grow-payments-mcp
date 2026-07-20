@@ -3,7 +3,7 @@ title: "Response"
 slug: response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response
+source_url: https://developers.grow.business/reference/response
 ---
 
 # Response

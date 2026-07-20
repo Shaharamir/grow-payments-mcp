@@ -3,7 +3,7 @@ title: "Update Payment Link "
 slug: post_api-light-server-1-0-updatepaymentlink-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-updatepaymentlink-1
+source_url: https://developers.grow.business/reference/post_api-light-server-1-0-updatepaymentlink-1
 ---
 
 # Update Payment Link 

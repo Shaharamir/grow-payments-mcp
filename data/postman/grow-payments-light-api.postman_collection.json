@@ -438,7 +438,7 @@
       }
     },
     {
-      "name": "POST Approve Transaction  תיקון",
+      "name": "POST Approve Transaction",
       "request": {
         "method": "POST",
         "header": [
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "name": "POST GetPaymentLinkInfo Copy",
+      "name": "POST Get Payment Link Info",
       "request": {
         "method": "POST",
         "header": [
@@ -1200,12 +1200,6 @@
               "value": "0b7a16e03b25",
               "type": "text",
               "description": "Required field - Unique identifier refers to payment mathod"
-            },
-            {
-              "key": "apiKey",
-              "value": "57ce86548429",
-              "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
             },
             {
               "key": "processId",
@@ -1310,22 +1304,16 @@
               "description": "Required field - Unique identifier refers to payment mathod"
             },
             {
-              "key": "apiKey",
-              "value": "57ce86548429",
+              "key": "transactionToken",
+              "value": "f3095a2579e86d15f5234fba0ee0ef09",
               "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
+              "description": "Required field - transaction identifier"
             },
             {
               "key": "transactionId",
-              "value": "10446",
+              "value": "425855",
               "type": "text",
-              "description": "Required field - transaction identifier"
-            },
-            {
-              "key": "transactionToken",
-              "value": "a3ffd8a1e628d21b2b057cde9",
-              "type": "text",
-              "description": "Required field - transaction identifier"
+              "description": "Required field - transaction identifier\n"
             }
           ]
         }

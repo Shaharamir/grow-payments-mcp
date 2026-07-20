@@ -3,7 +3,7 @@ title: "Growin Wallet SDK"
 slug: implement-code-on-client-side
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/implement-code-on-client-side
+source_url: https://developers.grow.business/reference/implement-code-on-client-side
 ---
 
 # Growin Wallet SDK

@@ -3,7 +3,7 @@ title: "Premium Recurring Payment"
 slug: premium-recurring-payment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/premium-recurring-payment
+source_url: https://developers.grow.business/reference/premium-recurring-payment
 ---
 
 # Premium Recurring Payment

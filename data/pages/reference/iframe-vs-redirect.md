@@ -3,7 +3,7 @@ title: "Iframe vs. Redirect"
 slug: iframe-vs-redirect
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/iframe-vs-redirect
+source_url: https://developers.grow.business/reference/iframe-vs-redirect
 ---
 
 # Iframe vs. Redirect

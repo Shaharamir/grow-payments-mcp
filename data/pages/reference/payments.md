@@ -3,7 +3,7 @@ title: "Supported Payment Method"
 slug: payments
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payments
+source_url: https://developers.grow.business/reference/payments
 ---
 
 # Supported Payment Method

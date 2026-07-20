@@ -3,7 +3,7 @@ title: "Overview"
 slug: recurring-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/recurring-payment-overview
+source_url: https://developers.grow.business/reference/recurring-payment-overview
 ---
 
 # Overview

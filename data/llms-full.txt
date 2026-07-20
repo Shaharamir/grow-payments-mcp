@@ -40,7 +40,7 @@ title: "3DS"
 slug: 3ds
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/3ds
+source_url: https://developers.grow.business/docs/3ds
 ---
 
 # 3DS
@@ -81,7 +81,7 @@ title: "About Grow"
 slug: about-grow-products
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/about-grow-products
+source_url: https://developers.grow.business/docs/about-grow-products
 ---
 
 # About Grow
@@ -150,7 +150,7 @@ title: "Grow App"
 slug: grow-app
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/grow-app
+source_url: https://developers.grow.business/docs/grow-app
 ---
 
 # Grow App
@@ -214,7 +214,7 @@ title: "Grow App for Make"
 slug: grow-app-for-make
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/grow-app-for-make
+source_url: https://developers.grow.business/docs/grow-app-for-make
 ---
 
 # Grow App for Make
@@ -533,7 +533,7 @@ title: "Light API"
 slug: light-api
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/light-api
+source_url: https://developers.grow.business/docs/light-api
 ---
 
 # Light API
@@ -588,7 +588,7 @@ title: "NFC Service"
 slug: nfc
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/nfc
+source_url: https://developers.grow.business/docs/nfc
 ---
 
 # NFC Service
@@ -643,7 +643,7 @@ title: "Plugin WordPress"
 slug: wordpress-plugin
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/wordpress-plugin
+source_url: https://developers.grow.business/docs/wordpress-plugin
 ---
 
 # Plugin WordPress
@@ -725,7 +725,7 @@ title: "POS Device"
 slug: pos-devices
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/pos-devices
+source_url: https://developers.grow.business/docs/pos-devices
 ---
 
 # POS Device
@@ -769,7 +769,7 @@ title: "Static Payment Page"
 slug: sales-pages
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/sales-pages
+source_url: https://developers.grow.business/docs/sales-pages
 ---
 
 # Static Payment Page
@@ -821,7 +821,7 @@ title: "Webhooks"
 slug: webhooks
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/webhooks
+source_url: https://developers.grow.business/docs/webhooks
 ---
 
 # Webhooks
@@ -1181,7 +1181,7 @@ title: "3DS"
 slug: 3ds-1
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/3ds-1
+source_url: https://developers.grow.business/reference/3ds-1
 ---
 
 # 3DS
@@ -1215,7 +1215,7 @@ title: "Apple Domain Verification"
 slug: sdk-apple
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-apple
+source_url: https://developers.grow.business/reference/sdk-apple
 ---
 
 # Apple Domain Verification
@@ -1273,7 +1273,7 @@ title: "Approve Transaction"
 slug: approve-transaction
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/approve-transaction
+source_url: https://developers.grow.business/reference/approve-transaction
 ---
 
 # Approve Transaction
@@ -1306,7 +1306,7 @@ title: "Authentication"
 slug: authentication
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/authentication
+source_url: https://developers.grow.business/reference/authentication
 ---
 
 # Authentication
@@ -1399,7 +1399,7 @@ title: "Billing"
 slug: billing
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing
+source_url: https://developers.grow.business/reference/billing
 ---
 
 # Billing
@@ -1438,7 +1438,7 @@ title: "Bit Redirect"
 slug: bit-redirect
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/bit-redirect
+source_url: https://developers.grow.business/reference/bit-redirect
 ---
 
 # Bit Redirect
@@ -1554,7 +1554,7 @@ title: "Bit SDK Android"
 slug: sdk-bit-android
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-android
+source_url: https://developers.grow.business/reference/sdk-bit-android
 ---
 
 # Bit SDK Android
@@ -1682,7 +1682,7 @@ title: "Bit SDK IOS"
 slug: sdk-bit-ios
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/sdk-bit-ios
+source_url: https://developers.grow.business/reference/sdk-bit-ios
 ---
 
 # Bit SDK IOS
@@ -1825,7 +1825,7 @@ title: "Errors"
 slug: errors
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/errors
+source_url: https://developers.grow.business/reference/errors
 ---
 
 # Errors
@@ -1920,10 +1920,10 @@ source_url: https://grow-il.readme.io/reference/errors
 
 ---
 title: "Growin SDK"
-slug: page
+slug: growin-wallet-sdk
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/page
+source_url: https://developers.grow.business/reference/growin-wallet-sdk
 ---
 
 # Growin SDK
@@ -2052,7 +2052,7 @@ title: "Growin Wallet SDK"
 slug: implement-code-on-client-side
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/implement-code-on-client-side
+source_url: https://developers.grow.business/reference/implement-code-on-client-side
 ---
 
 # Growin Wallet SDK
@@ -2122,7 +2122,7 @@ title: "Iframe vs. Redirect"
 slug: iframe-vs-redirect
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/iframe-vs-redirect
+source_url: https://developers.grow.business/reference/iframe-vs-redirect
 ---
 
 # Iframe vs. Redirect
@@ -2163,7 +2163,7 @@ title: "Initiating a Transaction on a POS Terminal or Android Device"
 slug: initiating-a-transaction-on-a-pos-terminal-or-android-device
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device
+source_url: https://developers.grow.business/reference/initiating-a-transaction-on-a-pos-terminal-or-android-device
 ---
 
 # Initiating a Transaction on a POS Terminal or Android Device
@@ -2267,7 +2267,7 @@ title: "Introduction"
 slug: introduction
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/introduction
+source_url: https://developers.grow.business/reference/introduction
 ---
 
 # Introduction
@@ -2366,7 +2366,7 @@ title: "Invoice Server Response"
 slug: invoice-server-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/invoice-server-response
+source_url: https://developers.grow.business/reference/invoice-server-response
 ---
 
 # Invoice Server Response
@@ -2404,7 +2404,7 @@ title: "IP Addresses"
 slug: ip-address
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/ip-address
+source_url: https://developers.grow.business/reference/ip-address
 ---
 
 # IP Addresses
@@ -2482,7 +2482,7 @@ title: "Overview"
 slug: delayed-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/delayed-payment-overview
+source_url: https://developers.grow.business/reference/delayed-payment-overview
 ---
 
 # Overview
@@ -2548,7 +2548,7 @@ title: "Overview"
 slug: transaction-inquiry-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/transaction-inquiry-overview
+source_url: https://developers.grow.business/reference/transaction-inquiry-overview
 ---
 
 # Overview
@@ -2585,7 +2585,7 @@ title: "Overview"
 slug: recurring-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/recurring-payment-overview
+source_url: https://developers.grow.business/reference/recurring-payment-overview
 ---
 
 # Overview
@@ -2636,7 +2636,7 @@ title: "Overview"
 slug: refund-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/refund-overview
+source_url: https://developers.grow.business/reference/refund-overview
 ---
 
 # Overview
@@ -2688,7 +2688,7 @@ title: "Overview"
 slug: billing-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing-overview
+source_url: https://developers.grow.business/reference/billing-overview
 ---
 
 # Overview
@@ -2721,7 +2721,7 @@ title: "overview"
 slug: billing-premium-recurring-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/billing-premium-recurring-overview
+source_url: https://developers.grow.business/reference/billing-premium-recurring-overview
 ---
 
 # overview
@@ -2765,7 +2765,7 @@ title: "Overview"
 slug: token-transactions-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/token-transactions-overview
+source_url: https://developers.grow.business/reference/token-transactions-overview
 ---
 
 # Overview
@@ -2831,7 +2831,7 @@ title: "Overview"
 slug: regular-payment-overview
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/regular-payment-overview
+source_url: https://developers.grow.business/reference/regular-payment-overview
 ---
 
 # Overview
@@ -2886,7 +2886,7 @@ title: "Overview"
 slug: payment-link
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payment-link
+source_url: https://developers.grow.business/reference/payment-link
 ---
 
 # Overview
@@ -2924,7 +2924,7 @@ title: "Parameter Mapping"
 slug: parameter-mapping
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/parameter-mapping
+source_url: https://developers.grow.business/reference/parameter-mapping
 ---
 
 # Parameter Mapping
@@ -2991,7 +2991,7 @@ title: "Payment Page"
 slug: payment-page
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payment-page
+source_url: https://developers.grow.business/reference/payment-page
 ---
 
 # Payment Page
@@ -3132,7 +3132,7 @@ title: "Payment Process"
 slug: the-process
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/the-process
+source_url: https://developers.grow.business/reference/the-process
 ---
 
 # Payment Process
@@ -3203,7 +3203,7 @@ title: "Payments Type"
 slug: payments-types
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payments-types
+source_url: https://developers.grow.business/reference/payments-types
 ---
 
 # Payments Type
@@ -3273,7 +3273,7 @@ title: "Platforms & Multi-Merchant Systems"
 slug: api-guidelines-for-platforms-system-integrators
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/api-guidelines-for-platforms-system-integrators
+source_url: https://developers.grow.business/reference/api-guidelines-for-platforms-system-integrators
 ---
 
 # Platforms & Multi-Merchant Systems
@@ -3387,7 +3387,7 @@ title: "Post Message"
 slug: postmessage
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/postmessage
+source_url: https://developers.grow.business/reference/postmessage
 ---
 
 # Post Message
@@ -3493,7 +3493,7 @@ title: "Postman Collection"
 slug: postman-collection
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/postman-collection
+source_url: https://developers.grow.business/reference/postman-collection
 ---
 
 # Postman Collection
@@ -3535,7 +3535,7 @@ title: "Premium Recurring Payment"
 slug: premium-recurring-payment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/premium-recurring-payment
+source_url: https://developers.grow.business/reference/premium-recurring-payment
 ---
 
 # Premium Recurring Payment
@@ -3633,7 +3633,7 @@ title: "Recurring Payment vs. Tokenization"
 slug: recurring-vs-token
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/recurring-vs-token
+source_url: https://developers.grow.business/reference/recurring-vs-token
 ---
 
 # Recurring Payment vs. Tokenization
@@ -3676,63 +3676,10 @@ Understanding your existing infrastructure and requirements will guide you towar
 
 ---
 title: "Response"
-slug: delayed-payment-response
+slug: delayed-payment-response-2
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/delayed-payment-response
----
-
-# Response
-
-## *Response example:*
-
-### *Success*:
-
-JSON
-
-```
-  {
-    "status": 1,
-    "err": "",
-    "data": {
-      	"processId":"734754",
-      	"processToken":"2153287cd9af46457ae842337250b78d",
-      	"url":"https://sandbox.meshulam.co.il/far?l=89a71a421b8e0686024fbb762dab61e1"
-    	}
-    }
-```
-
-### *Failure*:
-
-JSON
-
-```
-  {
-    "err": {
-        "id": 54,
-        "message": "חסרים שדות חובה: pageCode"
-    },
-    "status": 0,
-    "data":""
-    }
-```
-
-- **status** is referred to success or failure (1 or 0 respectively).
-- **err** - in case of an error, would return as the error code and error message.
-- **data** - all the details would return here.
-
-## ***Important!***
-
-*You must NOT reveal the process details such as the**processId** and the **processToken** to the paying customer. You may display the **asmachta** field for unique identification of the transaction.*
-
-================================================================================
-
----
-title: "Response"
-slug: response-copy-1
-type: basic
-section: reference
-source_url: https://grow-il.readme.io/reference/response-copy-1
+source_url: https://developers.grow.business/reference/delayed-payment-response-2
 ---
 
 # Response
@@ -3802,10 +3749,63 @@ JSON
 
 ---
 title: "Response"
-slug: response-3
+slug: delayed-payment-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-3
+source_url: https://developers.grow.business/reference/delayed-payment-response
+---
+
+# Response
+
+## *Response example:*
+
+### *Success*:
+
+JSON
+
+```
+  {
+    "status": 1,
+    "err": "",
+    "data": {
+      	"processId":"734754",
+      	"processToken":"2153287cd9af46457ae842337250b78d",
+      	"url":"https://sandbox.meshulam.co.il/far?l=89a71a421b8e0686024fbb762dab61e1"
+    	}
+    }
+```
+
+### *Failure*:
+
+JSON
+
+```
+  {
+    "err": {
+        "id": 54,
+        "message": "חסרים שדות חובה: pageCode"
+    },
+    "status": 0,
+    "data":""
+    }
+```
+
+- **status** is referred to success or failure (1 or 0 respectively).
+- **err** - in case of an error, would return as the error code and error message.
+- **data** - all the details would return here.
+
+## ***Important!***
+
+*You must NOT reveal the process details such as the**processId** and the **processToken** to the paying customer. You may display the **asmachta** field for unique identification of the transaction.*
+
+================================================================================
+
+---
+title: "Response"
+slug: growin-wallet-sdk-response
+type: basic
+section: reference
+source_url: https://developers.grow.business/reference/growin-wallet-sdk-response
 ---
 
 # Response
@@ -3855,10 +3855,10 @@ You may display the **asmachta** field for unique identification of the transact
 
 ---
 title: "Response"
-slug: responae
+slug: recurring-payment-response-1
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/responae
+source_url: https://developers.grow.business/reference/recurring-payment-response-1
 ---
 
 # Response
@@ -3904,10 +3904,10 @@ JSON
 
 ---
 title: "Response"
-slug: response-copy-copy
+slug: recurring-payment-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-copy-copy
+source_url: https://developers.grow.business/reference/recurring-payment-response
 ---
 
 # Response
@@ -3960,7 +3960,7 @@ title: "Response"
 slug: response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response
+source_url: https://developers.grow.business/reference/response
 ---
 
 # Response
@@ -4023,10 +4023,10 @@ JSON
 
 ---
 title: "Response"
-slug: copy-of-response
+slug: billing-premium-recurring-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/copy-of-response
+source_url: https://developers.grow.business/reference/billing-premium-recurring-response
 ---
 
 # Response
@@ -4099,10 +4099,10 @@ JSON
 
 ---
 title: "Response"
-slug: response-copy-2
+slug: token-transactions-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-copy-2
+source_url: https://developers.grow.business/reference/token-transactions-response
 ---
 
 # Response
@@ -4172,10 +4172,10 @@ JSON
 
 ---
 title: "Response"
-slug: reponse
+slug: regular-payment-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/reponse
+source_url: https://developers.grow.business/reference/regular-payment-response
 ---
 
 # Response
@@ -4226,10 +4226,10 @@ You may display the **asmachta** field for unique identification of the transact
 
 ---
 title: "Response"
-slug: response-copy-3
+slug: refund-overview-1
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-copy-3
+source_url: https://developers.grow.business/reference/refund-overview-1
 ---
 
 # Response
@@ -4281,10 +4281,10 @@ JSON
 
 ---
 title: "Response get payment process info"
-slug: response-get-transaction-info-copy
+slug: response-get-payment-info
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-get-transaction-info-copy
+source_url: https://developers.grow.business/reference/response-get-payment-info
 ---
 
 # Response get payment process info
@@ -4357,10 +4357,10 @@ JSON
 
 ---
 title: "Response get transaction info"
-slug: response-1
+slug: response-get-transaction-info
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/response-1
+source_url: https://developers.grow.business/reference/response-get-transaction-info
 ---
 
 # Response get transaction info
@@ -4436,7 +4436,7 @@ title: "Server Response"
 slug: server-response-1
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response-1
+source_url: https://developers.grow.business/reference/server-response-1
 ---
 
 # Server Response
@@ -4523,10 +4523,10 @@ For a detailed example of the API request, please see the API Request Example [S
 
 ---
 title: "Server response"
-slug: server-response-copy-1
+slug: token-server-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response-copy-1
+source_url: https://developers.grow.business/reference/token-server-response
 ---
 
 # Server response
@@ -4604,10 +4604,10 @@ This will help you debug the service, and/or insert logs if necessary.
 
 ---
 title: "Server-to-Server Callback"
-slug: server-response-copy
+slug: delayed-payment-callback
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response-copy
+source_url: https://developers.grow.business/reference/delayed-payment-callback
 ---
 
 # Server-to-Server Callback
@@ -4673,7 +4673,7 @@ title: "Server-to-Server Callback"
 slug: server-to-server-callback
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-to-server-callback
+source_url: https://developers.grow.business/reference/server-to-server-callback
 ---
 
 # Server-to-Server Callback
@@ -4751,10 +4751,10 @@ Example request: <https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUr
 
 ---
 title: "Server-to-Server Callback"
-slug: server-response-copy-copy
+slug: recurring-payment-callback
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response-copy-copy
+source_url: https://developers.grow.business/reference/recurring-payment-callback
 ---
 
 # Server-to-Server Callback
@@ -4838,7 +4838,7 @@ title: "Server-to-Server Callback"
 slug: server-response
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-response
+source_url: https://developers.grow.business/reference/server-response
 ---
 
 # Server-to-Server Callback
@@ -4911,10 +4911,10 @@ Example request: <https://sandbox.meshulam.co.il/api/light/server/1.0/updateMyUr
 
 ---
 title: "Server-to-Server Callback"
-slug: server-respons-copy
+slug: payment-request-callback
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/server-respons-copy
+source_url: https://developers.grow.business/reference/payment-request-callback
 ---
 
 # Server-to-Server Callback
@@ -5005,7 +5005,7 @@ title: "Success URL"
 slug: success-url
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/success-url
+source_url: https://developers.grow.business/reference/success-url
 ---
 
 # Success URL
@@ -5036,7 +5036,7 @@ title: "Supported Payment Method"
 slug: payments
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/payments
+source_url: https://developers.grow.business/reference/payments
 ---
 
 # Supported Payment Method
@@ -5093,7 +5093,7 @@ title: "Testing Environment"
 slug: testing-environment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/testing-environment
+source_url: https://developers.grow.business/reference/testing-environment
 ---
 
 # Testing Environment
@@ -5173,7 +5173,7 @@ title: "Token"
 slug: token
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/token
+source_url: https://developers.grow.business/reference/token
 ---
 
 # Token
@@ -5318,7 +5318,7 @@ title: "Transition to Production Environment"
 slug: live-environment
 type: basic
 section: reference
-source_url: https://grow-il.readme.io/reference/live-environment
+source_url: https://developers.grow.business/reference/live-environment
 ---
 
 # Transition to Production Environment
@@ -5470,10 +5470,10 @@ By following these steps and completing the required review, you can transition 
 
 ---
 title: "Approve Transaction"
-slug: post_api-light-server-1-0-approvetransaction-2
+slug: approve-transaction-2
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-2
+source_url: https://developers.grow.business/reference/approve-transaction-2
 ---
 
 # Approve Transaction
@@ -5485,7 +5485,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Approve Transaction Copy
+**Summary:** Approve Transaction
+
+The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5531,10 +5534,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 
 ---
 title: "Approve Transaction"
-slug: post_api-light-server-1-0-approvetransaction-4
+slug: approve-transaction-4
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-4
+source_url: https://developers.grow.business/reference/approve-transaction-4
 ---
 
 # Approve Transaction
@@ -5549,7 +5552,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 - https://sandboxapi.grow.link
 - https://growdevcms.inmanage.com
 
-**Summary:** Approve Transaction Copy
+**Summary:** Approve Transaction
+
+The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5595,10 +5601,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 
 ---
 title: "Approve Transaction"
-slug: post_api-light-server-1-0-approvetransaction-1
+slug: approve-transaction-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-1
+source_url: https://developers.grow.business/reference/approve-transaction-1
 ---
 
 # Approve Transaction
@@ -5610,7 +5616,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Approve Transaction  תיקון
+**Summary:** Approve Transaction
+
+The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5659,10 +5668,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 
 ---
 title: "Approve Transaction "
-slug: post_api-light-server-1-0-approvetransaction-5
+slug: approve-transaction-5
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approvetransaction-5
+source_url: https://developers.grow.business/reference/approve-transaction-5
 ---
 
 # Approve Transaction 
@@ -5674,7 +5683,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-approv
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Approve Transaction PL Copy
+**Summary:** Approve Transaction 
+
+The ApproveTransaction call must be executed after each successful payment. It is the final step in the transaction flow and serves as confirmation that your system has received and acknowledged the transaction details. Note: The transaction will still be processed even if the ApproveTransaction request is not executed or fails.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -5724,7 +5736,7 @@ title: "Cancel Bit Transaction"
 slug: cancel-bit-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/cancel-bit-transaction
+source_url: https://developers.grow.business/reference/cancel-bit-transaction
 ---
 
 # Cancel Bit Transaction
@@ -5764,10 +5776,10 @@ Each business has its own unique identifiers  (pageCode) - the identifiers on th
 
 ---
 title: "Create payment &save token"
-slug: post_api-light-server-1-0-createpaymentprocess-9
+slug: create-payment-process-9
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-9
+source_url: https://developers.grow.business/reference/create-payment-process-9
 ---
 
 # Create payment &save token
@@ -5827,10 +5839,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Create Payment Link"
-slug: post_api-light-server-1-0-createpaymentlink
+slug: create-payment-link
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentlink
+source_url: https://developers.grow.business/reference/create-payment-link
 ---
 
 # Create Payment Link
@@ -5913,10 +5925,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Create Transaction With Token"
-slug: post_api-light-server-1-0-createtransactionwithtoken-4
+slug: create-transaction-with-token-4
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-4
+source_url: https://developers.grow.business/reference/create-transaction-with-token-4
 ---
 
 # Create Transaction With Token
@@ -5968,10 +5980,10 @@ Each business has its own unique identifiers - the identifiers on this documenta
 
 ---
 title: "Delayed Payment J4J5"
-slug: post_api-light-server-1-0-createpaymentprocess-10
+slug: create-payment-process-10
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-10
+source_url: https://developers.grow.business/reference/create-payment-process-10
 ---
 
 # Delayed Payment J4J5
@@ -6032,10 +6044,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "First Payment -Premium Recurring By Token"
-slug: post_api-light-server-1-0-createtransactionwithtoken-3
+slug: create-transaction-with-token-3
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-3
+source_url: https://developers.grow.business/reference/create-transaction-with-token-3
 ---
 
 # First Payment -Premium Recurring By Token
@@ -6081,10 +6093,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 
 ---
 title: "Further Payment -Premium Recurring By Token"
-slug: post_api-light-server-1-0-createtransactionwithtoken-1
+slug: create-transaction-with-token-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken-1
+source_url: https://developers.grow.business/reference/create-transaction-with-token-1
 ---
 
 # Further Payment -Premium Recurring By Token
@@ -6131,10 +6143,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-create
 
 ---
 title: "Get Payment Link Info"
-slug: post_api-light-server-1-0-getpaymentlinkinfo-2
+slug: get-payment-link-info
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpaymentlinkinfo-2
+source_url: https://developers.grow.business/reference/get-payment-link-info
 ---
 
 # Get Payment Link Info
@@ -6149,7 +6161,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpay
 - https://sandboxapi.grow.link
 - https://growdevcms.inmanage.com
 
-**Summary:** GetPaymentLinkInfo Copy
+**Summary:** Get Payment Link Info
+
+Each business has its own unique identifiers - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6174,10 +6189,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpay
 
 ---
 title: "Get Payment Process Info"
-slug: post_api-light-server-1-0-getpaymentprocessinfo-1
+slug: get-payment-process-info
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpaymentprocessinfo-1
+source_url: https://developers.grow.business/reference/get-payment-process-info
 ---
 
 # Get Payment Process Info
@@ -6189,7 +6204,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpay
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Get Payment Process Info Copy
+**Summary:** Get Payment Process Info
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6214,10 +6232,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-getpay
 
 ---
 title: "Get Token Only"
-slug: post_api-light-server-1-0-createpaymentprocess-6
+slug: create-payment-process-6
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-6
+source_url: https://developers.grow.business/reference/create-payment-process-6
 ---
 
 # Get Token Only
@@ -6274,10 +6292,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Get Transaction Info"
-slug: post_api-light-server-1-0-gettransactioninfo-1
+slug: get-transaction-info
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-gettransactioninfo-1
+source_url: https://developers.grow.business/reference/get-transaction-info
 ---
 
 # Get Transaction Info
@@ -6289,7 +6307,10 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-gettra
 **Servers:**
 - https://sandbox.meshulam.co.il
 
-**Summary:** Get Transaction Info Copy
+**Summary:** Get Transaction Info
+
+Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6317,7 +6338,7 @@ title: "getTokenTransactionsByExternalIdentifiers"
 slug: post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1
+source_url: https://developers.grow.business/reference/post_api-light-server-1-0-gettokentransactionsbyexternalidentifiers-1
 ---
 
 # getTokenTransactionsByExternalIdentifiers
@@ -6358,10 +6379,10 @@ Each business has its own unique identifiers - the identifiers on this documenta
 
 ---
 title: "Premium Recurring Payment Managed by Grow via Token"
-slug: post_api-light-server-1-0-createtransactionwithtoken
+slug: create-transaction-with-token
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createtransactionwithtoken
+source_url: https://developers.grow.business/reference/create-transaction-with-token
 ---
 
 # Premium Recurring Payment Managed by Grow via Token
@@ -6412,10 +6433,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Recurring Payment"
-slug: post_api-light-server-1-0-createpaymentprocess-3
+slug: create-payment-process-3
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-3
+source_url: https://developers.grow.business/reference/create-payment-process-3
 ---
 
 # Recurring Payment
@@ -6475,10 +6496,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Refund Transaction"
-slug: post_api-light-server-1-0-refundtransaction-1
+slug: refund-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-refundtransaction-1
+source_url: https://developers.grow.business/reference/refund-transaction
 ---
 
 # Refund Transaction
@@ -6521,10 +6542,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Regular Payment"
-slug: post_api-light-server-1-0-createpaymentprocess
+slug: create-payment-process
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess
+source_url: https://developers.grow.business/reference/create-payment-process
 ---
 
 # Regular Payment
@@ -6586,10 +6607,10 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 
 ---
 title: "Regular Payment SDK"
-slug: post_api-light-server-1-0-createpaymentprocess-1
+slug: create-payment-process-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-createpaymentprocess-1
+source_url: https://developers.grow.business/reference/create-payment-process-1
 ---
 
 # Regular Payment SDK
@@ -6658,7 +6679,7 @@ title: "SetAccountDetails "
 slug: post_api-light-server-1-0-setaccountdetails-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-setaccountdetails-1
+source_url: https://developers.grow.business/reference/post_api-light-server-1-0-setaccountdetails-1
 ---
 
 # SetAccountDetails 
@@ -6700,10 +6721,10 @@ This API allows you to define default branding settings for the business, such a
 
 ---
 title: "Settle Suspended Transaction"
-slug: post_api-light-server-1-0-settlesuspendedtransaction-1
+slug: settle-suspended-transaction
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-settlesuspendedtransaction-1
+source_url: https://developers.grow.business/reference/settle-suspended-transaction
 ---
 
 # Settle Suspended Transaction
@@ -6753,7 +6774,7 @@ title: "Update Payment Link "
 slug: post_api-light-server-1-0-updatepaymentlink-1
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-updatepaymentlink-1
+source_url: https://developers.grow.business/reference/post_api-light-server-1-0-updatepaymentlink-1
 ---
 
 # Update Payment Link 
@@ -6801,10 +6822,10 @@ Each business has its own unique identifiers - the identifiers on this documenta
 
 ---
 title: "Update Recurring Payment"
-slug: post_api-light-server-1-0-updatedirectdebit
+slug: update-direct-debit
 type: endpoint
 section: reference
-source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-updatedirectdebit
+source_url: https://developers.grow.business/reference/update-direct-debit
 ---
 
 # Update Recurring Payment
@@ -6817,6 +6838,9 @@ source_url: https://grow-il.readme.io/reference/post_api-light-server-1-0-update
 - https://sandbox.meshulam.co.il
 
 **Summary:** Update Recurring Payment
+
+This method is for updating an existing direct debit payment .   Each business has its own unique identifiers - the identifiers on this documentation are for example only.  To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
+
 
 **Request body** (`multipart/form-data`):
 
@@ -6861,13 +6885,13 @@ source_url: https://grow-il.readme.io/changelog
 Release notes and product updates for Grow Payments. Entries:
 
 - [Infrastructure upgrade](whats-new.md)
-  - source: https://grow-il.readme.io/changelog/whats-new
+  - source: https://developers.grow.business/changelog/whats-new
 - [New invoice features](new-development-invoice-items-in-api-call.md)
-  - source: https://grow-il.readme.io/changelog/new-development-invoice-items-in-api-call
+  - source: https://developers.grow.business/changelog/new-development-invoice-items-in-api-call
 - [NFC Service](nfc-service.md)
-  - source: https://grow-il.readme.io/changelog/nfc-service
+  - source: https://developers.grow.business/changelog/nfc-service
 - [Unique identifiers for token transactions](unique-identifiers-for-token-transactions.md)
-  - source: https://grow-il.readme.io/changelog/unique-identifiers-for-token-transactions
+  - source: https://developers.grow.business/changelog/unique-identifiers-for-token-transactions
 
 ================================================================================
 
@@ -6876,7 +6900,7 @@ title: "Infrastructure upgrade"
 slug: whats-new
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/whats-new
+source_url: https://developers.grow.business/changelog/whats-new
 ---
 
 # Infrastructure upgrade
@@ -6930,7 +6954,7 @@ title: "New invoice features"
 slug: new-development-invoice-items-in-api-call
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/new-development-invoice-items-in-api-call
+source_url: https://developers.grow.business/changelog/new-development-invoice-items-in-api-call
 ---
 
 # New invoice features
@@ -6960,7 +6984,7 @@ title: "NFC Service"
 slug: nfc-service
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/nfc-service
+source_url: https://developers.grow.business/changelog/nfc-service
 ---
 
 # NFC Service
@@ -6989,7 +7013,7 @@ title: "Unique identifiers for token transactions"
 slug: unique-identifiers-for-token-transactions
 type: none
 section: changelog
-source_url: https://grow-il.readme.io/changelog/unique-identifiers-for-token-transactions
+source_url: https://developers.grow.business/changelog/unique-identifiers-for-token-transactions
 ---
 
 # Unique identifiers for token transactions

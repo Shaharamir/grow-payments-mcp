@@ -3,7 +3,7 @@ title: "Webhooks"
 slug: webhooks
 type: basic
 section: docs
-source_url: https://grow-il.readme.io/docs/webhooks
+source_url: https://developers.grow.business/docs/webhooks
 ---
 
 # Webhooks
