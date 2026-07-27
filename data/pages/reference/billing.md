@@ -10,7 +10,7 @@ source_url: https://developers.grow.business/reference/billing
 
 Grow Billing is a recurring payment solution for managing automatic monthly charges and long-term customer payment plans.
 
-It is needed for subscriptions, memberships, retainers, and any service that charges customers on a regular schedule.  
+It is needed for subscriptions, memberships, retainers, and any service that charges customers on a regular schedule.
 Unlike one-time payment flows, this billing setup supports long-term payment plans, flexible updates, and automatic monthly charging without manual handling.
 
 Businesses can change amounts, payment dates, customer details, card details, or cancel a recurring charge when needed.

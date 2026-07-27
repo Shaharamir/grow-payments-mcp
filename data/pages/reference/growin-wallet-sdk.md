@@ -8,10 +8,10 @@ source_url: https://developers.grow.business/reference/growin-wallet-sdk
 
 # Growin SDK
 
-Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.  
-It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.  
-The form adapts to the site design, helping create a smoother payment experience and improve conversion.  
-After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.  
+Growin SDK adds a modern checkout experience that feels like a payment wallet, without redirects or separate payment pages.
+It unifies payment methods like credit card, bit, Apple Pay, Google Pay, PayBox, and bank transfer in one flow.
+The form adapts to the site design, helping create a smoother payment experience and improve conversion.
+After the SDK is loaded, checkout starts with a wallet payment process, returns an authCode, and opens the payment options.
 Real-time events keep the payment status clear from start to success, failure, cancellation, or form changes.
 
 > 📘

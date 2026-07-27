@@ -8,7 +8,7 @@ source_url: https://developers.grow.business/reference/postmessage
 
 # Post Message
 
-PostMessage helps your business react instantly to what happens inside the Grow payment page.  
+PostMessage helps your business react instantly to what happens inside the Grow payment page.
 It is useful when the merchant uses an iframe, and the system needs to know whether the customer paid, closed the page, or changed direction.
 
 Grow supports different event messages for credit card, Bit, Apple Pay, and Google Pay, so each payment method can be handled in the right context.

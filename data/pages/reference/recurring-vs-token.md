@@ -10,7 +10,7 @@ source_url: https://developers.grow.business/reference/recurring-vs-token
 
 Compare Grow Billing and tokenization and choose the right way to manage recurring payments.
 
-With Billing, Grow manages the full recurring payment journey, from payment schedule and charge amounts, sends updates, and handles failure notifications.  
+With Billing, Grow manages the full recurring payment journey, from payment schedule and charge amounts, sends updates, and handles failure notifications.
 Once the initial setup is complete, the Recurring Payment runs automatically on a recurring basis.
 
 Tokenization gives businesses more control by allowing them to save a token and trigger each future charge separately, choosing when, how, and how often to charge.

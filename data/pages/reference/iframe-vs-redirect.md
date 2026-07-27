@@ -8,12 +8,12 @@ source_url: https://developers.grow.business/reference/iframe-vs-redirect
 
 # Iframe vs. Redirect
 
-Businesses can choose between Iframe and Redirect when setting up the Grow payment flow.  
+Businesses can choose between Iframe and Redirect when setting up the Grow payment flow.
 With Iframe, the payment page stays embedded inside the business website, creating a smoother and more continuous checkout experience.
 
 With Redirect, the customer moves to a separate payment page, which can be simpler to manage and clearer for external payment actions.
 
-The comparison is needed because each option affects the customer journey, trust, payment experience, and checkout flow differently.  
+The comparison is needed because each option affects the customer journey, trust, payment experience, and checkout flow differently.
 For businesses using Apple Pay in an Iframe, domain verification is an important requirement for secure payment integration.
 
 ### The differences between Iframe and Redirect:

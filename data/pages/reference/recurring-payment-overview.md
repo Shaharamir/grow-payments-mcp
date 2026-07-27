@@ -14,7 +14,7 @@ It is needed when a business wants to automate monthly billing, reduce manual wo
 
 The flow starts by creating the payment form with a unique pageCode, then presenting the returned payment link in an iframe, new tab, or direct customer message.
 
-Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.  
+Businesses can edit the recurring payment details at any time, keeping recurring billing flexible and easy to manage.
 Uniquely with Grow, customers can also set up the recurring payment through PayBox, without entering credit card details.
 
 Effortless Billing with Grow Systems  
