@@ -1316,20 +1316,6 @@
   "openapi": null
  },
  {
-  "slug": "changelog",
-  "title": "Changelog",
-  "section": "changelog",
-  "type": "changelog",
-  "group": "Changelog",
-  "url": "https://developers.grow.business/changelog",
-  "path": "pages/changelog/changelog.md",
-  "description": "Release notes and product updates for Grow Payments. Entries:",
-  "is_endpoint": false,
-  "method": null,
-  "api_path": null,
-  "openapi": null
- },
- {
   "slug": "new-development-invoice-items-in-api-call",
   "title": "New invoice features",
   "section": "changelog",

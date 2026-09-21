@@ -206,8 +206,6 @@ Source: https://grow-il.readme.io • Each link is a bundled Markdown file (path
 
 ## Changelog
 
-- [Changelog](pages/changelog/changelog.md): Release notes and product updates for Grow Payments. Entries:
-  - source: https://developers.grow.business/changelog
 - [Infrastructure upgrade](pages/changelog/whats-new.md): 19.07.2023 infrastructure upgrade
   - source: https://developers.grow.business/changelog/whats-new
 - [New invoice features](pages/changelog/new-development-invoice-items-in-api-call.md): 01.11.2022 New development of invoice items in API call
