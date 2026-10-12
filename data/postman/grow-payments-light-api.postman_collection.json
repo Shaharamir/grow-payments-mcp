@@ -630,174 +630,6 @@
       }
     },
     {
-      "name": "POST cancelPaymentLink  תיקון",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "multipart/form-data"
-          }
-        ],
-        "url": {
-          "raw": "https://sandbox.meshulam.co.il/api/light/server/1.0/cancelPaymentLink",
-          "host": [
-            "https://sandbox.meshulam.co.il"
-          ],
-          "path": [
-            "api",
-            "light",
-            "server",
-            "1.0",
-            "cancelPaymentLink"
-          ]
-        },
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "paymentLinkProcessId",
-              "value": "917577",
-              "type": "text",
-              "description": "Required field -payment Link Process identifier\n"
-            },
-            {
-              "key": "paymentLinkProcessToken",
-              "value": "5cdc1faa6d7ccb69138f84bc4b57b85a",
-              "type": "text",
-              "description": "Required field -payment Link Process identifier\n"
-            },
-            {
-              "key": "userId",
-              "value": "4ec1d595ae764243",
-              "type": "text",
-              "description": "Required field -Unique identifier refers to every business that is connected and uses Grow payments solutions."
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "POST createPaymentLink תיקון",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "multipart/form-data"
-          }
-        ],
-        "url": {
-          "raw": "https://sandbox.meshulam.co.il/api/light/server/1.0/createPaymentLink",
-          "host": [
-            "https://sandbox.meshulam.co.il"
-          ],
-          "path": [
-            "api",
-            "light",
-            "server",
-            "1.0",
-            "createPaymentLink"
-          ]
-        },
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "pageCode",
-              "value": "c34d1f4a546f",
-              "type": "text",
-              "description": "Required field - Unique identifier refers for this payment mathod"
-            },
-            {
-              "key": "userId",
-              "value": "4ec1d595ae764243",
-              "type": "text",
-              "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions."
-            },
-            {
-              "key": "apiKey",
-              "value": "57ce86548429",
-              "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
-            },
-            {
-              "key": "sum",
-              "value": "1",
-              "type": "text",
-              "description": ""
-            },
-            {
-              "key": "successUrl",
-              "value": "https://mysite.co.il/thank.html?test=1",
-              "type": "text",
-              "description": "Required field -An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true"
-            },
-            {
-              "key": "cancelUrl",
-              "value": "https://mysite.co.il/thank.html?test=1",
-              "type": "text",
-              "description": "Required field -The page users will be redirected to if a payment is cancelled.\n"
-            },
-            {
-              "key": "description",
-              "value": "Course",
-              "type": "text",
-              "description": "Required field -Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription."
-            },
-            {
-              "key": "notifyUrl",
-              "value": "",
-              "type": "text",
-              "description": "optional Url for server to sever request"
-            },
-            {
-              "key": "pageField[fullName]",
-              "value": "John Smith",
-              "type": "text",
-              "description": "Required field - Full name must consist of at least two names."
-            },
-            {
-              "key": "pageField[phone]",
-              "value": "050",
-              "type": "text",
-              "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000"
-            },
-            {
-              "key": "pageField[email]",
-              "value": "test@gmail.com",
-              "type": "text",
-              "description": "optional -A valid email address"
-            },
-            {
-              "key": "sendingMode",
-              "value": "1",
-              "type": "text",
-              "description": "1=SMS,2=Mail"
-            },
-            {
-              "key": "messageText",
-              "value": "",
-              "type": "text",
-              "description": "optional  -Message text sent to user."
-            },
-            {
-              "key": "cField1",
-              "value": "test field 1",
-              "type": "text",
-              "description": "optional - Custom field, you may add up to 9 fields.\n\n"
-            },
-            {
-              "key": "cField2",
-              "value": "test field 2",
-              "type": "text",
-              "description": "optional - Custom field, you may add up to 9 fields.\n\n"
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "POST Regular Payment SDK",
       "request": {
         "method": "POST",
@@ -996,7 +828,7 @@
       }
     },
     {
-      "name": "POST Further Payment -Premium Recurring By Token תיקון",
+      "name": "POST Create Transaction With Token",
       "request": {
         "method": "POST",
         "header": [
@@ -1023,7 +855,7 @@
           "formdata": [
             {
               "key": "cardToken",
-              "value": "456456776vgfyvhjbsdkc87s8",
+              "value": "b91ca50b93c7b402a0665c09e533f6ca",
               "type": "text",
               "description": "Required field - credit card token ."
             },
@@ -1034,12 +866,6 @@
               "description": "Required field - Will be provided by Meshulam for each clearing business Example: 41deb6f1347ee8b2."
             },
             {
-              "key": "apiKey",
-              "value": "57ce86548429",
-              "type": "text",
-              "description": "Required only for companies that are working with multiple businesses. company's code"
-            },
-            {
               "key": "sum",
               "value": "1",
               "type": "text",
@@ -1047,7 +873,7 @@
             },
             {
               "key": "description",
-              "value": "Course",
+              "value": "my deal",
               "type": "text",
               "description": "Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription."
             },
@@ -1055,13 +881,25 @@
               "key": "paymentType",
               "value": "2",
               "type": "text",
-              "description": "Required field - 2-Regular"
+              "description": "Required field - 1-Direct Debit, 2-Regular, 4-Payments"
             },
             {
               "key": "paymentNum",
               "value": "1",
               "type": "text",
-              "description": "Determine payments number. 1-12"
+              "description": "optional -Determine payments number. 1-12"
+            },
+            {
+              "key": "pageField[invoiceName]",
+              "value": "Jon Jon",
+              "type": "text",
+              "description": "optional - the name for the invoice"
+            },
+            {
+              "key": "pageField[invoiceLicenseNumber]",
+              "value": "",
+              "type": "text",
+              "description": "optional - Invoice License Number for invoice"
             },
             {
               "key": "pageField[fullName]",
@@ -1071,7 +909,7 @@
             },
             {
               "key": "pageField[phone]",
-              "value": "",
+              "value": "0500000000",
               "type": "text",
               "description": "Required field - A valid israeli mobile phone numebr Example: 0500000000 "
             },
@@ -1079,41 +917,29 @@
               "key": "pageField[email]",
               "value": "test@gmail.com",
               "type": "text",
-              "description": "A valid email address"
+              "description": "optional -A valid email address"
             },
             {
               "key": "cField1",
               "value": "my_key123",
               "type": "text",
-              "description": "Custom field, you may add up to 9 fields."
+              "description": "optional -Custom field, you may add up to 9 fields."
             },
             {
               "key": "cField2",
               "value": "next456",
               "type": "text",
-              "description": "Custom field, you may add up to 9 fields."
-            },
-            {
-              "key": "companyCommission",
-              "value": "2.5",
-              "type": "text",
-              "description": "A different commission than the regular commission Meshulam has. Example: 2.5.\n"
-            },
-            {
-              "key": "recurringDebitId",
-              "value": "1234",
-              "type": "text",
-              "description": "Required field - the given value in the param \"recurringDebitId\" from the respons of the first premiume recurring payment  payment "
+              "description": "optional -Custom field, you may add up to 9 fields."
             },
             {
               "key": "transactionGroupIdentifier",
-              "value": "253",
+              "value": "2701",
               "type": "text",
               "description": "optional - Group identifier for the payment- if you send a value in this field, then a check will be made if there is a succesful payment with this value,  then the request will be rejected ."
             },
             {
               "key": "transactionUniqueIdentifier",
-              "value": "17663",
+              "value": "2002",
               "type": "text",
               "description": "Required field - Unique identifier for the request - if we send a value in this field, then a check will be made that this is the first time we see this value for the business. If it finds that a request has been sent with this ID, then the current request will be rejected outright regardless of the status of the first request with this ID."
             }
