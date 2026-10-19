@@ -253,7 +253,9 @@ To connect Grow to Make:
 7. Select the required connection type:
    - **Grow** for the production environment
    - **Grow Sandbox** for the test environment
-8. Enter the business identifier associated with your Grow account, together with the mobile phone number linked to the same account.
+8. Enter the business identification number associated with your Grow account,   
+   **such as company ID or ID numbe,**   
+   together with the mobile phone number linked to the same account.
 9. Click **Save**.
 10. A pop-up window will open.  
     Enter the OTP verification code sent to the mobile phone.
@@ -297,7 +299,7 @@ The Grow app includes several actions that can be used in Make scenarios.
 | Settle Suspended Transaction | Captures a previously authorized transaction |
 | Refund Transaction | Creates a full or partial refund for an existing transaction |
 | Notify URL Webhook | Receives transaction notifications from Grow and can be used to trigger additional Make scenario steps |
-| Make an API Call | A generic Make module required by Make.  Not required for the standard Grow payment flow. |
+| Make an API Call | A generic Make module required by Make. Not required for the standard Grow payment flow. |
 
   
 
@@ -325,20 +327,20 @@ After the module runs successfully, the payment request will be created. If a se
 
 | Field | Required | Description |
 | --- | --- | --- |
-| Sending Mode | Yes | Defines how the payment request will be delivered to the customer.  Available options: `sms`, `mail`, or `none`. Select `none` if you want to create the payment link without sending it automatically. |
-| Full Name | Yes | The customer's full name.  Enter first name and last name, each with at least 2 characters. |
+| Sending Mode | Yes | Defines how the payment request will be delivered to the customer. Available options: `sms`, `mail`, or `none`. Select `none` if you want to create the payment link without sending it automatically. |
+| Full Name | Yes | The customer's full name. Enter first name and last name, each with at least 2 characters. |
 | Phone | Yes | A valid Israeli mobile phone number. Example: `0500000000`. |
-| Email | Depends on configuration | The customer's email address.  Required only if the payment request should be sent by email. |
+| Email | Depends on configuration | The customer's email address. Required only if the payment request should be sent by email. |
 | Invoice Name | Depends on configuration | Defines whether the customer will be required to enter their name for the invoice. Available options: `required` or `optional`. |
-| Invoice License Number | Depends on configuration | Defines whether the customer will be required to enter their ID number or company number for the invoice.  Available options: `required` or `optional`. |
+| Invoice License Number | Depends on configuration | Defines whether the customer will be required to enter their ID number or company number for the invoice. Available options: `required` or `optional`. |
 | Charge Type | Yes | Defines the transaction charge type. Available options: `regular charge` or `J4/J5` authorization. |
 | Success URL | No | An external thank you page URL. If provided, the customer will be redirected to this URL after a successful payment. The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il?success=true`. |
-| Thank Page Title | No | The title displayed on Grow's thank you page.  This is used only when no external Success URL is provided. |
-| Thank Page Description | No | The description displayed on Grow's thank you page.  This is used only when no external Success URL is provided. |
+| Thank Page Title | No | The title displayed on Grow's thank you page. This is used only when no external Success URL is provided. |
+| Thank Page Description | No | The description displayed on Grow's thank you page. This is used only when no external Success URL is provided. |
 | Invoice Notify URL | No | A webhook URL used to receive invoice-related notifications. |
-| Notify URL | Yes | A webhook URL used to receive payment status updates.  The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il/webhook`. |
+| Notify URL | Yes | A webhook URL used to receive payment status updates. The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il/webhook`. |
 | Title | Yes | The title of the payment link. This title will be displayed to the customer. |
-| Payment Type | Yes | Defines the payment flow.  Select `recurring payment` for a recurring payment page.  Select `payments` for a one-time payment page with 1-12 payments. |
+| Payment Type | Yes | Defines the payment flow. Select `recurring payment` for a recurring payment page. Select `payments` for a one-time payment page with 1-12 payments. |
 | Products | Yes | A list of product items. Each product item includes the fields listed below and will be displayed on the payment page and reflected in the invoice. |
 | Custom Field 1 | No | Optional custom field that can be used to pass an internal identifier or additional data. |
 | Custom Field 2 | No | Optional custom field that can be used to pass an internal identifier or additional data. |
@@ -355,8 +357,8 @@ Each item represents a product that will be displayed on the payment page and re
 | Price | Yes | The product price. |
 | Quantity | Yes | The product quantity. |
 | Minimum Quantity | No | The minimum quantity that can be selected for the product, when relevant. |
-| Product URL | No | A URL to the product image.  Supported formats: PNG or JPEG.  Maximum file size: 2 MB. Minimum dimensions: 60x60 px.  Required aspect ratio: 1:1. |
-| VAT Type | Yes | Defines the VAT type for the product.  Available options: `regular VAT` or `VAT exempt`.  If the product is VAT exempt, select `VAT exempt` |
+| Product URL | No | A URL to the product image. Supported formats: PNG or JPEG. Maximum file size: 2 MB. Minimum dimensions: 60x60 px. Required aspect ratio: 1:1. |
+| VAT Type | Yes | Defines the VAT type for the product. Available options: `regular VAT` or `VAT exempt`. If the product is VAT exempt, select `VAT exempt` |
 
   
 
@@ -813,6 +815,71 @@ Tailor your sales pages with precision, defining key parameters to enhance user 
 
 Embed your sales page seamlessly on external websites using Redirect (not Iframe) for a cohesive user experience.  
 Grow brings sophistication to your sales and payment processes, ensuring a user-friendly and efficient transaction experience.
+
+================================================================================
+
+---
+title: "Webhook Field Mapping"
+slug: webhook-field-mapping
+type: basic
+section: docs
+source_url: https://developers.grow.business/docs/webhook-field-mapping
+---
+
+# Webhook Field Mapping
+
+> This page lists the possible values of webhook fields and explains their meaning.
+
+transactionType
+
+The transactionType field indicates the payment method used for the transaction. The values below are shown exactly as returned in the webhook payload.
+
+  
+
+| Key | Value | Payment Method |
+| --- | --- | --- |
+| transactionType | אשראי | Credit Card |
+| transactionType | Bit | Bit |
+| transactionType | PayBox | PayBox |
+| transactionType | Gpay | Google Pay |
+| transactionType | ApplePay | Apple Pay |
+| transactionType | העברה בנקאית | Bank Transfer |
+
+Note: This mapping applies only to webhook payloads that contain the transactionType field.
+
+  
+
+Example
+
+JSON
+
+```
+{ 
+  "webhookKey":"ABC1234", 
+  "transactionCode":"ABCD1234", 
+  "transactionType":"אשראי",
+  "paymentSum":2.00, 
+  "paymentsNum":1, 
+  "allPaymentNum":2, 
+  "firstPaymentSum":1, 
+  "periodicalPaymentSum":1, 
+  "paymentType":"רגיל", 
+  "paymentDate":"14/10/21",
+  "asmachta":"123456789", 
+  "paymentDesc":"Description",
+  "fullName":"Full Name", 
+  "payerPhone":"0500000000", 
+  "payerEmail":"test@test.com", 
+  "cardSuffix":"1234", 
+  "cardBrand":"Mastercard", 
+  "cardType":"Local", 
+  "paymentSource":"מערכת חיצונית"
+}
+```
+
+  
+
+In this example, the payment was made using a credit card.
 
 ================================================================================
 
@@ -1990,18 +2057,21 @@ Real-time events keep the payment status clear from start to success, failure, c
 | --- | --- | --- | --- | --- | --- |
 | environment | String | required | “PRODUCTION”, “DEV” |  |  |
 | version | String | required | Current stable version is 1 | Target the preferred base version |  |
-| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).  onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.  onError: Gets triggered on payment error, receives a message describing what caused the error.  onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed.  Note: useful for changing your loaders state.  onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.  onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`. | Attach callback functions to handle each event type | onSuccess:  {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  }  }  onFailure:  {  "status": 0,  "message": "תשלום נכשל"  }  onError:  {  "status": 0,  "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה"  }  {  "status": 0,  "message": "התשלום סורב"  }  onWalletChange:  open  Close  onPaymentStart:  {  "paymentType": 15,  "paymentName": "bank_transfer"  }  onPaymentCancel:  {  "paymentType": 15,  "paymentName": "bank_transfer"  } |
+| events | Object | optional | onSuccess: Gets triggered on payment success, receives a response with information about the payment (confirmation number, payment method, and more).  onFailure: Gets triggered on payment failure, receives a message describing what caused the failure.  onError: Gets triggered on payment error, receives a message describing what caused the error.  onWalletChange: Gets triggered on wallet state change, receives the current wallet state - open/closed. Note: useful for changing your loaders state.  onPaymentStart: Gets triggered when a payment process starts, receives a response with the triggered `paymentType` and `paymentName`.  onPaymentCancel: Gets triggered when a payment process is cancelled, receives a response with the triggered `paymentType` and `paymentName`.  onTimeout:  Gets triggered when the payment session expires, receives a response with `status: 0` and a message indicating that the payment session has expired. | Attach callback functions to handle each event type | **onSuccess:** { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "credit", "number_of_payments": 1, "confirmation_number": "12345678" } }  **onFailure**: { "status": 0, "message": "תשלום נכשל" }  **onError:** { "status": 0, "message": "לא ניתן לבצע עסקת תשלומים על כרטיס מסוג זה" }  { "status": 0, "message": "התשלום סורב" }  **onWalletChange:** open Close  **onPaymentStart:** { "paymentType": 15, "paymentName": "bank_transfer" }  **onPaymentCancel:** { "paymentType": 15, "paymentName": "bank_transfer" }  **onTimeout:** **{**  "status": 0, "messege": " פג תוקף התשלום" } |
+
+  
+  
 
 onSuccess events:
 
 | payment method | Response Examples |
 | --- | --- |
-| bit | {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "bit",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
-| Google Pay | {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "google",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
-| Apple Pay | "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "apple",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
-| Credit Card | {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "credit",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
-| Bank Transfer | {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "bank_transfer",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
-| Pay Box | {  "status": 1,  "data": {  "payment_sum": "1",  "full_name": "example example",  "payment_method": "paybox",  "number_of_payments": 1,  "confirmation_number": "12345678"  } |
+| bit | { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "bit", "number_of_payments": 1, "confirmation_number": "12345678" } |
+| Google Pay | { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "google", "number_of_payments": 1, "confirmation_number": "12345678" } |
+| Apple Pay | "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "apple", "number_of_payments": 1, "confirmation_number": "12345678" } |
+| Credit Card | { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "credit", "number_of_payments": 1, "confirmation_number": "12345678" } |
+| Bank Transfer | { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "bank_transfer", "number_of_payments": 1, "confirmation_number": "12345678" } |
+| Pay Box | { "status": 1, "data": { "payment_sum": "1", "full_name": "example example", "payment_method": "paybox", "number_of_payments": 1, "confirmation_number": "12345678" } |
 
 **Note:** The init method can also be used to update the entire SDK configuration. However, this will reset all previously registered events and replace them with the new ones provided.
 
@@ -4280,6 +4350,57 @@ JSON
 ================================================================================
 
 ---
+title: "Response Example"
+slug: copy-of-response
+type: basic
+section: reference
+source_url: https://developers.grow.business/reference/copy-of-response
+---
+
+# Response Example
+
+## Response from approveTransaction example:
+
+### *Success*:
+
+JSON
+
+```
+{
+    "err": "",
+    "status": 1,
+    "data": "",
+    "message": ""
+}
+```
+
+### *Failure*:
+
+JSON
+
+```
+{
+    "err": {
+        "id": 701,
+        "message": "פרמטר קוד זיהוי אינו תקין: "
+    },
+    "status": 0,
+    "data": ""
+}
+```
+
+- - **status** is referred to success or failure (1 or 0 respectively).
+- **err** - in case of an error, would return as the error code and error message.
+- **data** - all the details would return here.
+
+## ***Important!***
+
+*You must NOT reveal the process details such as the****processId*** *and the* ***processToken*** *to the paying customer.*  
+*You may display the* ***asmachta*** *field for unique identification of the transaction.*
+
+================================================================================
+
+---
 title: "Response get payment process info"
 slug: response-get-payment-info
 type: basic
@@ -5849,7 +5970,7 @@ source_url: https://developers.grow.business/reference/create-payment-link
 
 > Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
 
-## `POST /api/light/server/1.0/CreatePaymentLink`
+## `POST /api/light/server/1.1/CreatePaymentLink`
 
 **Servers:**
 - http://sandboxapi.grow.link
@@ -5858,12 +5979,6 @@ source_url: https://developers.grow.business/reference/create-payment-link
 
 Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
 
-
-**Parameters:**
-
-| Name | In | Type | Required | Description |
-|---|---|---|---|---|
-| x-api-key | header | string | False |  |
 
 **Request body** (`multipart/form-data`):
 
@@ -5917,7 +6032,6 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 >
 > ### Important note:
 >
-> - **The x-api-key header is mandatory and must be included in every request.**
 > - **All requests must be sent exclusively from your server’s back end. Client-side (browser-based) requests are not supported and will be blocked.**
 > - **Do not include any special characters in any parameter of the API request.**
 
@@ -6463,8 +6577,7 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 | sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
-| paymentNum | integer | False | optional- Determine payments number. 2-12 |
-| maxPaymentNum | integer | False | optional -the customer can choose number of payments between 2- to the value that you choose in this parameter. The payments number must be minimum 2 Determine Restricting the number of payments |
+| paymentNum | integer | False | optional- Determine payments number. 2-48 |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.  Do not include special characters in this field. |
 | pageField[invoiceName] | string | False | optional - the name for the invoice |
 | pageField[invoiceLicenseNumber]  | string | False | optional - Invoice License Number for invoice |

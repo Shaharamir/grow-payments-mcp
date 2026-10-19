@@ -55,13 +55,8 @@
          },
          "paymentNum": {
           "type": "integer",
-          "description": "optional- Determine payments number. 2-12",
+          "description": "optional- Determine payments number. 2-48",
           "example": "10"
-         },
-         "maxPaymentNum": {
-          "type": "integer",
-          "description": "optional -the customer can choose number of payments between 2- to the value that you choose in this parameter.\nThe payments number must be minimum 2\nDetermine Restricting the number of payments",
-          "example": "12"
          },
          "description": {
           "type": "string",

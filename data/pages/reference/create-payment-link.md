@@ -10,7 +10,7 @@ source_url: https://developers.grow.business/reference/create-payment-link
 
 > Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
 
-## `POST /api/light/server/1.0/CreatePaymentLink`
+## `POST /api/light/server/1.1/CreatePaymentLink`
 
 **Servers:**
 - http://sandboxapi.grow.link
@@ -19,12 +19,6 @@ source_url: https://developers.grow.business/reference/create-payment-link
 
 Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.
 
-
-**Parameters:**
-
-| Name | In | Type | Required | Description |
-|---|---|---|---|---|
-| x-api-key | header | string | False |  |
 
 **Request body** (`multipart/form-data`):
 
@@ -78,6 +72,5 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 >
 > ### Important note:
 >
-> - **The x-api-key header is mandatory and must be included in every request.**
 > - **All requests must be sent exclusively from your server’s back end. Client-side (browser-based) requests are not supported and will be blocked.**
 > - **Do not include any special characters in any parameter of the API request.**

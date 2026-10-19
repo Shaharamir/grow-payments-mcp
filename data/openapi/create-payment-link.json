@@ -10,7 +10,7 @@
   }
  ],
  "paths": {
-  "/api/light/server/1.0/CreatePaymentLink": {
+  "/api/light/server/1.1/CreatePaymentLink": {
    "post": {
     "tags": [
      "default"
@@ -214,16 +214,7 @@
       }
      }
     },
-    "parameters": [
-     {
-      "name": "x-api-key",
-      "in": "header",
-      "schema": {
-       "type": "string"
-      },
-      "example": "hfBND9mlC28BGvUkwQBls9hypPUIoJIj4Sy6LyUH"
-     }
-    ],
+    "parameters": [],
     "responses": {
      "200": {
       "description": "Successful response",
@@ -232,7 +223,8 @@
       }
      }
     },
-    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers."
+    "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.",
+    "operationId": "post_api-light-server-1-1-createpaymentlink"
    }
   }
  },

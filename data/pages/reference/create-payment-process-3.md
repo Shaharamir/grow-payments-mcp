@@ -30,8 +30,7 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 | sum | number | False | Required field -Total amount for payment Example: 10.99. |
 | successUrl | string | False | Required field - An after payment "Thank you" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true  Do not include special characters in this field. |
 | cancelUrl | string | False | Required field - The page users will be redirected to if a payment is cancelled.  Do not include special characters in this field. |
-| paymentNum | integer | False | optional- Determine payments number. 2-12 |
-| maxPaymentNum | integer | False | optional -the customer can choose number of payments between 2- to the value that you choose in this parameter. The payments number must be minimum 2 Determine Restricting the number of payments |
+| paymentNum | integer | False | optional- Determine payments number. 2-48 |
 | description | string | False | Required field - Description of the product to be charged (will appear in the details of the transaction as well) Example: Payment for a monthly subscription.  Do not include special characters in this field. |
 | pageField[invoiceName] | string | False | optional - the name for the invoice |
 | pageField[invoiceLicenseNumber]  | string | False | optional - Invoice License Number for invoice |

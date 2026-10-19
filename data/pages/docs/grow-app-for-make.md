@@ -42,7 +42,9 @@ To connect Grow to Make:
 7. Select the required connection type:
    - **Grow** for the production environment
    - **Grow Sandbox** for the test environment
-8. Enter the business identifier associated with your Grow account, together with the mobile phone number linked to the same account.
+8. Enter the business identification number associated with your Grow account,   
+   **such as company ID or ID numbe,**   
+   together with the mobile phone number linked to the same account.
 9. Click **Save**.
 10. A pop-up window will open.  
     Enter the OTP verification code sent to the mobile phone.
@@ -86,7 +88,7 @@ The Grow app includes several actions that can be used in Make scenarios.
 | Settle Suspended Transaction | Captures a previously authorized transaction |
 | Refund Transaction | Creates a full or partial refund for an existing transaction |
 | Notify URL Webhook | Receives transaction notifications from Grow and can be used to trigger additional Make scenario steps |
-| Make an API Call | A generic Make module required by Make.  Not required for the standard Grow payment flow. |
+| Make an API Call | A generic Make module required by Make. Not required for the standard Grow payment flow. |
 
   
 
@@ -114,20 +116,20 @@ After the module runs successfully, the payment request will be created. If a se
 
 | Field | Required | Description |
 | --- | --- | --- |
-| Sending Mode | Yes | Defines how the payment request will be delivered to the customer.  Available options: `sms`, `mail`, or `none`. Select `none` if you want to create the payment link without sending it automatically. |
-| Full Name | Yes | The customer's full name.  Enter first name and last name, each with at least 2 characters. |
+| Sending Mode | Yes | Defines how the payment request will be delivered to the customer. Available options: `sms`, `mail`, or `none`. Select `none` if you want to create the payment link without sending it automatically. |
+| Full Name | Yes | The customer's full name. Enter first name and last name, each with at least 2 characters. |
 | Phone | Yes | A valid Israeli mobile phone number. Example: `0500000000`. |
-| Email | Depends on configuration | The customer's email address.  Required only if the payment request should be sent by email. |
+| Email | Depends on configuration | The customer's email address. Required only if the payment request should be sent by email. |
 | Invoice Name | Depends on configuration | Defines whether the customer will be required to enter their name for the invoice. Available options: `required` or `optional`. |
-| Invoice License Number | Depends on configuration | Defines whether the customer will be required to enter their ID number or company number for the invoice.  Available options: `required` or `optional`. |
+| Invoice License Number | Depends on configuration | Defines whether the customer will be required to enter their ID number or company number for the invoice. Available options: `required` or `optional`. |
 | Charge Type | Yes | Defines the transaction charge type. Available options: `regular charge` or `J4/J5` authorization. |
 | Success URL | No | An external thank you page URL. If provided, the customer will be redirected to this URL after a successful payment. The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il?success=true`. |
-| Thank Page Title | No | The title displayed on Grow's thank you page.  This is used only when no external Success URL is provided. |
-| Thank Page Description | No | The description displayed on Grow's thank you page.  This is used only when no external Success URL is provided. |
+| Thank Page Title | No | The title displayed on Grow's thank you page. This is used only when no external Success URL is provided. |
+| Thank Page Description | No | The description displayed on Grow's thank you page. This is used only when no external Success URL is provided. |
 | Invoice Notify URL | No | A webhook URL used to receive invoice-related notifications. |
-| Notify URL | Yes | A webhook URL used to receive payment status updates.  The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il/webhook`. |
+| Notify URL | Yes | A webhook URL used to receive payment status updates. The URL must use HTTPS, must be an external URL, and cannot be localhost. Example: `https://mysite.co.il/webhook`. |
 | Title | Yes | The title of the payment link. This title will be displayed to the customer. |
-| Payment Type | Yes | Defines the payment flow.  Select `recurring payment` for a recurring payment page.  Select `payments` for a one-time payment page with 1-12 payments. |
+| Payment Type | Yes | Defines the payment flow. Select `recurring payment` for a recurring payment page. Select `payments` for a one-time payment page with 1-12 payments. |
 | Products | Yes | A list of product items. Each product item includes the fields listed below and will be displayed on the payment page and reflected in the invoice. |
 | Custom Field 1 | No | Optional custom field that can be used to pass an internal identifier or additional data. |
 | Custom Field 2 | No | Optional custom field that can be used to pass an internal identifier or additional data. |
@@ -144,8 +146,8 @@ Each item represents a product that will be displayed on the payment page and re
 | Price | Yes | The product price. |
 | Quantity | Yes | The product quantity. |
 | Minimum Quantity | No | The minimum quantity that can be selected for the product, when relevant. |
-| Product URL | No | A URL to the product image.  Supported formats: PNG or JPEG.  Maximum file size: 2 MB. Minimum dimensions: 60x60 px.  Required aspect ratio: 1:1. |
-| VAT Type | Yes | Defines the VAT type for the product.  Available options: `regular VAT` or `VAT exempt`.  If the product is VAT exempt, select `VAT exempt` |
+| Product URL | No | A URL to the product image. Supported formats: PNG or JPEG. Maximum file size: 2 MB. Minimum dimensions: 60x60 px. Required aspect ratio: 1:1. |
+| VAT Type | Yes | Defines the VAT type for the product. Available options: `regular VAT` or `VAT exempt`. If the product is VAT exempt, select `VAT exempt` |
 
   
 

@@ -54,270 +54,6 @@
       }
     },
     {
-      "name": "POST Create Payment Link",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "multipart/form-data"
-          }
-        ],
-        "url": {
-          "raw": "https://sandbox.meshulam.co.il/api/light/server/1.0/CreatePaymentLink",
-          "host": [
-            "https://sandbox.meshulam.co.il"
-          ],
-          "path": [
-            "api",
-            "light",
-            "server",
-            "1.0",
-            "CreatePaymentLink"
-          ]
-        },
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "userId",
-              "value": "4ec1d595ae764243",
-              "type": "text",
-              "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.\n"
-            },
-            {
-              "key": "pageCode",
-              "value": "c34d1f4a546f",
-              "type": "text",
-              "description": "Required field - Unique identifier refers for this payment mathod\n"
-            },
-            {
-              "key": "paymentLinkType",
-              "value": "2",
-              "type": "text",
-              "description": "Required field -The link is closed for one payment"
-            },
-            {
-              "key": "isActive",
-              "value": "1",
-              "type": "text",
-              "description": "Required field -Link is active = 1"
-            },
-            {
-              "key": "sendingMode",
-              "value": "1",
-              "type": "text",
-              "description": "Optional   - 1=SMS,2=Mail"
-            },
-            {
-              "key": "messageText",
-              "value": "שלום ישראל כאן ביוטי ספא",
-              "type": "text",
-              "description": "Message text sent to user.\n\n\nRequired only in case the parameter \"sendingMode\" is send.\n\n\n"
-            },
-            {
-              "key": "chargeType",
-              "value": "1",
-              "type": "text",
-              "description": "Optional -\n1 - Regular Charge\n2- j4j5\n"
-            },
-            {
-              "key": "successUrl",
-              "value": "",
-              "type": "text",
-              "description": "Optional  -An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true\n\nDo not include special characters in this field."
-            },
-            {
-              "key": "customText[thankPageTitle]",
-              "value": "תודה על רכישתכם ",
-              "type": "text",
-              "description": "Optional -Thank you page title"
-            },
-            {
-              "key": "customText[thankPageDescription]",
-              "value": "נציג יצור קשר בהקדם לקביעת מועד טיפול ",
-              "type": "text",
-              "description": "Optional -Description to the thank you page"
-            },
-            {
-              "key": "invoiceNotifyUrl",
-              "value": "https://yourinvoicewebhookurl.com\n",
-              "type": "text",
-              "description": "optional - Url for invoice\n\nDo not include special characters in this field."
-            },
-            {
-              "key": "notifyUrl",
-              "value": "",
-              "type": "text",
-              "description": "Optional - A fixed server address can be set via GROW\n\nDo not include special characters in this field."
-            },
-            {
-              "key": "title",
-              "value": "דרישת תשלום - טיפול יופי",
-              "type": "text",
-              "description": "Required field -Page title"
-            },
-            {
-              "key": "paymentTypes[0][type]",
-              "value": "payments",
-              "type": "text",
-              "description": "Required field - payment method - payments"
-            },
-            {
-              "key": "paymentTypes[0][payments][paymentsPaymentNum]",
-              "value": "1",
-              "type": "text",
-              "description": "Required field  - in case the parameter \npaymentTypes[0][payments][paymentsMaxPaymentNum]\n is not sent.\n Determine payments number. 1-12"
-            },
-            {
-              "key": "paymentTypes[0][payments][paymentsMaxPaymentNum]",
-              "value": "",
-              "type": "text",
-              "description": "Required field  in case the  parameter \npaymentTypes[0][payments][paymentsPaymentNum]\n is not sent.\n-Determine payments number must be minimum 2\nRestricting the number of payments. the customer can choose between 2- 12"
-            },
-            {
-              "key": "pageFieldSettings[fullName][value]",
-              "value": "ישראל ישראלי",
-              "type": "text",
-              "description": "Required field -Full name must consist of at least two names."
-            },
-            {
-              "key": "pageFieldSettings[phone][value]",
-              "value": "",
-              "type": "text",
-              "description": "Required field -A valid israeli mobile phone numebr Example: 0500000000"
-            },
-            {
-              "key": "pageFieldSettings[email][value]",
-              "value": "test@test.com",
-              "type": "text",
-              "description": "optional -A valid email address"
-            },
-            {
-              "key": "pageFieldSettings[invoiceName][isRequired]",
-              "value": "",
-              "type": "text",
-              "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
-            },
-            {
-              "key": "pageFieldSettings[invoiceLicenseNumber][isRequired]",
-              "value": "",
-              "type": "text",
-              "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
-            },
-            {
-              "key": "products[data][0][catalogNumber]",
-              "value": "1",
-              "type": "text",
-              "description": "Optional - catalog number of the product"
-            },
-            {
-              "key": "products[data][0][name]",
-              "value": "חבילת טיפול יופי ",
-              "type": "text",
-              "description": "Required field - product name"
-            },
-            {
-              "key": "products[data][0][price]",
-              "value": "100",
-              "type": "text",
-              "description": "Required field - product amount"
-            },
-            {
-              "key": "products[data][0][quantity]",
-              "value": "1",
-              "type": "text",
-              "description": "Optional - maximum units per product"
-            },
-            {
-              "key": "products[data][0][minQuantity]",
-              "value": "1",
-              "type": "text",
-              "description": "Optional - minimum units per product"
-            },
-            {
-              "key": "products[data][0][url]",
-              "value": "",
-              "type": "text",
-              "description": "Optional -URL image of the product"
-            },
-            {
-              "key": "products[data][0][vatType]",
-              "value": "1",
-              "type": "text",
-              "description": "Required field- \nSpecifies the value based on the business VAT status:\n\n\nif the business is subject to regular VAT setting=  1\nif the business is VAT-exempt - VAT setting = 3\n"
-            },
-            {
-              "key": "transactionType[0]",
-              "value": "1",
-              "type": "text",
-              "description": "specify which payment method to display - Credit Card"
-            },
-            {
-              "key": "transactionType[1]",
-              "value": "6",
-              "type": "text",
-              "description": "specify which payment method to display -bit"
-            },
-            {
-              "key": "transactionType[2]",
-              "value": "13",
-              "type": "text",
-              "description": "specify which payment method to display -Apple Pay"
-            },
-            {
-              "key": "transactionType[3]",
-              "value": "14",
-              "type": "text",
-              "description": "specify which payment method to display - Google Pay"
-            },
-            {
-              "key": "transactionType[4]",
-              "value": "15",
-              "type": "text",
-              "description": "specify which payment method to display - bank transfer"
-            },
-            {
-              "key": "transactionType[5]",
-              "value": "",
-              "type": "text",
-              "description": "specify which payment method to display - Pay Box"
-            },
-            {
-              "key": "cField1",
-              "value": "",
-              "type": "text",
-              "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
-            },
-            {
-              "key": "cField2",
-              "value": "",
-              "type": "text",
-              "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
-            },
-            {
-              "key": "backgroundColor",
-              "value": "#0285Ac",
-              "type": "text",
-              "description": "Optional - Defines the background color of the payment page.\n\nFormat:\nHEX color code (e.g. #FFFFFF)\n\n"
-            },
-            {
-              "key": "buttonColor",
-              "value": "#0285Ac",
-              "type": "text",
-              "description": "Optional - Defines the background color of the payment button.\n\nFormat:\nHEX color code (e.g. #0285AC)\n\n"
-            },
-            {
-              "key": "paymentButtonText",
-              "value": "לתשלום",
-              "type": "text",
-              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules:\nUp to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface."
-            }
-          ]
-        }
-      }
-    },
-    {
       "name": "POST SetAccountDetails ",
       "request": {
         "method": "POST",
@@ -1398,6 +1134,270 @@
               "value": "0",
               "type": "text",
               "description": "optional -\n0= no update 1=update"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Create Payment Link",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "url": {
+          "raw": "https://sandbox.meshulam.co.il/api/light/server/1.1/CreatePaymentLink",
+          "host": [
+            "https://sandbox.meshulam.co.il"
+          ],
+          "path": [
+            "api",
+            "light",
+            "server",
+            "1.1",
+            "CreatePaymentLink"
+          ]
+        },
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "userId",
+              "value": "4ec1d595ae764243",
+              "type": "text",
+              "description": "Required field - Unique identifier refers to every business that is connected and uses Grow payments solutions.\n"
+            },
+            {
+              "key": "pageCode",
+              "value": "c34d1f4a546f",
+              "type": "text",
+              "description": "Required field - Unique identifier refers for this payment mathod\n"
+            },
+            {
+              "key": "paymentLinkType",
+              "value": "2",
+              "type": "text",
+              "description": "Required field -The link is closed for one payment"
+            },
+            {
+              "key": "isActive",
+              "value": "1",
+              "type": "text",
+              "description": "Required field -Link is active = 1"
+            },
+            {
+              "key": "sendingMode",
+              "value": "1",
+              "type": "text",
+              "description": "Optional   - 1=SMS,2=Mail"
+            },
+            {
+              "key": "messageText",
+              "value": "שלום ישראל כאן ביוטי ספא",
+              "type": "text",
+              "description": "Message text sent to user.\n\n\nRequired only in case the parameter \"sendingMode\" is send.\n\n\n"
+            },
+            {
+              "key": "chargeType",
+              "value": "1",
+              "type": "text",
+              "description": "Optional -\n1 - Regular Charge\n2- j4j5\n"
+            },
+            {
+              "key": "successUrl",
+              "value": "",
+              "type": "text",
+              "description": "Optional  -An after payment \"Thank you\" URL. make sure to use HTTPS and not HTTP. Must use an external URL and not localhost. Example: https://mysite.co.il?success=true\n\nDo not include special characters in this field."
+            },
+            {
+              "key": "customText[thankPageTitle]",
+              "value": "תודה על רכישתכם ",
+              "type": "text",
+              "description": "Optional -Thank you page title"
+            },
+            {
+              "key": "customText[thankPageDescription]",
+              "value": "נציג יצור קשר בהקדם לקביעת מועד טיפול ",
+              "type": "text",
+              "description": "Optional -Description to the thank you page"
+            },
+            {
+              "key": "invoiceNotifyUrl",
+              "value": "https://yourinvoicewebhookurl.com\n",
+              "type": "text",
+              "description": "optional - Url for invoice\n\nDo not include special characters in this field."
+            },
+            {
+              "key": "notifyUrl",
+              "value": "",
+              "type": "text",
+              "description": "Optional - A fixed server address can be set via GROW\n\nDo not include special characters in this field."
+            },
+            {
+              "key": "title",
+              "value": "דרישת תשלום - טיפול יופי",
+              "type": "text",
+              "description": "Required field -Page title"
+            },
+            {
+              "key": "paymentTypes[0][type]",
+              "value": "payments",
+              "type": "text",
+              "description": "Required field - payment method - payments"
+            },
+            {
+              "key": "paymentTypes[0][payments][paymentsPaymentNum]",
+              "value": "1",
+              "type": "text",
+              "description": "Required field  - in case the parameter \npaymentTypes[0][payments][paymentsMaxPaymentNum]\n is not sent.\n Determine payments number. 1-12"
+            },
+            {
+              "key": "paymentTypes[0][payments][paymentsMaxPaymentNum]",
+              "value": "",
+              "type": "text",
+              "description": "Required field  in case the  parameter \npaymentTypes[0][payments][paymentsPaymentNum]\n is not sent.\n-Determine payments number must be minimum 2\nRestricting the number of payments. the customer can choose between 2- 12"
+            },
+            {
+              "key": "pageFieldSettings[fullName][value]",
+              "value": "ישראל ישראלי",
+              "type": "text",
+              "description": "Required field -Full name must consist of at least two names."
+            },
+            {
+              "key": "pageFieldSettings[phone][value]",
+              "value": "",
+              "type": "text",
+              "description": "Required field -A valid israeli mobile phone numebr Example: 0500000000"
+            },
+            {
+              "key": "pageFieldSettings[email][value]",
+              "value": "test@test.com",
+              "type": "text",
+              "description": "optional -A valid email address"
+            },
+            {
+              "key": "pageFieldSettings[invoiceName][isRequired]",
+              "value": "",
+              "type": "text",
+              "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
+            },
+            {
+              "key": "pageFieldSettings[invoiceLicenseNumber][isRequired]",
+              "value": "",
+              "type": "text",
+              "description": "Optional - specifies whether the customer is required to complete the invoice name field.\nIf set to true (or 1), the field becomes mandatory.\nIf set to false (or 0), the field remains optional."
+            },
+            {
+              "key": "products[data][0][catalogNumber]",
+              "value": "1",
+              "type": "text",
+              "description": "Optional - catalog number of the product"
+            },
+            {
+              "key": "products[data][0][name]",
+              "value": "חבילת טיפול יופי ",
+              "type": "text",
+              "description": "Required field - product name"
+            },
+            {
+              "key": "products[data][0][price]",
+              "value": "100",
+              "type": "text",
+              "description": "Required field - product amount"
+            },
+            {
+              "key": "products[data][0][quantity]",
+              "value": "1",
+              "type": "text",
+              "description": "Optional - maximum units per product"
+            },
+            {
+              "key": "products[data][0][minQuantity]",
+              "value": "1",
+              "type": "text",
+              "description": "Optional - minimum units per product"
+            },
+            {
+              "key": "products[data][0][url]",
+              "value": "",
+              "type": "text",
+              "description": "Optional -URL image of the product"
+            },
+            {
+              "key": "products[data][0][vatType]",
+              "value": "1",
+              "type": "text",
+              "description": "Required field- \nSpecifies the value based on the business VAT status:\n\n\nif the business is subject to regular VAT setting=  1\nif the business is VAT-exempt - VAT setting = 3\n"
+            },
+            {
+              "key": "transactionType[0]",
+              "value": "1",
+              "type": "text",
+              "description": "specify which payment method to display - Credit Card"
+            },
+            {
+              "key": "transactionType[1]",
+              "value": "6",
+              "type": "text",
+              "description": "specify which payment method to display -bit"
+            },
+            {
+              "key": "transactionType[2]",
+              "value": "13",
+              "type": "text",
+              "description": "specify which payment method to display -Apple Pay"
+            },
+            {
+              "key": "transactionType[3]",
+              "value": "14",
+              "type": "text",
+              "description": "specify which payment method to display - Google Pay"
+            },
+            {
+              "key": "transactionType[4]",
+              "value": "15",
+              "type": "text",
+              "description": "specify which payment method to display - bank transfer"
+            },
+            {
+              "key": "transactionType[5]",
+              "value": "",
+              "type": "text",
+              "description": "specify which payment method to display - Pay Box"
+            },
+            {
+              "key": "cField1",
+              "value": "",
+              "type": "text",
+              "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
+            },
+            {
+              "key": "cField2",
+              "value": "",
+              "type": "text",
+              "description": "optional -Custom field, you may add up to 9 fields.\n\nDo not include special characters in this field."
+            },
+            {
+              "key": "backgroundColor",
+              "value": "#0285Ac",
+              "type": "text",
+              "description": "Optional - Defines the background color of the payment page.\n\nFormat:\nHEX color code (e.g. #FFFFFF)\n\n"
+            },
+            {
+              "key": "buttonColor",
+              "value": "#0285Ac",
+              "type": "text",
+              "description": "Optional - Defines the background color of the payment button.\n\nFormat:\nHEX color code (e.g. #0285AC)\n\n"
+            },
+            {
+              "key": "paymentButtonText",
+              "value": "לתשלום",
+              "type": "text",
+              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules:\nUp to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface."
             }
           ]
         }

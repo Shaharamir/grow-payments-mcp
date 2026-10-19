@@ -29,6 +29,8 @@ Source: https://grow-il.readme.io • Each link is a bundled Markdown file (path
   - source: https://developers.grow.business/docs/pos-devices
 - [Static Payment Page](pages/docs/sales-pages.md): Tailor-made Sales and Payment Pages for Effortless Transactions
   - source: https://developers.grow.business/docs/sales-pages
+- [Webhook Field Mapping](pages/docs/webhook-field-mapping.md): This page lists the possible values of webhook fields and explains their meaning.
+  - source: https://developers.grow.business/docs/webhook-field-mapping
 - [Webhooks](pages/docs/webhooks.md): Achieve automation excellence with Grow's Webhooks, enhancing your control and management capabilities.
   - source: https://developers.grow.business/docs/webhooks
 
@@ -122,6 +124,8 @@ Source: https://grow-il.readme.io • Each link is a bundled Markdown file (path
   - source: https://developers.grow.business/reference/regular-payment-response
 - [Response](pages/reference/refund-overview-1.md): CreatePaymentLink
   - source: https://developers.grow.business/reference/refund-overview-1
+- [Response Example](pages/reference/copy-of-response.md): "message": "פרמטר קוד זיהוי אינו תקין: "
+  - source: https://developers.grow.business/reference/copy-of-response
 - [Response get payment process info](pages/reference/response-get-payment-info.md): "processId": "1234122",
   - source: https://developers.grow.business/reference/response-get-payment-info
 - [Response get transaction info](pages/reference/response-get-transaction-info.md): "asmachta": "300000209",

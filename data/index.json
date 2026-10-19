@@ -154,6 +154,20 @@
   "openapi": null
  },
  {
+  "slug": "webhook-field-mapping",
+  "title": "Webhook Field Mapping",
+  "section": "docs",
+  "type": "basic",
+  "group": "Guides",
+  "url": "https://developers.grow.business/docs/webhook-field-mapping",
+  "path": "pages/docs/webhook-field-mapping.md",
+  "description": "This page lists the possible values of webhook fields and explains their meaning.",
+  "is_endpoint": false,
+  "method": null,
+  "api_path": null,
+  "openapi": null
+ },
+ {
   "slug": "3ds-1",
   "title": "3DS",
   "section": "reference",
@@ -162,6 +176,20 @@
   "url": "https://developers.grow.business/reference/3ds-1",
   "path": "pages/reference/3ds-1.md",
   "description": "Enhance the security of your transactions with the Grow 3DS service, a robust defence against fraudulent activities.",
+  "is_endpoint": false,
+  "method": null,
+  "api_path": null,
+  "openapi": null
+ },
+ {
+  "slug": "copy-of-response",
+  "title": "Response Example",
+  "section": "reference",
+  "type": "basic",
+  "group": "API Reference — Concepts",
+  "url": "https://developers.grow.business/reference/copy-of-response",
+  "path": "pages/reference/copy-of-response.md",
+  "description": "\"message\": \"פרמטר קוד זיהוי אינו תקין: \"",
   "is_endpoint": false,
   "method": null,
   "api_path": null,
@@ -1032,7 +1060,7 @@
   "description": "Each business has its own unique identifiers  (userId + pageCode) - the identifiers on this documentation are for example only. To integrate with the API, please contact Grow support to obtain the necessary permissions and your unique identifiers.",
   "is_endpoint": true,
   "method": "POST",
-  "api_path": "/api/light/server/1.0/CreatePaymentLink",
+  "api_path": "/api/light/server/1.1/CreatePaymentLink",
   "openapi": "openapi/create-payment-link.json"
  },
  {
