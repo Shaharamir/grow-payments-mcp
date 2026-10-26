@@ -1098,8 +1098,13 @@
                   },
                   "title": {
                     "type": "string",
-                    "description": "Required field -Page title",
+                    "description": "Required field -The internal name of the page.",
                     "example": "דרישת תשלום - טיפול יופי"
+                  },
+                  "customText[pageTitle]": {
+                    "type": "string",
+                    "default": "",
+                    "description": " Optional - The title displayed on the page."
                   },
                   "paymentTypes[0][type]": {
                     "type": "string",

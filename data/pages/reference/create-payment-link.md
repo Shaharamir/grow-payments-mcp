@@ -36,7 +36,8 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 | customText[thankPageDescription] | string | False | Optional -Description to the thank you page |
 | invoiceNotifyUrl | string | False | optional - Url for invoice  Do not include special characters in this field. |
 | notifyUrl | string | False | Optional - A fixed server address can be set via GROW  Do not include special characters in this field. |
-| title | string | False | Required field -Page title |
+| title | string | False | Required field -The internal name of the page. |
+| customText[pageTitle] | string | False |  Optional - The title displayed on the page. |
 | paymentTypes[0][type] | string | False | Required field - payment method - payments |
 | paymentTypes[0][payments][paymentsPaymentNum] | integer | False | Required field  - in case the parameter  paymentTypes[0][payments][paymentsMaxPaymentNum]  is not sent.  Determine payments number. 1-12 |
 | paymentTypes[0][payments][paymentsMaxPaymentNum] | string | False | Required field  in case the  parameter  paymentTypes[0][payments][paymentsPaymentNum]  is not sent. -Determine payments number must be minimum 2 Restricting the number of payments. the customer can choose between 2- 12 |

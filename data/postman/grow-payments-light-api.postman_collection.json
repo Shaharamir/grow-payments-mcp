@@ -1241,7 +1241,13 @@
               "key": "title",
               "value": "דרישת תשלום - טיפול יופי",
               "type": "text",
-              "description": "Required field -Page title"
+              "description": "Required field -The internal name of the page."
+            },
+            {
+              "key": "customText[pageTitle]",
+              "value": "",
+              "type": "text",
+              "description": " Optional - The title displayed on the page."
             },
             {
               "key": "paymentTypes[0][type]",
