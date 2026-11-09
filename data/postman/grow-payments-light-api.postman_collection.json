@@ -1403,7 +1403,13 @@
               "key": "paymentButtonText",
               "value": "לתשלום",
               "type": "text",
-              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules:\nUp to 20 characters - only letters\n\nYou can also configure a default business logo via the business management interface."
+              "description": "Optional - Sets the text that will appear on the payment button\n\nValidation rules:\nUp to 20 characters - only letters\n"
+            },
+            {
+              "key": "businessLogo[url]",
+              "value": "",
+              "type": "text",
+              "description": "URL of the business logo image to display on the payment link.\n\nMaximum file size: 512 KB.\nMinimum dimensions: 128 × 128 pixels.\nSupported shapes: square, rectangle, or circle.\n\n\nYou can also configure a default business logo via the business management interface."
             }
           ]
         }

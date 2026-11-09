@@ -6023,7 +6023,8 @@ Each business has its own unique identifiers  (userId + pageCode) - the identifi
 | cField2 | string | False | optional -Custom field, you may add up to 9 fields.  Do not include special characters in this field. |
 | backgroundColor | string | False | Optional - Defines the background color of the payment page.  Format: HEX color code (e.g. #FFFFFF)   |
 | buttonColor | string | False | Optional - Defines the background color of the payment button.  Format: HEX color code (e.g. #0285AC)   |
-| paymentButtonText | string | False | Optional - Sets the text that will appear on the payment button  Validation rules: Up to 20 characters - only letters  You can also configure a default business logo via the business management interface. |
+| paymentButtonText | string | False | Optional - Sets the text that will appear on the payment button  Validation rules: Up to 20 characters - only letters  |
+| businessLogo[url] | string | False | URL of the business logo image to display on the payment link.  Maximum file size: 512 KB. Minimum dimensions: 128 × 128 pixels. Supported shapes: square, rectangle, or circle.   You can also configure a default business logo via the business management interface. |
 
 **Responses:**
 
